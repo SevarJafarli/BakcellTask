@@ -1,0 +1,673 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C550E09F2B7F8382009408D2 /* PackageFreeServicesStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C550E09E2B7F8382009408D2 /* PackageFreeServicesStackView.swift */; };
+		C550E0A12B7F87CA009408D2 /* PackageChipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C550E0A02B7F87CA009408D2 /* PackageChipButton.swift */; };
+		C550E0A42B7F8AE7009408D2 /* MiniAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C550E0A32B7F8AE7009408D2 /* MiniAddButton.swift */; };
+		C5BB3BB12B7E1CF800819E25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BB3BB02B7E1CF800819E25 /* AppDelegate.swift */; };
+		C5BB3BBA2B7E1CF900819E25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5BB3BB92B7E1CF900819E25 /* Assets.xcassets */; };
+		C5BB3BBD2B7E1CF900819E25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5BB3BBB2B7E1CF900819E25 /* LaunchScreen.storyboard */; };
+		C5BB3BEE2B7E1D3100819E25 /* BakcellNetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5BB3BED2B7E1D3100819E25 /* BakcellNetworkKit.framework */; };
+		C5BB3BEF2B7E1D3100819E25 /* BakcellNetworkKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C5BB3BED2B7E1D3100819E25 /* BakcellNetworkKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C5BB3BF22B7E1D3400819E25 /* BakcellUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5BB3BF12B7E1D3400819E25 /* BakcellUIKit.framework */; };
+		C5BB3BF32B7E1D3400819E25 /* BakcellUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C5BB3BF12B7E1D3400819E25 /* BakcellUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C5BB3BF62B7E1E0800819E25 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BB3BF52B7E1E0800819E25 /* AppRouter.swift */; };
+		C5BB3BF92B7E1E1700819E25 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BB3BF82B7E1E1700819E25 /* AppContainer.swift */; };
+		C5BB3C032B7E1EF100819E25 /* MainNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BB3C022B7E1EF100819E25 /* MainNavigation.swift */; };
+		C5BB3C052B7E1F1E00819E25 /* ViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BB3C042B7E1F1E00819E25 /* ViewController+Navigation.swift */; };
+		C5BB3C082B7E1F4300819E25 /* ThemeableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BB3C072B7E1F4300819E25 /* ThemeableView.swift */; };
+		C5BB3C0A2B7E1F5200819E25 /* ThemeableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BB3C092B7E1F5200819E25 /* ThemeableViewController.swift */; };
+		C5BB3C2E2B7E27DB00819E25 /* AppAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BB3C2D2B7E27DB00819E25 /* AppAssets.swift */; };
+		C5BB3C372B7E29C200819E25 /* RoumingDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BB3C2F2B7E29C200819E25 /* RoumingDetailPresenter.swift */; };
+		C5BB3C382B7E29C200819E25 /* RoumingDetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BB3C302B7E29C200819E25 /* RoumingDetailWorker.swift */; };
+		C5BB3C392B7E29C200819E25 /* RoumingDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BB3C312B7E29C200819E25 /* RoumingDetailRouter.swift */; };
+		C5BB3C3A2B7E29C200819E25 /* RoumingDetailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BB3C322B7E29C200819E25 /* RoumingDetailModels.swift */; };
+		C5BB3C3B2B7E29C200819E25 /* RoumingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BB3C332B7E29C200819E25 /* RoumingDetailViewController.swift */; };
+		C5BB3C3C2B7E29C200819E25 /* RoumingDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BB3C342B7E29C200819E25 /* RoumingDetailInteractor.swift */; };
+		C5BB3C3D2B7E29C200819E25 /* RoumingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BB3C352B7E29C200819E25 /* RoumingDetailView.swift */; };
+		C5BB3C3E2B7E29C200819E25 /* RoumingDetailConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BB3C362B7E29C200819E25 /* RoumingDetailConfigurator.swift */; };
+		C5BB3C402B7E2E6A00819E25 /* ImageResizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BB3C3F2B7E2E6A00819E25 /* ImageResizer.swift */; };
+		C5BB3C432B7E308700819E25 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C5BB3C422B7E308700819E25 /* SnapKit */; };
+		C5BB3C4A2B7E315D00819E25 /* PackagesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BB3C492B7E315D00819E25 /* PackagesCollectionView.swift */; };
+		C5BB3C4C2B7E32A600819E25 /* RoumingPackageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BB3C4B2B7E32A600819E25 /* RoumingPackageViewCell.swift */; };
+		C5C82A122B7F62E30018BB61 /* InternetPackagesCollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C82A112B7F62E30018BB61 /* InternetPackagesCollectionTableViewCell.swift */; };
+		C5C82A142B7F63780018BB61 /* SMSPackagesCollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C82A132B7F63780018BB61 /* SMSPackagesCollectionTableViewCell.swift */; };
+		C5C82A162B7F6BC40018BB61 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C82A152B7F6BC40018BB61 /* RoundedView.swift */; };
+		C5EF6E6B2B84876C00AA3494 /* AllIncludedPackageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EF6E6A2B84876C00AA3494 /* AllIncludedPackageViewCell.swift */; };
+		C5EF6E6D2B848A7900AA3494 /* PackageServiceFeeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EF6E6C2B848A7900AA3494 /* PackageServiceFeeLabel.swift */; };
+		C5EF6E6F2B84BD0F00AA3494 /* AllPackageInfoVStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EF6E6E2B84BD0F00AA3494 /* AllPackageInfoVStackView.swift */; };
+		C5EF6E712B84D2A200AA3494 /* RoamingTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EF6E702B84D2A200AA3494 /* RoamingTableViewHeader.swift */; };
+		C5EF6E732B85C0C400AA3494 /* AllIncludedPackageInfoHStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EF6E722B85C0C400AA3494 /* AllIncludedPackageInfoHStackView.swift */; };
+		C5EF6E752B85C61800AA3494 /* CountrySearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EF6E742B85C61800AA3494 /* CountrySearchView.swift */; };
+		C5EF6E772B85CD2900AA3494 /* RoumingCountryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EF6E762B85CD2900AA3494 /* RoumingCountryButton.swift */; };
+		C5EF6E792B85D1A800AA3494 /* RoumingCountriesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EF6E782B85D1A800AA3494 /* RoumingCountriesCollectionView.swift */; };
+		C5EF6E7B2B85EEFC00AA3494 /* UICollectionCenterFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EF6E7A2B85EEFC00AA3494 /* UICollectionCenterFlowLayout.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C5BB3BF02B7E1D3100819E25 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C5BB3BF32B7E1D3400819E25 /* BakcellUIKit.framework in Embed Frameworks */,
+				C5BB3BEF2B7E1D3100819E25 /* BakcellNetworkKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C550E09E2B7F8382009408D2 /* PackageFreeServicesStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageFreeServicesStackView.swift; sourceTree = "<group>"; };
+		C550E0A02B7F87CA009408D2 /* PackageChipButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageChipButton.swift; sourceTree = "<group>"; };
+		C550E0A32B7F8AE7009408D2 /* MiniAddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniAddButton.swift; sourceTree = "<group>"; };
+		C5BB3BAD2B7E1CF800819E25 /* BakcellApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BakcellApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5BB3BB02B7E1CF800819E25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C5BB3BB92B7E1CF900819E25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C5BB3BBC2B7E1CF900819E25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C5BB3BBE2B7E1CF900819E25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5BB3BED2B7E1D3100819E25 /* BakcellNetworkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BakcellNetworkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5BB3BF12B7E1D3400819E25 /* BakcellUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BakcellUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5BB3BF52B7E1E0800819E25 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		C5BB3BF82B7E1E1700819E25 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
+		C5BB3C022B7E1EF100819E25 /* MainNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigation.swift; sourceTree = "<group>"; };
+		C5BB3C042B7E1F1E00819E25 /* ViewController+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Navigation.swift"; sourceTree = "<group>"; };
+		C5BB3C072B7E1F4300819E25 /* ThemeableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeableView.swift; sourceTree = "<group>"; };
+		C5BB3C092B7E1F5200819E25 /* ThemeableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeableViewController.swift; sourceTree = "<group>"; };
+		C5BB3C2D2B7E27DB00819E25 /* AppAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssets.swift; sourceTree = "<group>"; };
+		C5BB3C2F2B7E29C200819E25 /* RoumingDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingDetailPresenter.swift; sourceTree = "<group>"; };
+		C5BB3C302B7E29C200819E25 /* RoumingDetailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingDetailWorker.swift; sourceTree = "<group>"; };
+		C5BB3C312B7E29C200819E25 /* RoumingDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingDetailRouter.swift; sourceTree = "<group>"; };
+		C5BB3C322B7E29C200819E25 /* RoumingDetailModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingDetailModels.swift; sourceTree = "<group>"; };
+		C5BB3C332B7E29C200819E25 /* RoumingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingDetailViewController.swift; sourceTree = "<group>"; };
+		C5BB3C342B7E29C200819E25 /* RoumingDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingDetailInteractor.swift; sourceTree = "<group>"; };
+		C5BB3C352B7E29C200819E25 /* RoumingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingDetailView.swift; sourceTree = "<group>"; };
+		C5BB3C362B7E29C200819E25 /* RoumingDetailConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingDetailConfigurator.swift; sourceTree = "<group>"; };
+		C5BB3C3F2B7E2E6A00819E25 /* ImageResizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResizer.swift; sourceTree = "<group>"; };
+		C5BB3C492B7E315D00819E25 /* PackagesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagesCollectionView.swift; sourceTree = "<group>"; };
+		C5BB3C4B2B7E32A600819E25 /* RoumingPackageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingPackageViewCell.swift; sourceTree = "<group>"; };
+		C5C82A112B7F62E30018BB61 /* InternetPackagesCollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetPackagesCollectionTableViewCell.swift; sourceTree = "<group>"; };
+		C5C82A132B7F63780018BB61 /* SMSPackagesCollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSPackagesCollectionTableViewCell.swift; sourceTree = "<group>"; };
+		C5C82A152B7F6BC40018BB61 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		C5EF6E6A2B84876C00AA3494 /* AllIncludedPackageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllIncludedPackageViewCell.swift; sourceTree = "<group>"; };
+		C5EF6E6C2B848A7900AA3494 /* PackageServiceFeeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageServiceFeeLabel.swift; sourceTree = "<group>"; };
+		C5EF6E6E2B84BD0F00AA3494 /* AllPackageInfoVStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPackageInfoVStackView.swift; sourceTree = "<group>"; };
+		C5EF6E702B84D2A200AA3494 /* RoamingTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoamingTableViewHeader.swift; sourceTree = "<group>"; };
+		C5EF6E722B85C0C400AA3494 /* AllIncludedPackageInfoHStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllIncludedPackageInfoHStackView.swift; sourceTree = "<group>"; };
+		C5EF6E742B85C61800AA3494 /* CountrySearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountrySearchView.swift; sourceTree = "<group>"; };
+		C5EF6E762B85CD2900AA3494 /* RoumingCountryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingCountryButton.swift; sourceTree = "<group>"; };
+		C5EF6E782B85D1A800AA3494 /* RoumingCountriesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingCountriesCollectionView.swift; sourceTree = "<group>"; };
+		C5EF6E7A2B85EEFC00AA3494 /* UICollectionCenterFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionCenterFlowLayout.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C5BB3BAA2B7E1CF800819E25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5BB3C432B7E308700819E25 /* SnapKit in Frameworks */,
+				C5BB3BF22B7E1D3400819E25 /* BakcellUIKit.framework in Frameworks */,
+				C5BB3BEE2B7E1D3100819E25 /* BakcellNetworkKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C550E0A22B7F8ADB009408D2 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				C5EF6E762B85CD2900AA3494 /* RoumingCountryButton.swift */,
+				C550E0A32B7F8AE7009408D2 /* MiniAddButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		C5BB3BA42B7E1CF800819E25 = {
+			isa = PBXGroup;
+			children = (
+				C5BB3BAF2B7E1CF800819E25 /* BakcellApp */,
+				C5BB3BAE2B7E1CF800819E25 /* Products */,
+				C5BB3BEC2B7E1D3100819E25 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C5BB3BAE2B7E1CF800819E25 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C5BB3BAD2B7E1CF800819E25 /* BakcellApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C5BB3BAF2B7E1CF800819E25 /* BakcellApp */ = {
+			isa = PBXGroup;
+			children = (
+				C5BB3BF42B7E1DFB00819E25 /* App */,
+				C5BB3BFF2B7E1E9A00819E25 /* Supporting */,
+				C5BB3BFE2B7E1E9500819E25 /* Scenes */,
+				C5BB3BFD2B7E1E8C00819E25 /* Resources */,
+				C5BB3BFC2B7E1E8700819E25 /* Managers */,
+				C5BB3BFB2B7E1E7E00819E25 /* Helpers */,
+				C5BB3BFA2B7E1E7800819E25 /* Extensions */,
+				C5BB3BBE2B7E1CF900819E25 /* Info.plist */,
+			);
+			path = BakcellApp;
+			sourceTree = "<group>";
+		};
+		C5BB3BEC2B7E1D3100819E25 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5BB3BF12B7E1D3400819E25 /* BakcellUIKit.framework */,
+				C5BB3BED2B7E1D3100819E25 /* BakcellNetworkKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C5BB3BF42B7E1DFB00819E25 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C5BB3BB02B7E1CF800819E25 /* AppDelegate.swift */,
+				C5BB3BF52B7E1E0800819E25 /* AppRouter.swift */,
+				C5BB3BF82B7E1E1700819E25 /* AppContainer.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C5BB3BFA2B7E1E7800819E25 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C5BB3C3F2B7E2E6A00819E25 /* ImageResizer.swift */,
+				C5C82A152B7F6BC40018BB61 /* RoundedView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C5BB3BFB2B7E1E7E00819E25 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C5BB3C062B7E1F3800819E25 /* Theme */,
+				C5BB3C002B7E1ED700819E25 /* Navigation */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C5BB3BFC2B7E1E8700819E25 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		C5BB3BFD2B7E1E8C00819E25 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C5BB3BB92B7E1CF900819E25 /* Assets.xcassets */,
+				C5BB3C2D2B7E27DB00819E25 /* AppAssets.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C5BB3BFE2B7E1E9500819E25 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				C5BB3C442B7E30F700819E25 /* RoumingDetail */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		C5BB3BFF2B7E1E9A00819E25 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				C5BB3BBB2B7E1CF900819E25 /* LaunchScreen.storyboard */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		C5BB3C002B7E1ED700819E25 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				C5BB3C022B7E1EF100819E25 /* MainNavigation.swift */,
+				C5BB3C042B7E1F1E00819E25 /* ViewController+Navigation.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		C5BB3C062B7E1F3800819E25 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				C5BB3C072B7E1F4300819E25 /* ThemeableView.swift */,
+				C5BB3C092B7E1F5200819E25 /* ThemeableViewController.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		C5BB3C442B7E30F700819E25 /* RoumingDetail */ = {
+			isa = PBXGroup;
+			children = (
+				C5BB3C452B7E310400819E25 /* Views */,
+				C5BB3C2F2B7E29C200819E25 /* RoumingDetailPresenter.swift */,
+				C5BB3C302B7E29C200819E25 /* RoumingDetailWorker.swift */,
+				C5BB3C312B7E29C200819E25 /* RoumingDetailRouter.swift */,
+				C5BB3C322B7E29C200819E25 /* RoumingDetailModels.swift */,
+				C5BB3C332B7E29C200819E25 /* RoumingDetailViewController.swift */,
+				C5BB3C342B7E29C200819E25 /* RoumingDetailInteractor.swift */,
+				C5BB3C352B7E29C200819E25 /* RoumingDetailView.swift */,
+				C5BB3C362B7E29C200819E25 /* RoumingDetailConfigurator.swift */,
+			);
+			path = RoumingDetail;
+			sourceTree = "<group>";
+		};
+		C5BB3C452B7E310400819E25 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C550E0A22B7F8ADB009408D2 /* Buttons */,
+				C5BB3C482B7E312100819E25 /* CollectionViews */,
+				C5BB3C472B7E311B00819E25 /* TableViews */,
+				C5BB3C462B7E310A00819E25 /* Cells */,
+				C550E09E2B7F8382009408D2 /* PackageFreeServicesStackView.swift */,
+				C550E0A02B7F87CA009408D2 /* PackageChipButton.swift */,
+				C5EF6E6C2B848A7900AA3494 /* PackageServiceFeeLabel.swift */,
+				C5EF6E6E2B84BD0F00AA3494 /* AllPackageInfoVStackView.swift */,
+				C5EF6E702B84D2A200AA3494 /* RoamingTableViewHeader.swift */,
+				C5EF6E722B85C0C400AA3494 /* AllIncludedPackageInfoHStackView.swift */,
+				C5EF6E742B85C61800AA3494 /* CountrySearchView.swift */,
+				C5EF6E7A2B85EEFC00AA3494 /* UICollectionCenterFlowLayout.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C5BB3C462B7E310A00819E25 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C5C82A102B7F62D10018BB61 /* TableViewCell */,
+				C5C82A0F2B7F62CA0018BB61 /* CollectionViewCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		C5BB3C472B7E311B00819E25 /* TableViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TableViews;
+			sourceTree = "<group>";
+		};
+		C5BB3C482B7E312100819E25 /* CollectionViews */ = {
+			isa = PBXGroup;
+			children = (
+				C5BB3C492B7E315D00819E25 /* PackagesCollectionView.swift */,
+				C5EF6E782B85D1A800AA3494 /* RoumingCountriesCollectionView.swift */,
+			);
+			path = CollectionViews;
+			sourceTree = "<group>";
+		};
+		C5C82A0F2B7F62CA0018BB61 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C5BB3C4B2B7E32A600819E25 /* RoumingPackageViewCell.swift */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		C5C82A102B7F62D10018BB61 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C5C82A112B7F62E30018BB61 /* InternetPackagesCollectionTableViewCell.swift */,
+				C5C82A132B7F63780018BB61 /* SMSPackagesCollectionTableViewCell.swift */,
+				C5EF6E6A2B84876C00AA3494 /* AllIncludedPackageViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C5BB3BAC2B7E1CF800819E25 /* BakcellApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5BB3BC12B7E1CF900819E25 /* Build configuration list for PBXNativeTarget "BakcellApp" */;
+			buildPhases = (
+				C5BB3BA92B7E1CF800819E25 /* Sources */,
+				C5BB3BAA2B7E1CF800819E25 /* Frameworks */,
+				C5BB3BAB2B7E1CF800819E25 /* Resources */,
+				C5BB3BF02B7E1D3100819E25 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BakcellApp;
+			packageProductDependencies = (
+				C5BB3C422B7E308700819E25 /* SnapKit */,
+			);
+			productName = BakcellApp;
+			productReference = C5BB3BAD2B7E1CF800819E25 /* BakcellApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C5BB3BA52B7E1CF800819E25 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					C5BB3BAC2B7E1CF800819E25 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = C5BB3BA82B7E1CF800819E25 /* Build configuration list for PBXProject "BakcellApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C5BB3BA42B7E1CF800819E25;
+			packageReferences = (
+				C5BB3C412B7E308700819E25 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
+			productRefGroup = C5BB3BAE2B7E1CF800819E25 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C5BB3BAC2B7E1CF800819E25 /* BakcellApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C5BB3BAB2B7E1CF800819E25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5BB3BBD2B7E1CF900819E25 /* LaunchScreen.storyboard in Resources */,
+				C5BB3BBA2B7E1CF900819E25 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C5BB3BA92B7E1CF800819E25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5EF6E6D2B848A7900AA3494 /* PackageServiceFeeLabel.swift in Sources */,
+				C550E09F2B7F8382009408D2 /* PackageFreeServicesStackView.swift in Sources */,
+				C5BB3C4C2B7E32A600819E25 /* RoumingPackageViewCell.swift in Sources */,
+				C5EF6E6B2B84876C00AA3494 /* AllIncludedPackageViewCell.swift in Sources */,
+				C5BB3C4A2B7E315D00819E25 /* PackagesCollectionView.swift in Sources */,
+				C5BB3C392B7E29C200819E25 /* RoumingDetailRouter.swift in Sources */,
+				C5EF6E772B85CD2900AA3494 /* RoumingCountryButton.swift in Sources */,
+				C5BB3C3E2B7E29C200819E25 /* RoumingDetailConfigurator.swift in Sources */,
+				C5BB3C032B7E1EF100819E25 /* MainNavigation.swift in Sources */,
+				C5C82A122B7F62E30018BB61 /* InternetPackagesCollectionTableViewCell.swift in Sources */,
+				C5EF6E712B84D2A200AA3494 /* RoamingTableViewHeader.swift in Sources */,
+				C5BB3BF92B7E1E1700819E25 /* AppContainer.swift in Sources */,
+				C5EF6E6F2B84BD0F00AA3494 /* AllPackageInfoVStackView.swift in Sources */,
+				C5BB3C052B7E1F1E00819E25 /* ViewController+Navigation.swift in Sources */,
+				C5BB3C3A2B7E29C200819E25 /* RoumingDetailModels.swift in Sources */,
+				C5BB3BB12B7E1CF800819E25 /* AppDelegate.swift in Sources */,
+				C5BB3C3B2B7E29C200819E25 /* RoumingDetailViewController.swift in Sources */,
+				C5BB3C3C2B7E29C200819E25 /* RoumingDetailInteractor.swift in Sources */,
+				C5EF6E7B2B85EEFC00AA3494 /* UICollectionCenterFlowLayout.swift in Sources */,
+				C550E0A42B7F8AE7009408D2 /* MiniAddButton.swift in Sources */,
+				C5EF6E732B85C0C400AA3494 /* AllIncludedPackageInfoHStackView.swift in Sources */,
+				C5BB3C3D2B7E29C200819E25 /* RoumingDetailView.swift in Sources */,
+				C5EF6E792B85D1A800AA3494 /* RoumingCountriesCollectionView.swift in Sources */,
+				C550E0A12B7F87CA009408D2 /* PackageChipButton.swift in Sources */,
+				C5EF6E752B85C61800AA3494 /* CountrySearchView.swift in Sources */,
+				C5BB3C0A2B7E1F5200819E25 /* ThemeableViewController.swift in Sources */,
+				C5BB3C402B7E2E6A00819E25 /* ImageResizer.swift in Sources */,
+				C5C82A142B7F63780018BB61 /* SMSPackagesCollectionTableViewCell.swift in Sources */,
+				C5BB3C082B7E1F4300819E25 /* ThemeableView.swift in Sources */,
+				C5BB3C2E2B7E27DB00819E25 /* AppAssets.swift in Sources */,
+				C5BB3BF62B7E1E0800819E25 /* AppRouter.swift in Sources */,
+				C5BB3C382B7E29C200819E25 /* RoumingDetailWorker.swift in Sources */,
+				C5C82A162B7F6BC40018BB61 /* RoundedView.swift in Sources */,
+				C5BB3C372B7E29C200819E25 /* RoumingDetailPresenter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C5BB3BBB2B7E1CF900819E25 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5BB3BBC2B7E1CF900819E25 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C5BB3BBF2B7E1CF900819E25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C5BB3BC02B7E1CF900819E25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C5BB3BC22B7E1CF900819E25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BakcellApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.BakcellApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C5BB3BC32B7E1CF900819E25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BakcellApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.BakcellApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C5BB3BA82B7E1CF800819E25 /* Build configuration list for PBXProject "BakcellApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5BB3BBF2B7E1CF900819E25 /* Debug */,
+				C5BB3BC02B7E1CF900819E25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5BB3BC12B7E1CF900819E25 /* Build configuration list for PBXNativeTarget "BakcellApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5BB3BC22B7E1CF900819E25 /* Debug */,
+				C5BB3BC32B7E1CF900819E25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C5BB3C412B7E308700819E25 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C5BB3C422B7E308700819E25 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C5BB3C412B7E308700819E25 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = C5BB3BA52B7E1CF800819E25 /* Project object */;
+}

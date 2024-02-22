@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "7A4645E2-DF8C-457F-8E41-E33436958717"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C028F97E-7D16-4C7C-9B11-2FDBA4290B7F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BakcellApp/BakcellApp/Scenes/RoumingDetail/Views/Cells/TableViewCell/InternetPackagesCollectionTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "addSubviews()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "70159315-622E-421E-B0A0-4B1EEEEF4EF2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BakcellApp/BakcellApp/Scenes/RoumingDetail/Views/Cells/CollectionViewCell/RoumingPackageViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "addSubviews()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "90C13538-8126-4737-BEEF-B1B4E44FC8BA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BakcellApp/BakcellApp/Scenes/RoumingDetail/Views/Cells/TableViewCell/AllIncludedPackageViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "addSubviews()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "90C13538-8126-4737-BEEF-B1B4E44FC8BA - 4e4ba95189768cc0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BakcellApp.AllIncludedPackageViewCell.addSubviews() -&gt; ()"
+                  moduleName = "BakcellApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sevarj/Desktop/Bakcell/BakcellApp/BakcellApp/Scenes/RoumingDetail/Views/Cells/TableViewCell/AllIncludedPackageViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "280">
+               </Location>
+               <Location
+                  uuid = "90C13538-8126-4737-BEEF-B1B4E44FC8BA - 4e4ba95189768ce1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BakcellApp.AllIncludedPackageViewCell.addSubviews() -&gt; ()"
+                  moduleName = "BakcellApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sevarj/Desktop/Bakcell/BakcellApp/BakcellApp/Scenes/RoumingDetail/Views/Cells/TableViewCell/AllIncludedPackageViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "220">
+               </Location>
+               <Location
+                  uuid = "90C13538-8126-4737-BEEF-B1B4E44FC8BA - 4e4ba95189768f02"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BakcellApp.AllIncludedPackageViewCell.addSubviews() -&gt; ()"
+                  moduleName = "BakcellApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sevarj/Desktop/Bakcell/BakcellApp/BakcellApp/Scenes/RoumingDetail/Views/Cells/TableViewCell/AllIncludedPackageViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "220">
+               </Location>
+               <Location
+                  uuid = "90C13538-8126-4737-BEEF-B1B4E44FC8BA - 4e4ba95189768f23"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BakcellApp.AllIncludedPackageViewCell.addSubviews() -&gt; ()"
+                  moduleName = "BakcellApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sevarj/Desktop/Bakcell/BakcellApp/BakcellApp/Scenes/RoumingDetail/Views/Cells/TableViewCell/AllIncludedPackageViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "220">
+               </Location>
+               <Location
+                  uuid = "90C13538-8126-4737-BEEF-B1B4E44FC8BA - 4e4ba95189768f7c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BakcellApp.AllIncludedPackageViewCell.addSubviews() -&gt; ()"
+                  moduleName = "BakcellApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sevarj/Desktop/Bakcell/BakcellApp/BakcellApp/Scenes/RoumingDetail/Views/Cells/TableViewCell/AllIncludedPackageViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "156">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "76AD8E45-48E9-474E-9B85-722FC22C2448"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BakcellApp/BakcellApp/Scenes/RoumingDetail/Views/AllIncludedPackageInfoHStackView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "init(frame:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "76AD8E45-48E9-474E-9B85-722FC22C2448 - 51981d8ec4c56f90"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BakcellApp.AllIncludedPackageInfoHStackView.init(frame: __C.CGRect) -&gt; BakcellApp.AllIncludedPackageInfoHStackView"
+                  moduleName = "BakcellApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sevarj/Desktop/Bakcell/BakcellApp/BakcellApp/Scenes/RoumingDetail/Views/AllIncludedPackageInfoHStackView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "272">
+               </Location>
+               <Location
+                  uuid = "76AD8E45-48E9-474E-9B85-722FC22C2448 - 51981d8ec4c56f90"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BakcellApp.AllIncludedPackageInfoHStackView.init(frame: __C.CGRect) -&gt; BakcellApp.AllIncludedPackageInfoHStackView"
+                  moduleName = "BakcellApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sevarj/Desktop/Bakcell/BakcellApp/BakcellApp/Scenes/RoumingDetail/Views/AllIncludedPackageInfoHStackView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "288">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "772B178F-5C13-486F-B7C7-411BE1478543"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BakcellApp/BakcellApp/Scenes/RoumingDetail/Views/AllIncludedPackageInfoHStackView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "configure(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B7A9444C-513C-47D6-A024-8559B19A3B85"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BakcellApp/BakcellApp/Scenes/RoumingDetail/Views/Cells/TableViewCell/AllIncludedPackageViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "configure(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
