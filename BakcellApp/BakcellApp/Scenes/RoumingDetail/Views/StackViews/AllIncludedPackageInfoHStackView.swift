@@ -9,11 +9,16 @@ import UIKit
 
 class AllIncludedPackageInfoHStackView: UIStackView {
     
+    var data: [Package]? = [] {
+        didSet {
+            configure()
+        }
+    }
     //MARK: Init
     fileprivate func setupStackView() {
         self.axis = .horizontal
         self.spacing = 24
-        self.distribution = .fillEqually
+//        self.distribution = .fillEqually
     }
     
     override init(frame: CGRect) {
@@ -26,14 +31,21 @@ class AllIncludedPackageInfoHStackView: UIStackView {
         fatalError()
     }
     
-    public func configure(with models: [Package]) {
-        for model in models {
+   
+    func configure() {
+        guard let data = data else { return }
+        
+        for model in data {
             if let title = model.packageType {
                 let packageView = AllPackageInfoVStackView(title: title, subtitle: "\(model.packageAmount) \(model.amountType)")
         
-            self.removeArrangedSubview(packageView)
             self.addArrangedSubview(packageView)
             }
         }
+        self.updateConstraints()
+    }
+    
+    override func updateConstraints() {
+        super.updateConstraints()
     }
 }

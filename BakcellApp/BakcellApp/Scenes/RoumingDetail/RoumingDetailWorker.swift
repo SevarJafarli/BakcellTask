@@ -13,9 +13,19 @@ protocol RoumingDetailWorkingLogic {
     func fetchInternetPackages(_ completion: @escaping ([InternetPackageModel]) -> Void)
     
     func fetchSMSPackages(_ completion: @escaping ([SMSPackageModel]) -> Void)
+    
+    func fetchRoumingCountries(_ completion: @escaping ([String]) -> Void)
+
 }
 
+
 final class RoumingDetailWorker: RoumingDetailWorkingLogic {
+    func fetchRoumingCountries(_ completion: @escaping ([String]) -> Void) {
+        let countries = ["Türkiyə", "Rusiya", "Almaniya", "Italiya", "Ispaniya", "Qazaxistan"]
+        
+        completion(countries)
+    }
+    
     
     func fetchAllIncludedPackages(_ completion: @escaping ([AllIncludedPackageModel]) -> Void) {
         let models = [

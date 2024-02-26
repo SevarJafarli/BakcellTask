@@ -9,7 +9,7 @@ import UIKit
 
 @objc protocol RoumingDetailRoutingLogic {
     
-    //func routeToSomewhere()
+    func routeToRoumingCountryDetail()
 }
 
 protocol RoumingDetailDataPassing {
@@ -24,27 +24,27 @@ final class RoumingDetailRouter: NSObject, RoumingDetailRoutingLogic, RoumingDet
     
     // MARK: Routing
 
-//    func routeToSomewhere() {
-//        let destinationVC = SomewhereViewController()
-//        SomewhereConfigurator.configure(destinationVC)
-//
-//        var destinationDS = destinationVC.router!.dataStore!
-//        passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-//
-//        navigateToSomewhere(source: viewController!, destination: destinationVC)
-//    }
+    func routeToRoumingCountryDetail() {
+        let destinationVC = RoumingCountryDetailViewController()
+        RoumingCountryDetailConfigurator.configure(destinationVC)
+
+        var destinationDS = destinationVC.router!.dataStore!
+        passDataToRoumingCountryDetail(source: dataStore!, destination: &destinationDS)
+
+        navigateToRoumingCountryDetail(source: viewController!, destination: destinationVC)
+    }
 
     
     // MARK: Navigation
 
-//    func navigateToSomewhere(source: RoumingDetailViewController, destination: SomewhereViewController) {
-//        source.show(destination, sender: nil)
-//    }
+    func navigateToRoumingCountryDetail(source: RoumingDetailViewController, destination: RoumingCountryDetailViewController) {
+        source.show(destination, sender: nil)
+    }
 
     
     // MARK: Passing data
 
-//    func passDataToSomewhere(source: RoumingDetailDataStore, destination: inout SomewhereDataStore) {
-//        destination.name = source.name
-//    }
+    func passDataToRoumingCountryDetail(source: RoumingDetailDataStore, destination: inout RoumingCountryDetailDataStore) {
+        destination.country = source.country
+    }
 }

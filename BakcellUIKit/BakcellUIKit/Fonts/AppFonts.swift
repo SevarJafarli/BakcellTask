@@ -17,6 +17,8 @@ public enum AppFonts {
     case SFBoldCaption1
     case SFBoldCaptionBold
     case SFRegularCaption1
+    case SFRegularSubheadline
+    case SFBoldSubheadline
 }
 
 extension AppFonts {
@@ -41,6 +43,10 @@ extension AppFonts {
             return .systemFont(ofSize: 12, weight: .bold)
         case .SFRegularCaption1:
             return .systemFont(ofSize: 12, weight: .medium)
+        case .SFRegularSubheadline:
+            return .systemFont(ofSize: 15, weight: .regular)
+        case .SFBoldSubheadline:
+            return .systemFont(ofSize: 15, weight: .semibold)
         }
     }
 }

@@ -14,11 +14,12 @@ protocol RoumingDetailDisplayLogic: AnyObject {
     func displayAllIncludedPackages(viewModel: RoumingDetail.FetchAllIncluded.ViewModel)
     func displayInternetPackages(viewModel: RoumingDetail.FetchInternetPackages.ViewModel)
     func displaySMSPackages(viewModel: RoumingDetail.FetchSMSPackages.ViewModel)
+    func displayRoumingCountries(viewModel: RoumingDetail.FetchRoumingCountries.ViewModel)
+    
 }
 
 final class RoumingDetailViewController: UIViewController, ThemeableViewController {
     var theme: ThemeProvider = App.theme
-    
     
     var mainView: RoumingDetailView?
     var interactor: RoumingDetailBusinessLogic?
@@ -28,6 +29,14 @@ final class RoumingDetailViewController: UIViewController, ThemeableViewControll
     var allIncludedPackages = [AllIncludedPackageModel]()
     var internetPackages = [InternetPackageModel]()
     var smsPackages = [SMSPackageModel]()
+    var countries = [String]()
+    
+    private lazy var roumingHeaderView: RoumingCountryHeaderView = {
+        let view = RoumingCountryHeaderView()
+        view.delegate = self
+        return view
+    }()
+    
     // MARK: - Lifecycle Methods
     
     override func loadView() {
@@ -65,6 +74,11 @@ final class RoumingDetailViewController: UIViewController, ThemeableViewControll
         let request = RoumingDetail.FetchSMSPackages.Request()
         interactor?.loadSMSPackages(request: request)
     }
+    
+    func loadRoumingCountries() {
+        let request = RoumingDetail.FetchRoumingCountries.Request()
+        interactor?.loadRoumingCountries(request: request)
+    }
 }
 
 // MARK: - Display Logic
@@ -76,43 +90,25 @@ extension RoumingDetailViewController: RoumingDetailDisplayLogic {
     
     func displaySMSPackages(viewModel: RoumingDetail.FetchSMSPackages.ViewModel) {
         self.smsPackages = viewModel.smsPackageModels
-      
+        
     }
     
     func displayAllIncludedPackages(viewModel: RoumingDetail.FetchAllIncluded.ViewModel) {
         self.allIncludedPackages = viewModel.allIncludedPackageModels
-       
+        
+    }
+    func displayRoumingCountries(viewModel: RoumingDetail.FetchRoumingCountries.ViewModel) {
+        self.roumingHeaderView.items = viewModel.countries
     }
     
     func displayLoad(viewModel: RoumingDetail.Load.ViewModel) {
+        self.loadRoumingCountries()
         self.loadInternetPackages()
         self.loadAllIncludedPackages()
         self.loadSMSPackages()
-        
-//        self.mainView?.mainTableView.reloadData()
     }
     
-//    override func viewDidLayoutSubviews() {
-//        
-//        super.viewDidLayoutSubviews()
-//        
-//        if let thv = self.mainView?.mainTableView.tableHeaderView {
-//            
-//            var f = thv.frame
-//            
-//            let targetSize = CGSize(
-//                width: self.mainView!.mainTableView.contentSize.width,
-//                height: UIView.layoutFittingCompressedSize.height)
-//            let fittingSize = thv.systemLayoutSizeFitting(
-//                targetSize,
-//                withHorizontalFittingPriority: .required,
-//                verticalFittingPriority: .fittingSizeLevel)
-//            f.size = fittingSize
-//            
-//            thv.frame = f
-//            self.mainView!.mainTableView.tableHeaderView = thv
-//        }
-//    }
+    
 }
 
 // MARK: - View Delegate
@@ -133,6 +129,8 @@ extension RoumingDetailViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let sectionType = RoumingDetail.sections[section]
         switch sectionType {
+        case .roumingCountryHeader:
+            return 0
         case .internetPackages, .smsPackages:
             return 1
         case .allIncludedPackages:
@@ -143,12 +141,16 @@ extension RoumingDetailViewController: UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let sectionType = RoumingDetail.sections[indexPath.section]
+        
         switch sectionType {
+        case .roumingCountryHeader:
+            return UITableViewCell.init()
             
         case .internetPackages:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: InternetPackagesCollectionTableViewCell.reuseIdentifier, for: indexPath) as? InternetPackagesCollectionTableViewCell else {
                 return UITableViewCell()
             }
+            
             cell.configure(with: self.internetPackages)
             return cell
             
@@ -157,54 +159,47 @@ extension RoumingDetailViewController: UITableViewDelegate, UITableViewDataSourc
                 return UITableViewCell()
             }
             
-            let model =  self.allIncludedPackages[ indexPath.row]
-            cell.configure(with: model)
-           
+            let model = self.allIncludedPackages[ indexPath.row]
+            cell.data = model
+            
             return cell
             
         case .smsPackages:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: SMSPackagesCollectionTableViewCell.reuseIdentifier, for: indexPath) as? SMSPackagesCollectionTableViewCell else {
                 return UITableViewCell()
             }
+            
             cell.configure(with: self.smsPackages)
             return cell
         }
     }
     
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let sectionType = RoumingDetail.sections[section]
         
-        let headerView = UIView()
-        headerView.backgroundColor = adaptiveColor(.greyBg)
-        let sectionLabel = UILabel(frame: CGRect(x: 16, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
-        sectionLabel.font = AppFonts.SFBoldHeadline.fontStyle
-        sectionLabel.textColor = adaptiveColor(.blackHigh)
-        sectionLabel.text = RoumingDetail.sectionTitles[section]
-        sectionLabel.sizeToFit()
-        headerView.addSubview(sectionLabel)
-        
-        return headerView
+        switch sectionType {
+        case .roumingCountryHeader:
+            return self.roumingHeaderView
+        default:
+            return SectionHeaderView(title: RoumingDetail.sectionTitles[section])
+        }
     }
     
-    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 24
+        return UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    
         return UITableView.automaticDimension
     }
+    
+    
+}
 
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        let sectionType = RoumingDetail.sections[indexPath.section]
-        
-        switch sectionType {
-        case .internetPackages:
-            return 168
-        case .allIncludedPackages:
-            return 144
-        case .smsPackages:
-            return 136
-        }
+extension RoumingDetailViewController: RoumingCountryHeaderViewDelegate {
+    func didSelectCountry(country: String) {
+        interactor?.getSelectedCountry(country: country)
+        router?.routeToRoumingCountryDetail()
     }
 }

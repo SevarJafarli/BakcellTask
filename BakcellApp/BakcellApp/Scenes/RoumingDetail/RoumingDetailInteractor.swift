@@ -16,19 +16,26 @@ protocol RoumingDetailBusinessLogic {
     func loadSMSPackages(request: RoumingDetail.FetchSMSPackages.Request)
     
     func loadInternetPackages(request: RoumingDetail.FetchInternetPackages.Request)
+    
+    func loadRoumingCountries(request: RoumingDetail.FetchRoumingCountries.Request)
+    
+    func getSelectedCountry(country: String)
 }
 
 protocol RoumingDetailDataStore {
     
     //var name: String { get set }
+    
+    var country: String { get set }
 }
 
 final class RoumingDetailInteractor: RoumingDetailBusinessLogic, RoumingDetailDataStore {
+    var country: String = ""
+    
    
     
     var presenter: RoumingDetailPresentationLogic?
     lazy var worker: RoumingDetailWorkingLogic = RoumingDetailWorker()
-    //var name: String = ""
   
     
     // MARK: Business Logic
@@ -67,6 +74,21 @@ final class RoumingDetailInteractor: RoumingDetailBusinessLogic, RoumingDetailDa
             self.presenter?.presentSMSPackages(response: response)
         }
         
+    }
+    
+    func loadRoumingCountries(request: RoumingDetail.FetchRoumingCountries.Request) {
+        worker.fetchRoumingCountries { [weak self] data in
+            guard let self = self else { return }
+            
+            let response = RoumingDetail.FetchRoumingCountries.Response(countries: data)
+            self.presenter?.presentRoumingCountries(response: response)
+        }
+        
+    }
+    
+    
+    func getSelectedCountry(country: String) {
+        self.country = country
     }
     
 }

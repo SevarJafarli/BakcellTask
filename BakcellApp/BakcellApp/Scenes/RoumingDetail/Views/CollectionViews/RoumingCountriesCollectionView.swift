@@ -22,7 +22,11 @@ class RoumingCountriesCollectionView: UICollectionView {
         self.showsHorizontalScrollIndicator = false
         self.backgroundColor = .clear
         self.isScrollEnabled = false
-//        self.bounce
+//        self.alwaysBounceHorizontal = true
+//        self.bounces = true
+//        self.decelerationRate = .fast
+//        self.bouncesZoom = true
+        self.setContentHuggingPriority(.defaultHigh, for: .vertical)
     
     }
     

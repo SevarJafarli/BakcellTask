@@ -11,9 +11,11 @@ enum RoumingDetail {
     static var sections: [RoumingDetailViewModel] {
         return RoumingDetailViewModel.allCases
     }
+    
     static var sectionCount: Int {
         return sections.count
     }
+    
     static var sectionTitles: [String] {
         return RoumingDetailViewModel.allCases.map { $0.rawValue }
     }
@@ -63,14 +65,27 @@ enum RoumingDetail {
             let smsPackageModels: [SMSPackageModel]
         }
     }
+    
+    enum FetchRoumingCountries {
+        struct Request { }
+        
+        struct Response {
+            let countries: [String]
+        }
+        
+        struct ViewModel {
+            let countries: [String]
+        }
+    }
 }
 
 enum RoumingDetailViewModel: String, CaseIterable {
+    case roumingCountryHeader = ""
     case internetPackages = "İnternet paketləri"
     case allIncludedPackages = "Hamısı daxil paketləri"
     case smsPackages = "SMS və zəng paketləri"
-    
 }
+
 enum RoumingPackageType {
     case internet
     case smsAndCall

@@ -18,12 +18,12 @@ final class RoumingDetailView: UIView, ThemeableView {
     
     weak var delegate: RoumingDetailViewDelegate?
     
+    
     lazy var mainTableView: UITableView = {
-        let tableView = UITableView(frame: .zero, style: .plain)
+        let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.separatorStyle = .none
         tableView.backgroundColor = adaptiveColor(.greyBg)
-        tableView.tableHeaderView = tableViewHeader
-
+        
         tableView.register(InternetPackagesCollectionTableViewCell.self, forCellReuseIdentifier: InternetPackagesCollectionTableViewCell.reuseIdentifier)
         
         tableView.register(AllIncludedPackageViewCell.self, forCellReuseIdentifier: AllIncludedPackageViewCell.reuseIdentifier)
@@ -32,13 +32,7 @@ final class RoumingDetailView: UIView, ThemeableView {
         
         return tableView
     }()
-    
-  
-    lazy var tableViewHeader: RoamingTableViewHeader = {
-        let view = RoamingTableViewHeader(frame: .init(x: 0, y: 0, width: self.frame.width, height: 260))
-        return view
-    }()
-    
+
     
     //MARK: Init
     override init(frame: CGRect) {

@@ -11,8 +11,6 @@ import BakcellUIKit
 class CountrySearchView: UIView, ThemeableView {
     var theme: ThemeProvider = App.theme
     
-
-    
     private lazy var placeholderTextLabel: UILabel = {
         let label = UILabel()
         label.font = AppFonts.SFRegularBody.fontStyle
@@ -55,7 +53,6 @@ class CountrySearchView: UIView, ThemeableView {
     override func updateConstraints() {
         super.updateConstraints()
     
-        
         self.placeholderTextLabel.snp.updateConstraints { make in
             make.top.leading.equalToSuperview().offset(16)
             make.bottom.equalToSuperview().offset(-16)

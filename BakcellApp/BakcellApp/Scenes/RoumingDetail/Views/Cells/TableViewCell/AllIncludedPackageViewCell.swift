@@ -14,7 +14,11 @@ class AllIncludedPackageViewCell: UITableViewCell, ThemeableView {
    
     static var reuseIdentifier = "AllIncludedPackageViewCell"
 
-    
+    var data: AllIncludedPackageModel? {
+        didSet {
+            configure()
+        }
+    }
     private lazy var backView: UIView = {
         let view = UIView()
         view.backgroundColor = adaptiveColor(.appWhite)
@@ -81,7 +85,7 @@ class AllIncludedPackageViewCell: UITableViewCell, ThemeableView {
        
         self.backView.addSubview(self.cardContentView)
         
-        self.addSubview(self.backView)
+        self.contentView.addSubview(self.backView)
         
         self.updateConstraints()
         
@@ -107,6 +111,7 @@ class AllIncludedPackageViewCell: UITableViewCell, ThemeableView {
         self.packageHStackView.snp.updateConstraints { make in
             make.top.equalTo(self.titleVStackView.snp.bottom).offset(16)
             make.leading.bottom.equalToSuperview()
+
         }
         
         self.addButton.snp.updateConstraints { make in
@@ -117,13 +122,22 @@ class AllIncludedPackageViewCell: UITableViewCell, ThemeableView {
         }
     }
     
-    //MARK: Public
+   
     
-    public func configure(with model: AllIncludedPackageModel) {
-        self.packageTitleLabel.text = "\(model.title)"
+    func configure() {
+        guard let data = self.data else {
+            return
+        }
+        self.packageTitleLabel.text = "\(data.title)"
         
-        self.packageServiceFeeLabel.configure(serviceFee: model.packagePrice, serviceType: model.packageTimeRange)
+        self.packageServiceFeeLabel.configure(serviceFee: data.packagePrice, serviceType: data.packageTimeRange)
         
-        self.packageHStackView.configure(with: [model.internetPackage, model.callPackage, model.smsPackage])
+        self.packageHStackView.data = [data.internetPackage, data.callPackage, data.smsPackage]
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.data = nil
+        self.packageHStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
     }
 }

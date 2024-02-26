@@ -10,8 +10,13 @@ import BakcellUIKit
 
 class RoumingCountryButton: UICollectionViewCell, ThemeableView {
     static var reuseIdentifier = "RoumingCountryButton"
-    var theme: ThemeProvider = App.theme
     
+    var theme: ThemeProvider = App.theme
+    var data: String? {
+        didSet {
+            configure()
+        }
+    }
     private lazy var title: UILabel = {
         let lbl = UILabel()
         lbl.font = AppFonts.SFBoldFootnote.fontStyle
@@ -49,6 +54,11 @@ class RoumingCountryButton: UICollectionViewCell, ThemeableView {
         
         self.updateConstraints()
     }
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        data = nil
+    }
+    
     
     override func updateConstraints() {
         super.updateConstraints()
@@ -57,25 +67,18 @@ class RoumingCountryButton: UICollectionViewCell, ThemeableView {
         }
         
         self.title.snp.updateConstraints { make in
-            make.horizontalEdges.equalToSuperview().inset(16)
-            make.verticalEdges.equalToSuperview().inset(11)
-//            make.center.equalToSuperview()
+            make.top.equalToSuperview()
+            make.leading.trailing.equalToSuperview().inset(16)
+            make.bottom.equalToSuperview().priority(.high)
+            make.height.equalTo(40)
         }
     }
     
-//    private func setupButton() {
-//        self.backgroundColor = adaptiveColor(.appWhite)
-//        self.setTitle("Türkiyə", for: .normal)
-//        self.setTitleColor(adaptiveColor(.greyText), for: .normal)
-//        self.layer.borderColor = adaptiveColor(.greyInput).cgColor
-//        self.titleLabel?.font = AppFonts.SFBoldFootnote.fontStyle
-//        self.layer.borderWidth = 2
-//        self.layer.cornerRadius = 16
-//        self.contentEdgeInsets = UIEdgeInsets(top: 11, left: 16, bottom: 11, right: 16)
-//
-//    }
-    
-    public func configure(with text: String) {
-        self.title.text = text
+    //MARK: Public
+     func configure() {
+         if let data = data {
+             self.title.text = data
+         }
     }
+    
 }

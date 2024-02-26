@@ -33,6 +33,7 @@ class AllPackageInfoVStackView: UIStackView, ThemeableView {
     
     //MARK: Init
     init(title: String, subtitle: String) {
+        
         self.title = title
         self.subtitle = subtitle
         
@@ -40,6 +41,7 @@ class AllPackageInfoVStackView: UIStackView, ThemeableView {
         self.axis = .vertical
         self.titleLabel.text = title
         self.subtitleLabel.text = subtitle
+        
         self.addSubviews()
     }
     

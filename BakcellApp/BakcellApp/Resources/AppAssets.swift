@@ -14,6 +14,9 @@ public enum AppAssets: String, CaseIterable {
     case search
     case whatsapp
     case back
+    case internet
+    case sms
+    case phone
     
 }
 

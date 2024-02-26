@@ -1,15 +1,38 @@
 //
-//  RoamingTableViewHeader.swift
+//  RoumingCountryTableViewCell.swift
 //  BakcellApp
 //
-//  Created by Sevar Jafarli on 20.02.24.
+//  Created by Sevar Jafarli on 22.02.24.
 //
 
 import UIKit
 import BakcellUIKit
 
-class RoamingTableViewHeader: UIView, ThemeableView {
+protocol RoumingCountryHeaderViewDelegate: AnyObject {
+    func didSelectCountry(country: String)
+}
+
+class RoumingCountryHeaderView: UIView, ThemeableView {
+    
     var theme: ThemeProvider = App.theme
+    
+    var items: [String] = [] {
+        didSet {
+            self.roumingCountriesCollectionView.reloadData()
+            self.roumingCountriesCollectionView.invalidateIntrinsicContentSize()
+        }
+    }
+    
+    weak var delegate: RoumingCountryHeaderViewDelegate?
+    
+    private lazy var backView: UIView = {
+        let view = UIView()
+        view.backgroundColor = adaptiveColor(.appWhite)
+        view.layer.cornerRadius = 24
+        view.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+        view.clipsToBounds = true
+        return view
+    }()
     
     private lazy var bgImageView: UIImageView = {
         let imageView = UIImageView()
@@ -31,44 +54,45 @@ class RoamingTableViewHeader: UIView, ThemeableView {
         return view
     }()
     
-    let models: [String] = ["Turkiye", "Rusiya", "ABS", "Seudiiye Erebistan", "Almaniya", "Qazaxistan"]
-    
     private lazy var roumingCountriesCollectionView:  RoumingCountriesCollectionView = {
         let collectionView = RoumingCountriesCollectionView()
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(RoumingCountryButton.self, forCellWithReuseIdentifier: RoumingCountryButton.reuseIdentifier)
-       
+        
         return collectionView
     }()
     
     //MARK: Init
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.setupUI()
+        self.backgroundColor = .clear
         self.addSubviews()
-        
     }
+    
     required init?(coder: NSCoder) {
         fatalError()
     }
     
     
-    private func setupUI() {
-        self.backgroundColor = adaptiveColor(.appWhite)
-    }
-    
     private func addSubviews() {
-        self.addSubview(self.bgImageView)
-        self.addSubview(self.titleLabel)
-        self.addSubview(self.searchTextField)
-        self.addSubview(self.roumingCountriesCollectionView)
-        
+        self.addSubview(self.backView)
+        self.backView.addSubview(self.bgImageView)
+        self.backView.addSubview(self.titleLabel)
+        self.backView.addSubview(self.searchTextField)
+        self.backView.addSubview(self.roumingCountriesCollectionView)
+
         self.updateConstraints()
     }
     
     override func updateConstraints() {
         super.updateConstraints()
+        
+        self.backView.snp.updateConstraints { make in
+            make.edges.equalToSuperview()
+            
+        }
+        
         self.bgImageView.snp.updateConstraints { make in
             make.top.equalToSuperview().offset(16)
             make.leading.trailing.equalToSuperview().inset(16)
@@ -88,21 +112,31 @@ class RoamingTableViewHeader: UIView, ThemeableView {
         self.roumingCountriesCollectionView.snp.updateConstraints { make in
             make.top.equalTo(self.searchTextField.snp.bottom).offset(16)
             make.leading.trailing.equalToSuperview()
+            make.height.equalTo(100)
             make.bottom.equalToSuperview()
         }
     }
 }
-extension RoamingTableViewHeader: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-  
+
+//MARK: UICollectionViewDelegate
+extension RoumingCountryHeaderView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        self.models.count
+        self.items.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RoumingCountryButton.reuseIdentifier, for: indexPath) as? RoumingCountryButton else {
             return UICollectionViewCell()
         }
-        cell.configure(with: models[indexPath.row])
+        
+        cell.data = items[indexPath.row]
         return cell
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let country = items[indexPath.row]
+        delegate?.didSelectCountry(country: country)
     }
 }

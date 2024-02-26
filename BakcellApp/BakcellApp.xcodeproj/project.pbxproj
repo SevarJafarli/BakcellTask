@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C53A32302B8C926300EBB596 /* OperatorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53A322F2B8C926300EBB596 /* OperatorsView.swift */; };
+		C53A32332B8C93A600EBB596 /* PageSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53A32322B8C93A600EBB596 /* PageSegmentedControl.swift */; };
+		C53A32352B8C97B700EBB596 /* OperatorViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53A32342B8C97B700EBB596 /* OperatorViewCell.swift */; };
+		C53A32372B8C9BF800EBB596 /* OperatorServicesVStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53A32362B8C9BF800EBB596 /* OperatorServicesVStackView.swift */; };
+		C53A32392B8C9C9E00EBB596 /* OperatorServiceInfoStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53A32382B8C9C9E00EBB596 /* OperatorServiceInfoStackView.swift */; };
+		C53A323B2B8CA2D200EBB596 /* OperatorStatusVStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53A323A2B8CA2D200EBB596 /* OperatorStatusVStackView.swift */; };
+		C53A323D2B8CA31B00EBB596 /* OperatorStatusHStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53A323C2B8CA31B00EBB596 /* OperatorStatusHStackView.swift */; };
 		C550E09F2B7F8382009408D2 /* PackageFreeServicesStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C550E09E2B7F8382009408D2 /* PackageFreeServicesStackView.swift */; };
 		C550E0A12B7F87CA009408D2 /* PackageChipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C550E0A02B7F87CA009408D2 /* PackageChipButton.swift */; };
 		C550E0A42B7F8AE7009408D2 /* MiniAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C550E0A32B7F8AE7009408D2 /* MiniAddButton.swift */; };
@@ -39,15 +46,26 @@
 		C5C82A122B7F62E30018BB61 /* InternetPackagesCollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C82A112B7F62E30018BB61 /* InternetPackagesCollectionTableViewCell.swift */; };
 		C5C82A142B7F63780018BB61 /* SMSPackagesCollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C82A132B7F63780018BB61 /* SMSPackagesCollectionTableViewCell.swift */; };
 		C5C82A162B7F6BC40018BB61 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C82A152B7F6BC40018BB61 /* RoundedView.swift */; };
+		C5E658CE2B8C71B400571CE8 /* RoumingCountryDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E658C62B8C71B400571CE8 /* RoumingCountryDetailPresenter.swift */; };
+		C5E658CF2B8C71B400571CE8 /* RoumingCountryDetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E658C72B8C71B400571CE8 /* RoumingCountryDetailWorker.swift */; };
+		C5E658D02B8C71B400571CE8 /* RoumingCountryDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E658C82B8C71B400571CE8 /* RoumingCountryDetailRouter.swift */; };
+		C5E658D12B8C71B400571CE8 /* RoumingCountryDetailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E658C92B8C71B400571CE8 /* RoumingCountryDetailModels.swift */; };
+		C5E658D22B8C71B400571CE8 /* RoumingCountryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E658CA2B8C71B400571CE8 /* RoumingCountryDetailViewController.swift */; };
+		C5E658D32B8C71B400571CE8 /* RoumingCountryDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E658CB2B8C71B400571CE8 /* RoumingCountryDetailInteractor.swift */; };
+		C5E658D42B8C71B400571CE8 /* RoumingCountryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E658CC2B8C71B400571CE8 /* RoumingCountryDetailView.swift */; };
+		C5E658D52B8C71B400571CE8 /* RoumingCountryDetailConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E658CD2B8C71B400571CE8 /* RoumingCountryDetailConfigurator.swift */; };
+		C5E658D82B8C774600571CE8 /* CategoriesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E658D72B8C774600571CE8 /* CategoriesCollectionView.swift */; };
+		C5E658DC2B8C782E00571CE8 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E658DB2B8C782E00571CE8 /* CategoryCollectionViewCell.swift */; };
 		C5EF6E6B2B84876C00AA3494 /* AllIncludedPackageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EF6E6A2B84876C00AA3494 /* AllIncludedPackageViewCell.swift */; };
 		C5EF6E6D2B848A7900AA3494 /* PackageServiceFeeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EF6E6C2B848A7900AA3494 /* PackageServiceFeeLabel.swift */; };
 		C5EF6E6F2B84BD0F00AA3494 /* AllPackageInfoVStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EF6E6E2B84BD0F00AA3494 /* AllPackageInfoVStackView.swift */; };
-		C5EF6E712B84D2A200AA3494 /* RoamingTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EF6E702B84D2A200AA3494 /* RoamingTableViewHeader.swift */; };
 		C5EF6E732B85C0C400AA3494 /* AllIncludedPackageInfoHStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EF6E722B85C0C400AA3494 /* AllIncludedPackageInfoHStackView.swift */; };
 		C5EF6E752B85C61800AA3494 /* CountrySearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EF6E742B85C61800AA3494 /* CountrySearchView.swift */; };
 		C5EF6E772B85CD2900AA3494 /* RoumingCountryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EF6E762B85CD2900AA3494 /* RoumingCountryButton.swift */; };
 		C5EF6E792B85D1A800AA3494 /* RoumingCountriesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EF6E782B85D1A800AA3494 /* RoumingCountriesCollectionView.swift */; };
 		C5EF6E7B2B85EEFC00AA3494 /* UICollectionCenterFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EF6E7A2B85EEFC00AA3494 /* UICollectionCenterFlowLayout.swift */; };
+		C5EF6E9D2B87614F00AA3494 /* RoumingCountryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EF6E9C2B87614F00AA3494 /* RoumingCountryHeaderView.swift */; };
+		C5EF6E9F2B87650B00AA3494 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EF6E9E2B87650B00AA3494 /* SectionHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -66,6 +84,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C53A322F2B8C926300EBB596 /* OperatorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorsView.swift; sourceTree = "<group>"; };
+		C53A32322B8C93A600EBB596 /* PageSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageSegmentedControl.swift; sourceTree = "<group>"; };
+		C53A32342B8C97B700EBB596 /* OperatorViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorViewCell.swift; sourceTree = "<group>"; };
+		C53A32362B8C9BF800EBB596 /* OperatorServicesVStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorServicesVStackView.swift; sourceTree = "<group>"; };
+		C53A32382B8C9C9E00EBB596 /* OperatorServiceInfoStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorServiceInfoStackView.swift; sourceTree = "<group>"; };
+		C53A323A2B8CA2D200EBB596 /* OperatorStatusVStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorStatusVStackView.swift; sourceTree = "<group>"; };
+		C53A323C2B8CA31B00EBB596 /* OperatorStatusHStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorStatusHStackView.swift; sourceTree = "<group>"; };
 		C550E09E2B7F8382009408D2 /* PackageFreeServicesStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageFreeServicesStackView.swift; sourceTree = "<group>"; };
 		C550E0A02B7F87CA009408D2 /* PackageChipButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageChipButton.swift; sourceTree = "<group>"; };
 		C550E0A32B7F8AE7009408D2 /* MiniAddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniAddButton.swift; sourceTree = "<group>"; };
@@ -97,15 +122,26 @@
 		C5C82A112B7F62E30018BB61 /* InternetPackagesCollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetPackagesCollectionTableViewCell.swift; sourceTree = "<group>"; };
 		C5C82A132B7F63780018BB61 /* SMSPackagesCollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSPackagesCollectionTableViewCell.swift; sourceTree = "<group>"; };
 		C5C82A152B7F6BC40018BB61 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		C5E658C62B8C71B400571CE8 /* RoumingCountryDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingCountryDetailPresenter.swift; sourceTree = "<group>"; };
+		C5E658C72B8C71B400571CE8 /* RoumingCountryDetailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingCountryDetailWorker.swift; sourceTree = "<group>"; };
+		C5E658C82B8C71B400571CE8 /* RoumingCountryDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingCountryDetailRouter.swift; sourceTree = "<group>"; };
+		C5E658C92B8C71B400571CE8 /* RoumingCountryDetailModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingCountryDetailModels.swift; sourceTree = "<group>"; };
+		C5E658CA2B8C71B400571CE8 /* RoumingCountryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingCountryDetailViewController.swift; sourceTree = "<group>"; };
+		C5E658CB2B8C71B400571CE8 /* RoumingCountryDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingCountryDetailInteractor.swift; sourceTree = "<group>"; };
+		C5E658CC2B8C71B400571CE8 /* RoumingCountryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingCountryDetailView.swift; sourceTree = "<group>"; };
+		C5E658CD2B8C71B400571CE8 /* RoumingCountryDetailConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingCountryDetailConfigurator.swift; sourceTree = "<group>"; };
+		C5E658D72B8C774600571CE8 /* CategoriesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionView.swift; sourceTree = "<group>"; };
+		C5E658DB2B8C782E00571CE8 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		C5EF6E6A2B84876C00AA3494 /* AllIncludedPackageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllIncludedPackageViewCell.swift; sourceTree = "<group>"; };
 		C5EF6E6C2B848A7900AA3494 /* PackageServiceFeeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageServiceFeeLabel.swift; sourceTree = "<group>"; };
 		C5EF6E6E2B84BD0F00AA3494 /* AllPackageInfoVStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPackageInfoVStackView.swift; sourceTree = "<group>"; };
-		C5EF6E702B84D2A200AA3494 /* RoamingTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoamingTableViewHeader.swift; sourceTree = "<group>"; };
 		C5EF6E722B85C0C400AA3494 /* AllIncludedPackageInfoHStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllIncludedPackageInfoHStackView.swift; sourceTree = "<group>"; };
 		C5EF6E742B85C61800AA3494 /* CountrySearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountrySearchView.swift; sourceTree = "<group>"; };
 		C5EF6E762B85CD2900AA3494 /* RoumingCountryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingCountryButton.swift; sourceTree = "<group>"; };
 		C5EF6E782B85D1A800AA3494 /* RoumingCountriesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingCountriesCollectionView.swift; sourceTree = "<group>"; };
 		C5EF6E7A2B85EEFC00AA3494 /* UICollectionCenterFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionCenterFlowLayout.swift; sourceTree = "<group>"; };
+		C5EF6E9C2B87614F00AA3494 /* RoumingCountryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingCountryHeaderView.swift; sourceTree = "<group>"; };
+		C5EF6E9E2B87650B00AA3494 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,10 +158,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C53A32312B8C938400EBB596 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				C53A32322B8C93A600EBB596 /* PageSegmentedControl.swift */,
+				C53A32362B8C9BF800EBB596 /* OperatorServicesVStackView.swift */,
+				C53A32382B8C9C9E00EBB596 /* OperatorServiceInfoStackView.swift */,
+				C53A323A2B8CA2D200EBB596 /* OperatorStatusVStackView.swift */,
+				C53A323C2B8CA31B00EBB596 /* OperatorStatusHStackView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 		C550E0A22B7F8ADB009408D2 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
-				C5EF6E762B85CD2900AA3494 /* RoumingCountryButton.swift */,
 				C550E0A32B7F8AE7009408D2 /* MiniAddButton.swift */,
 			);
 			path = Buttons;
@@ -219,6 +266,7 @@
 		C5BB3BFE2B7E1E9500819E25 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				C5E658C52B8C719E00571CE8 /* RoumingCountryDetail */,
 				C5BB3C442B7E30F700819E25 /* RoumingDetail */,
 			);
 			path = Scenes;
@@ -269,17 +317,12 @@
 		C5BB3C452B7E310400819E25 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C5EF6EA12B876D4800AA3494 /* CustomViews */,
+				C5EF6EA02B876D3500AA3494 /* StackViews */,
 				C550E0A22B7F8ADB009408D2 /* Buttons */,
 				C5BB3C482B7E312100819E25 /* CollectionViews */,
 				C5BB3C472B7E311B00819E25 /* TableViews */,
 				C5BB3C462B7E310A00819E25 /* Cells */,
-				C550E09E2B7F8382009408D2 /* PackageFreeServicesStackView.swift */,
-				C550E0A02B7F87CA009408D2 /* PackageChipButton.swift */,
-				C5EF6E6C2B848A7900AA3494 /* PackageServiceFeeLabel.swift */,
-				C5EF6E6E2B84BD0F00AA3494 /* AllPackageInfoVStackView.swift */,
-				C5EF6E702B84D2A200AA3494 /* RoamingTableViewHeader.swift */,
-				C5EF6E722B85C0C400AA3494 /* AllIncludedPackageInfoHStackView.swift */,
-				C5EF6E742B85C61800AA3494 /* CountrySearchView.swift */,
 				C5EF6E7A2B85EEFC00AA3494 /* UICollectionCenterFlowLayout.swift */,
 			);
 			path = Views;
@@ -314,6 +357,7 @@
 			isa = PBXGroup;
 			children = (
 				C5BB3C4B2B7E32A600819E25 /* RoumingPackageViewCell.swift */,
+				C5EF6E762B85CD2900AA3494 /* RoumingCountryButton.swift */,
 			);
 			path = CollectionViewCell;
 			sourceTree = "<group>";
@@ -326,6 +370,72 @@
 				C5EF6E6A2B84876C00AA3494 /* AllIncludedPackageViewCell.swift */,
 			);
 			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		C5E658C52B8C719E00571CE8 /* RoumingCountryDetail */ = {
+			isa = PBXGroup;
+			children = (
+				C5E658D62B8C773000571CE8 /* Views */,
+				C5E658C62B8C71B400571CE8 /* RoumingCountryDetailPresenter.swift */,
+				C5E658C72B8C71B400571CE8 /* RoumingCountryDetailWorker.swift */,
+				C5E658C82B8C71B400571CE8 /* RoumingCountryDetailRouter.swift */,
+				C5E658C92B8C71B400571CE8 /* RoumingCountryDetailModels.swift */,
+				C5E658CA2B8C71B400571CE8 /* RoumingCountryDetailViewController.swift */,
+				C5E658CB2B8C71B400571CE8 /* RoumingCountryDetailInteractor.swift */,
+				C5E658CC2B8C71B400571CE8 /* RoumingCountryDetailView.swift */,
+				C5E658CD2B8C71B400571CE8 /* RoumingCountryDetailConfigurator.swift */,
+			);
+			path = RoumingCountryDetail;
+			sourceTree = "<group>";
+		};
+		C5E658D62B8C773000571CE8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C53A32312B8C938400EBB596 /* CustomViews */,
+				C5E658DA2B8C781F00571CE8 /* CollectionViews */,
+				C5E658D92B8C781A00571CE8 /* Cells */,
+				C53A322F2B8C926300EBB596 /* OperatorsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C5E658D92B8C781A00571CE8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C5E658DB2B8C782E00571CE8 /* CategoryCollectionViewCell.swift */,
+				C53A32342B8C97B700EBB596 /* OperatorViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		C5E658DA2B8C781F00571CE8 /* CollectionViews */ = {
+			isa = PBXGroup;
+			children = (
+				C5E658D72B8C774600571CE8 /* CategoriesCollectionView.swift */,
+			);
+			path = CollectionViews;
+			sourceTree = "<group>";
+		};
+		C5EF6EA02B876D3500AA3494 /* StackViews */ = {
+			isa = PBXGroup;
+			children = (
+				C5EF6E6E2B84BD0F00AA3494 /* AllPackageInfoVStackView.swift */,
+				C550E09E2B7F8382009408D2 /* PackageFreeServicesStackView.swift */,
+				C5EF6E722B85C0C400AA3494 /* AllIncludedPackageInfoHStackView.swift */,
+			);
+			path = StackViews;
+			sourceTree = "<group>";
+		};
+		C5EF6EA12B876D4800AA3494 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				C5EF6E9C2B87614F00AA3494 /* RoumingCountryHeaderView.swift */,
+				C550E0A02B7F87CA009408D2 /* PackageChipButton.swift */,
+				C5EF6E9E2B87650B00AA3494 /* SectionHeaderView.swift */,
+				C5EF6E6C2B848A7900AA3494 /* PackageServiceFeeLabel.swift */,
+				C5EF6E742B85C61800AA3494 /* CountrySearchView.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,37 +517,55 @@
 			files = (
 				C5EF6E6D2B848A7900AA3494 /* PackageServiceFeeLabel.swift in Sources */,
 				C550E09F2B7F8382009408D2 /* PackageFreeServicesStackView.swift in Sources */,
+				C53A32332B8C93A600EBB596 /* PageSegmentedControl.swift in Sources */,
+				C5E658D52B8C71B400571CE8 /* RoumingCountryDetailConfigurator.swift in Sources */,
 				C5BB3C4C2B7E32A600819E25 /* RoumingPackageViewCell.swift in Sources */,
 				C5EF6E6B2B84876C00AA3494 /* AllIncludedPackageViewCell.swift in Sources */,
 				C5BB3C4A2B7E315D00819E25 /* PackagesCollectionView.swift in Sources */,
 				C5BB3C392B7E29C200819E25 /* RoumingDetailRouter.swift in Sources */,
+				C53A323B2B8CA2D200EBB596 /* OperatorStatusVStackView.swift in Sources */,
+				C53A32352B8C97B700EBB596 /* OperatorViewCell.swift in Sources */,
+				C5E658D32B8C71B400571CE8 /* RoumingCountryDetailInteractor.swift in Sources */,
 				C5EF6E772B85CD2900AA3494 /* RoumingCountryButton.swift in Sources */,
 				C5BB3C3E2B7E29C200819E25 /* RoumingDetailConfigurator.swift in Sources */,
 				C5BB3C032B7E1EF100819E25 /* MainNavigation.swift in Sources */,
 				C5C82A122B7F62E30018BB61 /* InternetPackagesCollectionTableViewCell.swift in Sources */,
-				C5EF6E712B84D2A200AA3494 /* RoamingTableViewHeader.swift in Sources */,
+				C5E658CE2B8C71B400571CE8 /* RoumingCountryDetailPresenter.swift in Sources */,
 				C5BB3BF92B7E1E1700819E25 /* AppContainer.swift in Sources */,
+				C53A32372B8C9BF800EBB596 /* OperatorServicesVStackView.swift in Sources */,
 				C5EF6E6F2B84BD0F00AA3494 /* AllPackageInfoVStackView.swift in Sources */,
 				C5BB3C052B7E1F1E00819E25 /* ViewController+Navigation.swift in Sources */,
+				C53A32302B8C926300EBB596 /* OperatorsView.swift in Sources */,
 				C5BB3C3A2B7E29C200819E25 /* RoumingDetailModels.swift in Sources */,
+				C53A32392B8C9C9E00EBB596 /* OperatorServiceInfoStackView.swift in Sources */,
+				C5E658D42B8C71B400571CE8 /* RoumingCountryDetailView.swift in Sources */,
+				C5EF6E9D2B87614F00AA3494 /* RoumingCountryHeaderView.swift in Sources */,
 				C5BB3BB12B7E1CF800819E25 /* AppDelegate.swift in Sources */,
 				C5BB3C3B2B7E29C200819E25 /* RoumingDetailViewController.swift in Sources */,
 				C5BB3C3C2B7E29C200819E25 /* RoumingDetailInteractor.swift in Sources */,
 				C5EF6E7B2B85EEFC00AA3494 /* UICollectionCenterFlowLayout.swift in Sources */,
+				C5E658D02B8C71B400571CE8 /* RoumingCountryDetailRouter.swift in Sources */,
 				C550E0A42B7F8AE7009408D2 /* MiniAddButton.swift in Sources */,
 				C5EF6E732B85C0C400AA3494 /* AllIncludedPackageInfoHStackView.swift in Sources */,
 				C5BB3C3D2B7E29C200819E25 /* RoumingDetailView.swift in Sources */,
+				C5E658D12B8C71B400571CE8 /* RoumingCountryDetailModels.swift in Sources */,
+				C53A323D2B8CA31B00EBB596 /* OperatorStatusHStackView.swift in Sources */,
+				C5E658CF2B8C71B400571CE8 /* RoumingCountryDetailWorker.swift in Sources */,
 				C5EF6E792B85D1A800AA3494 /* RoumingCountriesCollectionView.swift in Sources */,
 				C550E0A12B7F87CA009408D2 /* PackageChipButton.swift in Sources */,
+				C5E658DC2B8C782E00571CE8 /* CategoryCollectionViewCell.swift in Sources */,
 				C5EF6E752B85C61800AA3494 /* CountrySearchView.swift in Sources */,
 				C5BB3C0A2B7E1F5200819E25 /* ThemeableViewController.swift in Sources */,
 				C5BB3C402B7E2E6A00819E25 /* ImageResizer.swift in Sources */,
 				C5C82A142B7F63780018BB61 /* SMSPackagesCollectionTableViewCell.swift in Sources */,
 				C5BB3C082B7E1F4300819E25 /* ThemeableView.swift in Sources */,
 				C5BB3C2E2B7E27DB00819E25 /* AppAssets.swift in Sources */,
+				C5E658D22B8C71B400571CE8 /* RoumingCountryDetailViewController.swift in Sources */,
+				C5EF6E9F2B87650B00AA3494 /* SectionHeaderView.swift in Sources */,
 				C5BB3BF62B7E1E0800819E25 /* AppRouter.swift in Sources */,
 				C5BB3C382B7E29C200819E25 /* RoumingDetailWorker.swift in Sources */,
 				C5C82A162B7F6BC40018BB61 /* RoundedView.swift in Sources */,
+				C5E658D82B8C774600571CE8 /* CategoriesCollectionView.swift in Sources */,
 				C5BB3C372B7E29C200819E25 /* RoumingDetailPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
