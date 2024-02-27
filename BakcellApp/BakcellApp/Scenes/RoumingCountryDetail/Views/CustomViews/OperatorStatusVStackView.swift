@@ -6,32 +6,51 @@
 //
 
 import UIKit
+import BakcellUIKit
 
-class OperatorStatusVStackView: UIStackView {
+class OperatorStatusVStackView: UIStackView, ThemeableView {
+    var theme: ThemeProvider =  App.theme
     
+     
+    var data: [RoumingOperatorVolume]? {
+        didSet {
+            configure()
+        }
+    }
     //MARK: Init
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.axis = .vertical
         self.spacing = 16
-        
-        self.addSubviews()
+
     }
     
     required init(coder: NSCoder) {
         fatalError()
     }
 
-    private func addSubviews() {
-        let firstHStackView = OperatorStatusHStackView()
-        let secondHStackView = OperatorStatusHStackView()
-        firstHStackView.data = .init(title: "Daxil olan", subtitle: "0.39 ₼/deq")
-        secondHStackView.data = .init(title: "Çıxan", subtitle: "0.99 ₼/deq")
+   
+    
+    override func updateConstraints() {
+        super.updateConstraints()
+    }
+    
+    private func configure() {
+        guard let data = data else { return }
         
-        self.addArrangedSubview(firstHStackView)
-        self.addArrangedSubview(secondHStackView)
-        
+        for volume in data {
+            let view = OperatorStatusHStackView()
+            
+            let subtitle = volume.volumeType.isEmpty ? volume.volume : "\(volume.volume)/\(volume.volumeType)"
+            
+            if subtitle == "Pulsuz" {
+                view.subtitleLabel.textColor = adaptiveColor(.redPrimary)
+            }
+            view.data = .init(title: volume.title, subtitle: subtitle)
+            self.addArrangedSubview(view)
+        }
         self.updateConstraints()
     }
-
+    
+    
 }

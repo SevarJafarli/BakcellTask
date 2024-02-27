@@ -9,28 +9,18 @@ import UIKit
 import BakcellUIKit
 
 class OperatorServiceInfoStackView: UIStackView, ThemeableView {
+    
     var theme: ThemeProvider = App.theme
     
+    var data: RoumingOperatorServiceType? {
+        didSet {
+            configure()
+        }
+    }
     
-    private lazy var infoTitleHStackView: UIStackView = {
-        let stackView =  UIStackView()
-        stackView.axis = .horizontal
-        stackView.spacing = 8
+    private lazy var infoTitleHStackView: OperatorInfoTitleVStackView = {
+        let stackView = OperatorInfoTitleVStackView()
         return stackView
-    }()
-    
-    private lazy var infoImageView: UIImageView = {
-        let view = UIImageView()
-        view.image = UIImage(named: AppAssets.phone.rawValue)
-        return view
-    }()
-    
-    private lazy var infoTitleLabel: UILabel = {
-        let label = UILabel()
-        label.font = AppFonts.SFBoldSubheadline.fontStyle
-        label.textColor = adaptiveColor(.blackHigh)
-        label.text = "Zənglər"
-        return label
     }()
     
     private lazy var statusVStackView: OperatorStatusVStackView = {
@@ -50,12 +40,9 @@ class OperatorServiceInfoStackView: UIStackView, ThemeableView {
     required init(coder: NSCoder) {
         fatalError()
     }
-
+    
     
     private func addSubviews() {
-        self.infoTitleHStackView.addArrangedSubview(self.infoImageView)
-        self.infoTitleHStackView.addArrangedSubview(self.infoTitleLabel)
-
         self.addArrangedSubview(self.infoTitleHStackView)
         
         self.addArrangedSubview(self.statusVStackView)
@@ -66,8 +53,16 @@ class OperatorServiceInfoStackView: UIStackView, ThemeableView {
     override func updateConstraints() {
         super.updateConstraints()
         
-        self.infoImageView.snp.updateConstraints { make in
-            make.width.height.equalTo(24)
+        self.infoTitleHStackView.snp.updateConstraints { make in
+            make.height.equalTo(24)
         }
+    }
+    
+    
+    private func configure() {
+        guard let data = data else { return }
+        infoTitleHStackView.configure(title: data.packageType.title, image: data.packageType.image!)
+        
+        statusVStackView.data = data.volumes
     }
 }

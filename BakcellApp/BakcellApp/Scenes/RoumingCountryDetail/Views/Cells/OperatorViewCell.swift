@@ -30,6 +30,7 @@ class OperatorViewCell: UITableViewCell, ThemeableView {
         view.layer.borderWidth = 2
         return view
     }()
+    
     private lazy var contentVStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
@@ -44,8 +45,9 @@ class OperatorViewCell: UITableViewCell, ThemeableView {
         return label
     }()
     
-    private lazy var operatorServicesVStackView: OperatorServicesVStackView = {
-        let stackView = OperatorServicesVStackView()
+    private lazy var operatorServiceVStackView: OperatorServiceVStackView = {
+        let stackView = OperatorServiceVStackView()
+
         return stackView
     }()
     
@@ -55,6 +57,7 @@ class OperatorViewCell: UITableViewCell, ThemeableView {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.selectionStyle = .none
         self.backgroundColor = .clear
+        
         self.addSubviews()
         configure()
     }
@@ -70,8 +73,7 @@ class OperatorViewCell: UITableViewCell, ThemeableView {
     
     private func addSubviews() {
         self.contentVStackView.addArrangedSubview(self.operatorTitleLabel)
-        self.contentVStackView.addArrangedSubview(self.operatorServicesVStackView)
-        
+        self.contentVStackView.addArrangedSubview(self.operatorServiceVStackView)
         
         self.backView.addSubview(self.contentVStackView)
         self.contentView.addSubview(self.backView)
@@ -83,7 +85,8 @@ class OperatorViewCell: UITableViewCell, ThemeableView {
         super.updateConstraints()
         
         self.backView.snp.updateConstraints { make in
-            make.edges.equalToSuperview()
+            make.leading.trailing.top.equalToSuperview()
+            make.bottom.equalToSuperview().offset(-8)
         }
         
         self.contentVStackView.snp.updateConstraints { make in
@@ -94,5 +97,20 @@ class OperatorViewCell: UITableViewCell, ThemeableView {
     
     private func configure() {
         self.operatorTitleLabel.text = "TT MobileB"
+        self.operatorServiceVStackView.data = .init(services: [
+            .init(packageType: .call, volumes: [
+                .init(title: "Daxil olan", volume: "0.39 ₼", volumeType: "deq"),
+                .init(title: "Çıxan", volume: "0.99 ₼", volumeType: "deq")
+            ]),
+            .init(packageType: .sms, volumes: [
+                .init(title: "Daxil olan", volume: "Pulsuz", volumeType: ""),
+                .init(title: "Çıxan", volume: "0.19 ₼", volumeType: "sms")
+            ]),
+            .init(packageType: .internet, volumes: [
+                .init(title: "Sərfiyyat", volume: "-", volumeType: ""),
+                .init(title: "Şəbəkə", volume: "2G, 3G, 4G", volumeType: "")
+            ]),
+        ])
+        
     }
 }

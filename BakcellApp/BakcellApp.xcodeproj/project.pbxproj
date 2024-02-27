@@ -8,15 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		C53A32302B8C926300EBB596 /* OperatorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53A322F2B8C926300EBB596 /* OperatorsView.swift */; };
-		C53A32332B8C93A600EBB596 /* PageSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53A32322B8C93A600EBB596 /* PageSegmentedControl.swift */; };
+		C53A32332B8C93A600EBB596 /* RoamingSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53A32322B8C93A600EBB596 /* RoamingSegmentedControl.swift */; };
 		C53A32352B8C97B700EBB596 /* OperatorViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53A32342B8C97B700EBB596 /* OperatorViewCell.swift */; };
-		C53A32372B8C9BF800EBB596 /* OperatorServicesVStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53A32362B8C9BF800EBB596 /* OperatorServicesVStackView.swift */; };
 		C53A32392B8C9C9E00EBB596 /* OperatorServiceInfoStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53A32382B8C9C9E00EBB596 /* OperatorServiceInfoStackView.swift */; };
 		C53A323B2B8CA2D200EBB596 /* OperatorStatusVStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53A323A2B8CA2D200EBB596 /* OperatorStatusVStackView.swift */; };
 		C53A323D2B8CA31B00EBB596 /* OperatorStatusHStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53A323C2B8CA31B00EBB596 /* OperatorStatusHStackView.swift */; };
 		C550E09F2B7F8382009408D2 /* PackageFreeServicesStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C550E09E2B7F8382009408D2 /* PackageFreeServicesStackView.swift */; };
 		C550E0A12B7F87CA009408D2 /* PackageChipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C550E0A02B7F87CA009408D2 /* PackageChipButton.swift */; };
 		C550E0A42B7F8AE7009408D2 /* MiniAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C550E0A32B7F8AE7009408D2 /* MiniAddButton.swift */; };
+		C5B01C0B2B8DB49E00C14F0C /* OperatorInfoTitleVStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B01C0A2B8DB49E00C14F0C /* OperatorInfoTitleVStackView.swift */; };
+		C5B01C0D2B8DBB6900C14F0C /* AppDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B01C0C2B8DBB6900C14F0C /* AppDivider.swift */; };
+		C5B01C0F2B8DCC5E00C14F0C /* OperatorServiceVStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B01C0E2B8DCC5E00C14F0C /* OperatorServiceVStackView.swift */; };
+		C5B01C122B8DF47800C14F0C /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B01C112B8DF47800C14F0C /* SegmentedControl.swift */; };
+		C5B01C152B8DF49200C14F0C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B01C142B8DF49200C14F0C /* Constants.swift */; };
+		C5B01C172B8DF4A700C14F0C /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B01C162B8DF4A700C14F0C /* Protocols.swift */; };
+		C5B01C192B8DF4BD00C14F0C /* SCScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B01C182B8DF4BD00C14F0C /* SCScrollView.swift */; };
+		C5B01C1B2B8DF4DA00C14F0C /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B01C1A2B8DF4DA00C14F0C /* Style.swift */; };
 		C5BB3BB12B7E1CF800819E25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BB3BB02B7E1CF800819E25 /* AppDelegate.swift */; };
 		C5BB3BBA2B7E1CF900819E25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5BB3BB92B7E1CF900819E25 /* Assets.xcassets */; };
 		C5BB3BBD2B7E1CF900819E25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5BB3BBB2B7E1CF900819E25 /* LaunchScreen.storyboard */; };
@@ -85,15 +92,22 @@
 
 /* Begin PBXFileReference section */
 		C53A322F2B8C926300EBB596 /* OperatorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorsView.swift; sourceTree = "<group>"; };
-		C53A32322B8C93A600EBB596 /* PageSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageSegmentedControl.swift; sourceTree = "<group>"; };
+		C53A32322B8C93A600EBB596 /* RoamingSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoamingSegmentedControl.swift; sourceTree = "<group>"; };
 		C53A32342B8C97B700EBB596 /* OperatorViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorViewCell.swift; sourceTree = "<group>"; };
-		C53A32362B8C9BF800EBB596 /* OperatorServicesVStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorServicesVStackView.swift; sourceTree = "<group>"; };
 		C53A32382B8C9C9E00EBB596 /* OperatorServiceInfoStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorServiceInfoStackView.swift; sourceTree = "<group>"; };
 		C53A323A2B8CA2D200EBB596 /* OperatorStatusVStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorStatusVStackView.swift; sourceTree = "<group>"; };
 		C53A323C2B8CA31B00EBB596 /* OperatorStatusHStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorStatusHStackView.swift; sourceTree = "<group>"; };
 		C550E09E2B7F8382009408D2 /* PackageFreeServicesStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageFreeServicesStackView.swift; sourceTree = "<group>"; };
 		C550E0A02B7F87CA009408D2 /* PackageChipButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageChipButton.swift; sourceTree = "<group>"; };
 		C550E0A32B7F8AE7009408D2 /* MiniAddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniAddButton.swift; sourceTree = "<group>"; };
+		C5B01C0A2B8DB49E00C14F0C /* OperatorInfoTitleVStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorInfoTitleVStackView.swift; sourceTree = "<group>"; };
+		C5B01C0C2B8DBB6900C14F0C /* AppDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDivider.swift; sourceTree = "<group>"; };
+		C5B01C0E2B8DCC5E00C14F0C /* OperatorServiceVStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorServiceVStackView.swift; sourceTree = "<group>"; };
+		C5B01C112B8DF47800C14F0C /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
+		C5B01C142B8DF49200C14F0C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C5B01C162B8DF4A700C14F0C /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		C5B01C182B8DF4BD00C14F0C /* SCScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCScrollView.swift; sourceTree = "<group>"; };
+		C5B01C1A2B8DF4DA00C14F0C /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		C5BB3BAD2B7E1CF800819E25 /* BakcellApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BakcellApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5BB3BB02B7E1CF800819E25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5BB3BB92B7E1CF900819E25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -161,11 +175,12 @@
 		C53A32312B8C938400EBB596 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				C53A32322B8C93A600EBB596 /* PageSegmentedControl.swift */,
-				C53A32362B8C9BF800EBB596 /* OperatorServicesVStackView.swift */,
+				C53A32322B8C93A600EBB596 /* RoamingSegmentedControl.swift */,
 				C53A32382B8C9C9E00EBB596 /* OperatorServiceInfoStackView.swift */,
+				C5B01C0A2B8DB49E00C14F0C /* OperatorInfoTitleVStackView.swift */,
 				C53A323A2B8CA2D200EBB596 /* OperatorStatusVStackView.swift */,
 				C53A323C2B8CA31B00EBB596 /* OperatorStatusHStackView.swift */,
+				C5B01C0E2B8DCC5E00C14F0C /* OperatorServiceVStackView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -176,6 +191,26 @@
 				C550E0A32B7F8AE7009408D2 /* MiniAddButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		C5B01C102B8DF46A00C14F0C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C5B01C132B8DF48100C14F0C /* SegmentedControl */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C5B01C132B8DF48100C14F0C /* SegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				C5B01C112B8DF47800C14F0C /* SegmentedControl.swift */,
+				C5B01C142B8DF49200C14F0C /* Constants.swift */,
+				C5B01C162B8DF4A700C14F0C /* Protocols.swift */,
+				C5B01C182B8DF4BD00C14F0C /* SCScrollView.swift */,
+				C5B01C1A2B8DF4DA00C14F0C /* Style.swift */,
+			);
+			path = SegmentedControl;
 			sourceTree = "<group>";
 		};
 		C5BB3BA42B7E1CF800819E25 = {
@@ -198,6 +233,7 @@
 		C5BB3BAF2B7E1CF800819E25 /* BakcellApp */ = {
 			isa = PBXGroup;
 			children = (
+				C5B01C102B8DF46A00C14F0C /* Views */,
 				C5BB3BF42B7E1DFB00819E25 /* App */,
 				C5BB3BFF2B7E1E9A00819E25 /* Supporting */,
 				C5BB3BFE2B7E1E9500819E25 /* Scenes */,
@@ -395,6 +431,7 @@
 				C5E658DA2B8C781F00571CE8 /* CollectionViews */,
 				C5E658D92B8C781A00571CE8 /* Cells */,
 				C53A322F2B8C926300EBB596 /* OperatorsView.swift */,
+				C5B01C0C2B8DBB6900C14F0C /* AppDivider.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -516,27 +553,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5EF6E6D2B848A7900AA3494 /* PackageServiceFeeLabel.swift in Sources */,
+				C5B01C1B2B8DF4DA00C14F0C /* Style.swift in Sources */,
 				C550E09F2B7F8382009408D2 /* PackageFreeServicesStackView.swift in Sources */,
-				C53A32332B8C93A600EBB596 /* PageSegmentedControl.swift in Sources */,
+				C53A32332B8C93A600EBB596 /* RoamingSegmentedControl.swift in Sources */,
 				C5E658D52B8C71B400571CE8 /* RoumingCountryDetailConfigurator.swift in Sources */,
 				C5BB3C4C2B7E32A600819E25 /* RoumingPackageViewCell.swift in Sources */,
 				C5EF6E6B2B84876C00AA3494 /* AllIncludedPackageViewCell.swift in Sources */,
 				C5BB3C4A2B7E315D00819E25 /* PackagesCollectionView.swift in Sources */,
 				C5BB3C392B7E29C200819E25 /* RoumingDetailRouter.swift in Sources */,
 				C53A323B2B8CA2D200EBB596 /* OperatorStatusVStackView.swift in Sources */,
+				C5B01C172B8DF4A700C14F0C /* Protocols.swift in Sources */,
 				C53A32352B8C97B700EBB596 /* OperatorViewCell.swift in Sources */,
 				C5E658D32B8C71B400571CE8 /* RoumingCountryDetailInteractor.swift in Sources */,
+				C5B01C0D2B8DBB6900C14F0C /* AppDivider.swift in Sources */,
 				C5EF6E772B85CD2900AA3494 /* RoumingCountryButton.swift in Sources */,
+				C5B01C122B8DF47800C14F0C /* SegmentedControl.swift in Sources */,
+				C5B01C192B8DF4BD00C14F0C /* SCScrollView.swift in Sources */,
 				C5BB3C3E2B7E29C200819E25 /* RoumingDetailConfigurator.swift in Sources */,
 				C5BB3C032B7E1EF100819E25 /* MainNavigation.swift in Sources */,
 				C5C82A122B7F62E30018BB61 /* InternetPackagesCollectionTableViewCell.swift in Sources */,
 				C5E658CE2B8C71B400571CE8 /* RoumingCountryDetailPresenter.swift in Sources */,
+				C5B01C0F2B8DCC5E00C14F0C /* OperatorServiceVStackView.swift in Sources */,
 				C5BB3BF92B7E1E1700819E25 /* AppContainer.swift in Sources */,
-				C53A32372B8C9BF800EBB596 /* OperatorServicesVStackView.swift in Sources */,
 				C5EF6E6F2B84BD0F00AA3494 /* AllPackageInfoVStackView.swift in Sources */,
 				C5BB3C052B7E1F1E00819E25 /* ViewController+Navigation.swift in Sources */,
 				C53A32302B8C926300EBB596 /* OperatorsView.swift in Sources */,
 				C5BB3C3A2B7E29C200819E25 /* RoumingDetailModels.swift in Sources */,
+				C5B01C0B2B8DB49E00C14F0C /* OperatorInfoTitleVStackView.swift in Sources */,
 				C53A32392B8C9C9E00EBB596 /* OperatorServiceInfoStackView.swift in Sources */,
 				C5E658D42B8C71B400571CE8 /* RoumingCountryDetailView.swift in Sources */,
 				C5EF6E9D2B87614F00AA3494 /* RoumingCountryHeaderView.swift in Sources */,
@@ -551,6 +594,7 @@
 				C5E658D12B8C71B400571CE8 /* RoumingCountryDetailModels.swift in Sources */,
 				C53A323D2B8CA31B00EBB596 /* OperatorStatusHStackView.swift in Sources */,
 				C5E658CF2B8C71B400571CE8 /* RoumingCountryDetailWorker.swift in Sources */,
+				C5B01C152B8DF49200C14F0C /* Constants.swift in Sources */,
 				C5EF6E792B85D1A800AA3494 /* RoumingCountriesCollectionView.swift in Sources */,
 				C550E0A12B7F87CA009408D2 /* PackageChipButton.swift in Sources */,
 				C5E658DC2B8C782E00571CE8 /* CategoryCollectionViewCell.swift in Sources */,

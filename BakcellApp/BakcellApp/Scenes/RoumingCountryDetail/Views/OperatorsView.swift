@@ -6,20 +6,29 @@
 //
 
 import UIKit
+import BakcellUIKit
 
-class OperatorsView: UIView {
+class OperatorsView: UIView, ThemeableView {
+    var theme: ThemeProvider = App.theme
     
-    lazy var segmentedControl: UISegmentedControl = {
-        let segmentControl = UISegmentedControl(items: [
-            "Öncədən ödənişli",
-            "Fakturalı"
-        ])
-//        segmentControl.selectedSegmentTintColor = adaptiveColor(.appWhite)
-        segmentControl.backgroundColor = .clear
-        segmentControl.tintColor = .clear
-      
-//        segmentedControl.addTarget(self, action: #selector(segmentedControlValueChanged), for: .valueChanged)
-        return segmentControl
+    
+    lazy var roamingSegmentedControl: SegmentedControl = {
+        
+        let segmentedControl = SegmentedControl()
+        
+        segmentedControl.backgroundColor = adaptiveColor(.greyBg)
+        segmentedControl.selectionBoxStyle = .default
+        segmentedControl.selectionBoxColor = adaptiveColor(.appWhite)
+        segmentedControl.selectionBoxCornerRadius = 10
+        segmentedControl.layoutPolicy = .fixed
+        segmentedControl.segmentSpacing = 0
+        segmentedControl.selectionBoxHeight = 32
+        segmentedControl.selectionHorizontalPadding = 8
+        
+        segmentedControl.contentInset = .zero
+        segmentedControl.clipsToBounds = true
+        
+        return segmentedControl
     }()
     
     
@@ -29,6 +38,7 @@ class OperatorsView: UIView {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = .clear
+        tableView.showsVerticalScrollIndicator = false
         tableView.register(OperatorViewCell.self, forCellReuseIdentifier: OperatorViewCell.reuseIdentifier)
         return tableView
         
@@ -37,14 +47,15 @@ class OperatorsView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.addSubviews()
-        self.segmentedControl.selectedSegmentIndex = 0
+        self.setSegmentedControl()
     }
+    
     required init?(coder: NSCoder) {
         fatalError()
     }
     
     private func addSubviews() {
-        self.addSubview(self.segmentedControl)
+        self.addSubview(self.roamingSegmentedControl)
         self.addSubview(self.operatorsTableView)
         self.updateConstraints()
     }
@@ -52,15 +63,44 @@ class OperatorsView: UIView {
     override func updateConstraints() {
         super.updateConstraints()
         
-        self.segmentedControl.snp.updateConstraints { make in
+        self.roamingSegmentedControl.snp.updateConstraints { make in
             make.top.equalToSuperview()
             make.leading.trailing.equalToSuperview().inset(16)
+            make.height.equalTo(32)
         }
+        
         self.operatorsTableView.snp.updateConstraints { make in
-            make.top.equalTo(self.segmentedControl.snp.bottom).offset(16)
+            make.top.equalTo(self.roamingSegmentedControl.snp.bottom).offset(16)
             make.bottom.equalToSuperview().offset(-16)
             make.leading.trailing.equalToSuperview().inset(16)
         }
+    }
+    
+    func setSegmentedControl() {
+        
+        let titleStrings = ["Öncədən ödənişli", "Fakturalı"]
+        let titles: [NSAttributedString] = {
+            let attributes: [NSAttributedString.Key: Any] = [.font:  AppFonts.SFRegularSubheadline.fontStyle, .foregroundColor: adaptiveColor(.blackHigh)]
+            var titles = [NSAttributedString]()
+            for titleString in titleStrings {
+                let title = NSAttributedString(string: titleString, attributes: attributes)
+                titles.append(title)
+            }
+            return titles
+        }()
+        
+        let selectedTitles: [NSAttributedString] = {
+            let attributes: [NSAttributedString.Key: Any] =  [.font:  AppFonts.SFRegularSubheadline.fontStyle, .foregroundColor: adaptiveColor(.blackHigh)]
+            var selectedTitles = [NSAttributedString]()
+            for titleString in titleStrings {
+                let selectedTitle = NSAttributedString(string: titleString, attributes: attributes)
+                selectedTitles.append(selectedTitle)
+            }
+            return selectedTitles
+        }()
+        
+        self.roamingSegmentedControl.setTitles(titles, selectedTitles: selectedTitles)
+        
     }
 }
 
@@ -78,6 +118,11 @@ extension OperatorsView: UITableViewDataSource, UITableViewDelegate {
         }
         return cell
     }
-    
-    
+}
+
+
+extension OperatorsView: RoamingSegmentedControlDelegate {
+    func segmentedControl(_ segmentedControl: RoamingSegmentedControl, didSelectItemAt index: Int) {
+        
+    }
 }

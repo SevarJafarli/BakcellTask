@@ -14,6 +14,7 @@ struct OperatorStatusInfoModel {
 }
 
 class OperatorStatusHStackView: UIStackView, ThemeableView {
+    
     var theme: ThemeProvider = App.theme
     
     var data: OperatorStatusInfoModel? {
@@ -29,9 +30,9 @@ class OperatorStatusHStackView: UIStackView, ThemeableView {
         return lbl
     }()
     
-    private lazy var subtitleLabel: UILabel = {
+    lazy var subtitleLabel: UILabel = {
         let lbl = UILabel()
-        lbl.font = AppFonts.SFBoldFootnote.fontStyle
+        lbl.font = AppFonts.SFBoldTitle3.fontStyle
         lbl.textColor = adaptiveColor(.blackHigh)
         return lbl
     }()
@@ -50,7 +51,7 @@ class OperatorStatusHStackView: UIStackView, ThemeableView {
     required init(coder: NSCoder) {
         fatalError()
     }
-
+    
     private func addSubviews() {
         self.addArrangedSubview(self.titleLabel)
         self.addArrangedSubview(self.subtitleLabel)

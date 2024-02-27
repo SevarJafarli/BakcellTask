@@ -115,6 +115,7 @@ class PackageModel {
         self.packageModelType = packageModelType
     }
 }
+
 class InternetPackageModel: PackageModel {
     
     let isWhatsappFree: Bool

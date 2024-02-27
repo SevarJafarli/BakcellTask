@@ -13,6 +13,7 @@ public enum AppFonts {
     case SFBoldFootnote
     case SFBoldLargeTitle
     case SFBoldTitle2
+    case SFBoldTitle3
     case SFBoldCardTitle
     case SFBoldCaption1
     case SFBoldCaptionBold
@@ -35,6 +36,8 @@ extension AppFonts {
             return .systemFont(ofSize: 34, weight: .bold)
         case .SFBoldTitle2:
             return .systemFont(ofSize: 22, weight: .bold)
+        case .SFBoldTitle3:
+            return .systemFont(ofSize: 20, weight: .semibold)
         case .SFBoldCardTitle:
             return .systemFont(ofSize: 17, weight: .bold)
         case .SFBoldCaption1:
