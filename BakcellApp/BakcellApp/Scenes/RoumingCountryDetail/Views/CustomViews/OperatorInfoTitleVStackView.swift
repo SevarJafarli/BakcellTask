@@ -8,10 +8,8 @@
 import UIKit
 import BakcellUIKit
 
-class OperatorInfoTitleVStackView: UIStackView, ThemeableView {
+class OperatorInfoTitleVStackView: UIStackView {
     
-    var theme: ThemeProvider = App.theme
-
     private lazy var infoImageView: UIImageView = {
         let view = UIImageView()
         view.image = UIImage(named: AppAssets.phone.rawValue)

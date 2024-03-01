@@ -8,8 +8,8 @@
 import UIKit
 import BakcellUIKit
 
-class PackageChipButton: UIView, ThemeableView {
-    var theme: ThemeProvider = App.theme
+class PackageChipButton: UIView {
+//    var theme: ThemeProvider = App.theme
 
     private lazy var titleLabel: UILabel = {
         let lbl = UILabel()

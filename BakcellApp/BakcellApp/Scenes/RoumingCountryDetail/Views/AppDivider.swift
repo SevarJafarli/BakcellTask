@@ -8,9 +8,7 @@
 import UIKit
 import BakcellUIKit
 
-class AppDivider: UIView, ThemeableView {
-    var theme: ThemeProvider = App.theme
-    
+class AppDivider: UIView {
     
     //MARK: Init
     override init(frame: CGRect) {

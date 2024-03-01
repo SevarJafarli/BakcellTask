@@ -8,9 +8,9 @@
 import UIKit
 import BakcellUIKit
 
-class SectionHeaderView: UIView, ThemeableView {
+class SectionHeaderView: UIView {
     
-    var theme: ThemeProvider = App.theme
+//    var theme: ThemeProvider = App.theme
     
     private let titleLabel: UILabel = {
         let label = UILabel()

@@ -8,8 +8,7 @@
 import UIKit
 import BakcellUIKit
 
-class CategoryCollectionViewCell: UICollectionViewCell, ThemeableView {
-    var theme: ThemeProvider = App.theme
+class CategoryCollectionViewCell: UICollectionViewCell {
     
     static var reuseIdentifier = "CategoryCollectionViewCell"
     

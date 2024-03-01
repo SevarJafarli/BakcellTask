@@ -13,8 +13,7 @@ protocol RoumingDetailViewDelegate: AnyObject {
     
 }
 
-final class RoumingDetailView: UIView, ThemeableView {
-    var theme: ThemeProvider = App.theme
+final class RoumingDetailView: UIView {
     
     weak var delegate: RoumingDetailViewDelegate?
     

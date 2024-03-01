@@ -8,10 +8,10 @@
 import UIKit
 import BakcellUIKit
 
-class RoumingCountryButton: UICollectionViewCell, ThemeableView {
+class RoumingCountryButton: UICollectionViewCell {
     static var reuseIdentifier = "RoumingCountryButton"
     
-    var theme: ThemeProvider = App.theme
+
     var data: String? {
         didSet {
             configure()

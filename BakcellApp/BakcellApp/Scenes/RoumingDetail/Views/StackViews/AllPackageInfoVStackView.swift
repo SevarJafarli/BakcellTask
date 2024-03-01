@@ -8,10 +8,8 @@
 import UIKit
 import BakcellUIKit
 
-class AllPackageInfoVStackView: UIStackView, ThemeableView {
+class AllPackageInfoVStackView: UIStackView {
   
-    var theme: ThemeProvider = App.theme
-    
     let title: String
     let subtitle: String
     

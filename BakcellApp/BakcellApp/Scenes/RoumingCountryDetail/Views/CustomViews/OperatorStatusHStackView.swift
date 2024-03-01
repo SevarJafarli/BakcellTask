@@ -13,9 +13,9 @@ struct OperatorStatusInfoModel {
     let subtitle: String
 }
 
-class OperatorStatusHStackView: UIStackView, ThemeableView {
+class OperatorStatusHStackView: UIStackView {
     
-    var theme: ThemeProvider = App.theme
+//    var theme: ThemeProvider = App.theme
     
     var data: OperatorStatusInfoModel? {
         didSet {

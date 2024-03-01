@@ -12,9 +12,7 @@ protocol RoumingCountryHeaderViewDelegate: AnyObject {
     func didSelectCountry(country: String)
 }
 
-class RoumingCountryHeaderView: UIView, ThemeableView {
-    
-    var theme: ThemeProvider = App.theme
+class RoumingCountryHeaderView: UIView {
     
     var items: [String] = [] {
         didSet {

@@ -8,9 +8,8 @@
 import UIKit
 import BakcellUIKit
 
-class AllIncludedPackageViewCell: UITableViewCell, ThemeableView {
+class AllIncludedPackageViewCell: UITableViewCell {
     
-    var theme: ThemeProvider = App.theme
    
     static var reuseIdentifier = "AllIncludedPackageViewCell"
 

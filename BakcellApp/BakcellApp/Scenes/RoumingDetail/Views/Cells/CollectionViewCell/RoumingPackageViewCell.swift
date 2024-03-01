@@ -8,8 +8,7 @@
 import UIKit
 import BakcellUIKit
 
-class RoumingPackageViewCell: UICollectionViewCell, ThemeableView {
-    var theme: ThemeProvider = App.theme
+class RoumingPackageViewCell: UICollectionViewCell {
     
     
     static var reuseIdentifier = "RoumingPackageViewCell"

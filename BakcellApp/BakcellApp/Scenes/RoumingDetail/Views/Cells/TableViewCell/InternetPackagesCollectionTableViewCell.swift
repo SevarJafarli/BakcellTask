@@ -7,12 +7,17 @@
 
 import UIKit
 
+protocol InternetPackagesCollectionTableViewCellDelegate: AnyObject {
+    func onPackageSelected()
+}
+
 class InternetPackagesCollectionTableViewCell: UITableViewCell {
     
     static var reuseIdentifier = "InternetPackagesCollectionTableViewCell"
     
     var internetPackageModels = [InternetPackageModel]()
     
+    weak var delegate: InternetPackagesCollectionTableViewCellDelegate?
     
     lazy var internetPackagesCollectionView: PackagesCollectionView = {
         let collectionView = PackagesCollectionView()
@@ -80,5 +85,9 @@ extension InternetPackagesCollectionTableViewCell: UICollectionViewDelegate, UIC
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: (collectionView.frame.width - 40) / 2, height: 168)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.delegate?.onPackageSelected()
     }
 }

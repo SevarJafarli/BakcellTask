@@ -8,8 +8,7 @@
 import UIKit
 import BakcellUIKit
 
-class CountrySearchView: UIView, ThemeableView {
-    var theme: ThemeProvider = App.theme
+class CountrySearchView: UIView {
     
     private lazy var placeholderTextLabel: UILabel = {
         let label = UILabel()

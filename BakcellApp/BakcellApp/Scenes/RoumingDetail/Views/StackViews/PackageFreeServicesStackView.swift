@@ -8,8 +8,7 @@
 import UIKit
 import BakcellUIKit
 
-class PackageFreeServicesStackView: UIView, ThemeableView {
-    var theme: ThemeProvider = App.theme
+class PackageFreeServicesStackView: UIView {
     
     private lazy var freeServicesView: UIStackView = {
         let stackView = UIStackView()

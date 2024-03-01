@@ -8,12 +8,9 @@
 import UIKit
 import BakcellUIKit
 
-class MiniAddButton: UIButton, ThemeableView {
-    
+class MiniAddButton: UIButton {
     let cornerRadius: Int
-    
-    var theme: ThemeProvider = App.theme
-    
+
     init(frame: CGRect, cornerRadius: Int) {
         self.cornerRadius = cornerRadius
         super.init(frame: frame)

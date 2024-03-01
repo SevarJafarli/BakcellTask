@@ -150,8 +150,9 @@ extension RoumingDetailViewController: UITableViewDelegate, UITableViewDataSourc
             guard let cell = tableView.dequeueReusableCell(withIdentifier: InternetPackagesCollectionTableViewCell.reuseIdentifier, for: indexPath) as? InternetPackagesCollectionTableViewCell else {
                 return UITableViewCell()
             }
-            
+           
             cell.configure(with: self.internetPackages)
+            cell.delegate = self
             return cell
             
         case .allIncludedPackages:
@@ -201,5 +202,12 @@ extension RoumingDetailViewController: RoumingCountryHeaderViewDelegate {
     func didSelectCountry(country: String) {
         interactor?.getSelectedCountry(country: country)
         router?.routeToRoumingCountryDetail()
+    }
+}
+
+
+extension RoumingDetailViewController: InternetPackagesCollectionTableViewCellDelegate {
+    func onPackageSelected() {
+        router?.routeToRoumingPackageDetail()
     }
 }

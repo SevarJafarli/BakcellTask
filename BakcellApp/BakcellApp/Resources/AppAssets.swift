@@ -17,6 +17,13 @@ public enum AppAssets: String, CaseIterable {
     case internet
     case sms
     case phone
+    case duration
+    case price
+    case flag
+    case turkiye
+    case done
+    case rusiya
+    case gurcustan
     
 }
 

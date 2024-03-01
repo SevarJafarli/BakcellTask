@@ -8,10 +8,7 @@
 import UIKit
 import BakcellUIKit
 
-class OperatorStatusVStackView: UIStackView, ThemeableView {
-    var theme: ThemeProvider =  App.theme
-    
-     
+class OperatorStatusVStackView: UIStackView{
     var data: [RoumingOperatorVolume]? {
         didSet {
             configure()

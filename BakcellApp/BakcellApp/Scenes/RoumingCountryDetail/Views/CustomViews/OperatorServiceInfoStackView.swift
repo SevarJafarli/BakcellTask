@@ -8,10 +8,8 @@
 import UIKit
 import BakcellUIKit
 
-class OperatorServiceInfoStackView: UIStackView, ThemeableView {
-    
-    var theme: ThemeProvider = App.theme
-    
+class OperatorServiceInfoStackView: UIStackView {
+
     var data: RoumingOperatorServiceType? {
         didSet {
             configure()

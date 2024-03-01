@@ -6,11 +6,10 @@ protocol RoamingSegmentedControlDelegate: AnyObject {
     func segmentedControl(_ segmentedControl: RoamingSegmentedControl, didSelectItemAt index: Int)
 }
 
-final class RoamingSegmentedControl: UIView, ThemeableView {
+final class RoamingSegmentedControl: UIView {
     
     weak var delegate: RoamingSegmentedControlDelegate?
     
-    var theme: ThemeProvider = App.theme
     
     private lazy var segmentedControl: UISegmentedControl = {
         let sc = UISegmentedControl(items: self.titles)

@@ -8,11 +8,8 @@
 import UIKit
 import BakcellUIKit
 
-class OperatorViewCell: UITableViewCell, ThemeableView {
-    
-    
-    var theme: ThemeProvider = App.theme
-    
+class OperatorViewCell: UITableViewCell {
+
     static var reuseIdentifier = "OperatorViewCell"
     
     
@@ -85,7 +82,8 @@ class OperatorViewCell: UITableViewCell, ThemeableView {
         super.updateConstraints()
         
         self.backView.snp.updateConstraints { make in
-            make.leading.trailing.top.equalToSuperview()
+            make.top.equalToSuperview()
+            make.horizontalEdges.equalToSuperview().inset(16)
             make.bottom.equalToSuperview().offset(-8)
         }
         

@@ -7,10 +7,8 @@
 
 import UIKit
 import BakcellUIKit
-
-class PackageServiceFeeLabel: UILabel, ThemeableView {
-    var theme: ThemeProvider = App.theme
-
+//TODO: REMOVE
+class PackageServiceFeeLabel: UILabel {
     
     override init(frame: CGRect) {
         super.init(frame: frame)

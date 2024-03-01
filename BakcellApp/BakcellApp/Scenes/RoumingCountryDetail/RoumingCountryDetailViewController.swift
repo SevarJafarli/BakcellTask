@@ -23,11 +23,6 @@ final class RoumingCountryDetailViewController: UIViewController, ThemeableViewC
     var selectedIndex = 0
     
     // MARK: - Lifecycle Methods
-    let contentViews: [UIView] = [
-        UIView(),
-        OperatorsView(),
-        UIView()
-    ]
 
     override func loadView() {
         super.loadView()
@@ -35,7 +30,8 @@ final class RoumingCountryDetailViewController: UIViewController, ThemeableViewC
         self.view = mainView
         mainView?.delegate = self
         self.setSegmentedControl()
-        self.mainView?.operatorsView.roamingSegmentedControl.delegate = self
+        self.mainView?.roamingSegmentedControl.delegate = self
+        self.mainView?.filterSegmentedControl.delegate = self
     }
     
     override func viewDidLoad() {
@@ -67,8 +63,8 @@ final class RoumingCountryDetailViewController: UIViewController, ThemeableViewC
             }
             return selectedTitles
         }()
+        
         self.mainView?.filterSegmentedControl.setTitles(titles, selectedTitles: selectedTitles)
-        self.mainView?.filterSegmentedControl.delegate = self
     }
     
     
@@ -97,13 +93,27 @@ extension RoumingCountryDetailViewController: RoumingCountryDetailViewDelegate {
 }
 
 extension RoumingCountryDetailViewController: SegmentedControlDelegate {
+    
     func segmentedControl(_ segmentedControl: SegmentedControl, didSelectIndex selectedIndex: Int) {
-        if segmentedControl == self.mainView?.operatorsView.roamingSegmentedControl {
+        if segmentedControl == self.mainView?.roamingSegmentedControl {
             
         }
         else if segmentedControl == self.mainView?.filterSegmentedControl {
             self.selectedIndex = selectedIndex
             
+            switch self.selectedIndex {
+            case 0 :
+                self.mainView?.contentTableView.isHidden = true
+            case 1 :
+                self.mainView?.contentTableView.isHidden = false
+               
+            case 2 :
+                self.mainView?.contentTableView.isHidden = true
+            default:
+          
+                self.mainView?.contentTableView.isHidden = true
+               
+            }
         }
     }
 }
