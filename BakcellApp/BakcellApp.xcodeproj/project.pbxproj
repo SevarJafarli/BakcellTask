@@ -37,6 +37,8 @@
 		C53A32392B8C9C9E00EBB596 /* OperatorServiceInfoStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53A32382B8C9C9E00EBB596 /* OperatorServiceInfoStackView.swift */; };
 		C53A323B2B8CA2D200EBB596 /* OperatorStatusVStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53A323A2B8CA2D200EBB596 /* OperatorStatusVStackView.swift */; };
 		C53A323D2B8CA31B00EBB596 /* OperatorStatusHStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53A323C2B8CA31B00EBB596 /* OperatorStatusHStackView.swift */; };
+		C54E84692B91C4D700B198DD /* PriceComparisonViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54E84682B91C4D700B198DD /* PriceComparisonViewCell.swift */; };
+		C54E846B2B91E98500B198DD /* PriceTableSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54E846A2B91E98500B198DD /* PriceTableSectionHeaderView.swift */; };
 		C550E09F2B7F8382009408D2 /* PackageFreeServicesStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C550E09E2B7F8382009408D2 /* PackageFreeServicesStackView.swift */; };
 		C550E0A12B7F87CA009408D2 /* PackageChipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C550E0A02B7F87CA009408D2 /* PackageChipButton.swift */; };
 		C550E0A42B7F8AE7009408D2 /* MiniAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C550E0A32B7F8AE7009408D2 /* MiniAddButton.swift */; };
@@ -102,7 +104,6 @@
 		C5E658D42B8C71B400571CE8 /* RoumingCountryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E658CC2B8C71B400571CE8 /* RoumingCountryDetailView.swift */; };
 		C5E658D52B8C71B400571CE8 /* RoumingCountryDetailConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E658CD2B8C71B400571CE8 /* RoumingCountryDetailConfigurator.swift */; };
 		C5E658D82B8C774600571CE8 /* CategoriesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E658D72B8C774600571CE8 /* CategoriesCollectionView.swift */; };
-		C5E658DC2B8C782E00571CE8 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E658DB2B8C782E00571CE8 /* CategoryCollectionViewCell.swift */; };
 		C5EF6E6B2B84876C00AA3494 /* AllIncludedPackageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EF6E6A2B84876C00AA3494 /* AllIncludedPackageViewCell.swift */; };
 		C5EF6E6D2B848A7900AA3494 /* PackageServiceFeeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EF6E6C2B848A7900AA3494 /* PackageServiceFeeLabel.swift */; };
 		C5EF6E6F2B84BD0F00AA3494 /* AllPackageInfoVStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EF6E6E2B84BD0F00AA3494 /* AllPackageInfoVStackView.swift */; };
@@ -161,6 +162,8 @@
 		C53A32382B8C9C9E00EBB596 /* OperatorServiceInfoStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorServiceInfoStackView.swift; sourceTree = "<group>"; };
 		C53A323A2B8CA2D200EBB596 /* OperatorStatusVStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorStatusVStackView.swift; sourceTree = "<group>"; };
 		C53A323C2B8CA31B00EBB596 /* OperatorStatusHStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorStatusHStackView.swift; sourceTree = "<group>"; };
+		C54E84682B91C4D700B198DD /* PriceComparisonViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceComparisonViewCell.swift; sourceTree = "<group>"; };
+		C54E846A2B91E98500B198DD /* PriceTableSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTableSectionHeaderView.swift; sourceTree = "<group>"; };
 		C550E09E2B7F8382009408D2 /* PackageFreeServicesStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageFreeServicesStackView.swift; sourceTree = "<group>"; };
 		C550E0A02B7F87CA009408D2 /* PackageChipButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageChipButton.swift; sourceTree = "<group>"; };
 		C550E0A32B7F8AE7009408D2 /* MiniAddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniAddButton.swift; sourceTree = "<group>"; };
@@ -225,7 +228,6 @@
 		C5E658CC2B8C71B400571CE8 /* RoumingCountryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingCountryDetailView.swift; sourceTree = "<group>"; };
 		C5E658CD2B8C71B400571CE8 /* RoumingCountryDetailConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingCountryDetailConfigurator.swift; sourceTree = "<group>"; };
 		C5E658D72B8C774600571CE8 /* CategoriesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionView.swift; sourceTree = "<group>"; };
-		C5E658DB2B8C782E00571CE8 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		C5EF6E6A2B84876C00AA3494 /* AllIncludedPackageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllIncludedPackageViewCell.swift; sourceTree = "<group>"; };
 		C5EF6E6C2B848A7900AA3494 /* PackageServiceFeeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageServiceFeeLabel.swift; sourceTree = "<group>"; };
 		C5EF6E6E2B84BD0F00AA3494 /* AllPackageInfoVStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPackageInfoVStackView.swift; sourceTree = "<group>"; };
@@ -616,6 +618,7 @@
 				C53A322F2B8C926300EBB596 /* OperatorsView.swift */,
 				C53745E12B90AD62001224A6 /* PriceComparisonView.swift */,
 				C5B01C0C2B8DBB6900C14F0C /* AppDivider.swift */,
+				C54E846A2B91E98500B198DD /* PriceTableSectionHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -623,8 +626,8 @@
 		C5E658D92B8C781A00571CE8 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				C5E658DB2B8C782E00571CE8 /* CategoryCollectionViewCell.swift */,
 				C53A32342B8C97B700EBB596 /* OperatorViewCell.swift */,
+				C54E84682B91C4D700B198DD /* PriceComparisonViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -809,7 +812,6 @@
 				C5B01C262B8E11B900C14F0C /* RoumingSearchCountryWorker.swift in Sources */,
 				C5B01C3D2B8E120B00C14F0C /* RoumingPackageDetailConfigurator.swift in Sources */,
 				C53745DB2B9095A6001224A6 /* RoamingCountriesTableView.swift in Sources */,
-				C5E658DC2B8C782E00571CE8 /* CategoryCollectionViewCell.swift in Sources */,
 				C5EF6E752B85C61800AA3494 /* CountrySearchView.swift in Sources */,
 				C5BB3C0A2B7E1F5200819E25 /* ThemeableViewController.swift in Sources */,
 				C53745BE2B9061A1001224A6 /* BulletTextFormatter.swift in Sources */,
@@ -825,9 +827,11 @@
 				C5E658D22B8C71B400571CE8 /* RoumingCountryDetailViewController.swift in Sources */,
 				C5EF6E9F2B87650B00AA3494 /* SectionHeaderView.swift in Sources */,
 				C53745D72B909545001224A6 /* RoumingCountrySearchView.swift in Sources */,
+				C54E84692B91C4D700B198DD /* PriceComparisonViewCell.swift in Sources */,
 				C5B01C2B2B8E11B900C14F0C /* RoumingSearchCountryView.swift in Sources */,
 				C5BB3BF62B7E1E0800819E25 /* AppRouter.swift in Sources */,
 				C5BB3C382B7E29C200819E25 /* RoumingDetailWorker.swift in Sources */,
+				C54E846B2B91E98500B198DD /* PriceTableSectionHeaderView.swift in Sources */,
 				C5B01C3A2B8E120B00C14F0C /* RoumingPackageDetailViewController.swift in Sources */,
 				C53745C12B90676A001224A6 /* AppButton.swift in Sources */,
 				C5C82A162B7F6BC40018BB61 /* RoundedView.swift in Sources */,

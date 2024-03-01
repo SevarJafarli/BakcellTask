@@ -9,14 +9,14 @@ import UIKit
 import BakcellUIKit
 
 protocol RoumingCountryDetailViewDelegate: AnyObject {
-    
 }
 
 final class RoumingCountryDetailView: UIView {
     
     weak var delegate: RoumingCountryDetailViewDelegate?
     
- 
+    var selectedIndex = 0
+    
     lazy var filterSegmentedControl: SegmentedControl = {
         let segmentedControl = SegmentedControl()
         segmentedControl.backgroundColor = .white
@@ -29,6 +29,7 @@ final class RoumingCountryDetailView: UIView {
         segmentedControl.selectionHorizontalPadding = 8
         segmentedControl.contentInset = .zero
         segmentedControl.clipsToBounds = true
+        segmentedControl.delegate = self
         return segmentedControl
     }()
     
@@ -40,7 +41,8 @@ final class RoumingCountryDetailView: UIView {
         tableView.backgroundColor = .clear
         tableView.contentInset = .zero
         tableView.register(OperatorViewCell.self, forCellReuseIdentifier: OperatorViewCell.reuseIdentifier)
-      
+        
+        tableView.register(PriceComparisonViewCell.self, forCellReuseIdentifier: PriceComparisonViewCell.reuseIdentifier)
         return tableView
         
     }()
@@ -57,6 +59,7 @@ final class RoumingCountryDetailView: UIView {
         segmentedControl.selectionHorizontalPadding = 8
         segmentedControl.contentInset = .zero
         segmentedControl.clipsToBounds = true
+        segmentedControl.delegate = self
         return segmentedControl
     }()
     
@@ -70,7 +73,7 @@ final class RoumingCountryDetailView: UIView {
     init() {
         super.init(frame: .zero)
         self.setSegmentedControl()
-        self.contentTableView.isHidden = true
+        
         self.addSubviews()
         self.setupUI()
     }
@@ -101,12 +104,15 @@ final class RoumingCountryDetailView: UIView {
             make.top.equalTo(self.filterSegmentedControl.snp.bottom)
             make.horizontalEdges.bottom.equalToSuperview()
         }
+        
+        
+        
         // Set a fixed height for the tableHeaderView
         if let headerView = self.contentTableView.tableHeaderView {
             headerView.frame.size.height = 64
         }
+        
     }
-    
     
     // MARK: - Private
     
@@ -155,14 +161,60 @@ final class RoumingCountryDetailView: UIView {
 
 extension RoumingCountryDetailView: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+
+                if self.selectedIndex == 1 {
+                    return 3
+                }
+                else if self.selectedIndex == 2 {
+                    return 1
+                }
+                else {
+                    return 0
+                }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: OperatorViewCell.reuseIdentifier, for: indexPath) as?  OperatorViewCell else {
-            return UITableViewCell()
+        print(self.selectedIndex)
+        if self.selectedIndex == 1 {
+            print("index is one")
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: OperatorViewCell.reuseIdentifier, for: indexPath) as?  OperatorViewCell else {
+                return UITableViewCell()
+            }
+            return cell
         }
-        return cell
+        else if self.selectedIndex == 2 {
+            print("index is two")
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: PriceComparisonViewCell.reuseIdentifier, for: indexPath) as?  PriceComparisonViewCell else {
+                return UITableViewCell()
+            }
+            return cell
+        }
+        else {
+            print("index is not one")
+            let cell =  UITableViewCell()
+            cell.backgroundColor = .red
+            return cell
+        }
+        
+        
+    }
+}
+
+
+extension RoumingCountryDetailView: SegmentedControlDelegate {
+    
+    func segmentedControl(_ segmentedControl: SegmentedControl, didSelectIndex selectedIndex: Int) {
+        if segmentedControl == self.roamingSegmentedControl {
+            
+        }
+        
+        else if segmentedControl == self.filterSegmentedControl {
+            self.selectedIndex = selectedIndex
+            
+            self.contentTableView.contentInset = self.selectedIndex == 2 ? .init(top: 0, left: 8, bottom: 0, right: 8) : .zero
+
+            self.contentTableView.reloadData()
+        }
     }
 }
 

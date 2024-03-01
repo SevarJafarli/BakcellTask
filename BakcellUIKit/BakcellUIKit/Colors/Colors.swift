@@ -21,6 +21,7 @@ public enum ColorStyle: String, CaseIterable {
     case appWhite
     case greyStrokeSoft
     case greyTextHelper
+    case tableGrey
 }
 
 extension ColorStyle {

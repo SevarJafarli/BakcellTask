@@ -20,7 +20,7 @@ final class RoumingCountryDetailViewController: UIViewController, ThemeableViewC
     var interactor: RoumingCountryDetailBusinessLogic?
     var router: (RoumingCountryDetailRoutingLogic & RoumingCountryDetailDataPassing)?
     
-    var selectedIndex = 0
+    var selectedFilterIndex = 0
     
     // MARK: - Lifecycle Methods
 
@@ -30,8 +30,7 @@ final class RoumingCountryDetailViewController: UIViewController, ThemeableViewC
         self.view = mainView
         mainView?.delegate = self
         self.setSegmentedControl()
-        self.mainView?.roamingSegmentedControl.delegate = self
-        self.mainView?.filterSegmentedControl.delegate = self
+       
     }
     
     override func viewDidLoad() {
@@ -89,31 +88,4 @@ extension RoumingCountryDetailViewController: RoumingCountryDetailDisplayLogic {
 // MARK: - View Delegate
 
 extension RoumingCountryDetailViewController: RoumingCountryDetailViewDelegate {
-  
-}
-
-extension RoumingCountryDetailViewController: SegmentedControlDelegate {
-    
-    func segmentedControl(_ segmentedControl: SegmentedControl, didSelectIndex selectedIndex: Int) {
-        if segmentedControl == self.mainView?.roamingSegmentedControl {
-            
-        }
-        else if segmentedControl == self.mainView?.filterSegmentedControl {
-            self.selectedIndex = selectedIndex
-            
-            switch self.selectedIndex {
-            case 0 :
-                self.mainView?.contentTableView.isHidden = true
-            case 1 :
-                self.mainView?.contentTableView.isHidden = false
-               
-            case 2 :
-                self.mainView?.contentTableView.isHidden = true
-            default:
-          
-                self.mainView?.contentTableView.isHidden = true
-               
-            }
-        }
-    }
 }
