@@ -9,9 +9,9 @@ import UIKit
 
 
 
-class PriceComparisonViewCell: UITableViewCell {
-    static var reuseIdentifier = "PriceComparisonViewCell"
-    
+class PriceComparisonViewCell: UIView {
+//    static var reuseIdentifier = "PriceComparisonViewCell"
+//    
     let titles = ["Operatorlar", "Daxil olan zənglər", "Çıxan zənglər", "Daxil olan SMS", "Çıxan SMS", "İnternet sərfiyyatı", "Şəbəkə"]
     let operator1 = ["TT Mobile", "0.39 ₼ / dəq", "0.99 ₼ / dəq", "Pulsuz", "0.19 ₼ / sms", "-", "2G, 3G, 4G"]
     let operator2 = ["Turkcell", "0.39 ₼ / dəq", "0.99 ₼ / dəq", "Pulsuz", "0.19 ₼ / sms", "-", "2G, 3G, 4G"]
@@ -69,10 +69,9 @@ class PriceComparisonViewCell: UITableViewCell {
     }()
     
     //MARK: Init
-    
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.selectionStyle = .none
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+   
         self.backgroundColor = .clear
         self.addSubviews()
     }
@@ -83,7 +82,7 @@ class PriceComparisonViewCell: UITableViewCell {
     
     private func addSubviews() {
        
-        self.contentView.addSubview(self.contentHStackView)
+        self.addSubview(self.contentHStackView)
         
         
         for (index, title) in self.titles.enumerated() {
@@ -141,7 +140,7 @@ class PriceComparisonViewCell: UITableViewCell {
         super.updateConstraints()
         
         self.contentHStackView.snp.updateConstraints { make in
-            make.horizontalEdges.equalToSuperview().inset(8)
+            make.horizontalEdges.equalToSuperview()
             make.verticalEdges.equalToSuperview()
 
         }

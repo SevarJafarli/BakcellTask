@@ -7,6 +7,7 @@
 
 import UIKit
 import BakcellUIKit
+import SnapKit
 
 protocol RoumingCountryDetailDisplayLogic: AnyObject {
     
@@ -14,6 +15,8 @@ protocol RoumingCountryDetailDisplayLogic: AnyObject {
 }
 
 final class RoumingCountryDetailViewController: UIViewController, ThemeableViewController {
+
+    
     var theme: ThemeProvider = App.theme
     
     var mainView: RoumingCountryDetailView?
@@ -22,13 +25,16 @@ final class RoumingCountryDetailViewController: UIViewController, ThemeableViewC
     
     var selectedFilterIndex = 0
     
+
+    
     // MARK: - Lifecycle Methods
 
     override func loadView() {
         super.loadView()
-        
+       
         self.view = mainView
         mainView?.delegate = self
+        self.setupPageViewController()
         self.setSegmentedControl()
        
     }
@@ -37,7 +43,6 @@ final class RoumingCountryDetailViewController: UIViewController, ThemeableViewC
         super.viewDidLoad()
         self.showBackButton = true
         self.title = router?.dataStore?.country
-        
         self.load()
     }
     
@@ -74,6 +79,14 @@ final class RoumingCountryDetailViewController: UIViewController, ThemeableViewC
         interactor?.load(request: request)
     }
     
+    
+    
+    private func setupPageViewController() {
+        self.addChild(self.mainView!.pageViewController)
+        
+        self.mainView!.pageViewController.didMove(toParent: self)
+    }
+    
 }
 
 // MARK: - Display Logic
@@ -81,7 +94,6 @@ final class RoumingCountryDetailViewController: UIViewController, ThemeableViewC
 extension RoumingCountryDetailViewController: RoumingCountryDetailDisplayLogic {
     
     func displayLoad(viewModel: RoumingCountryDetail.Load.ViewModel) {
-        //nameTextField.text = viewModel.name
     }
 }
 
