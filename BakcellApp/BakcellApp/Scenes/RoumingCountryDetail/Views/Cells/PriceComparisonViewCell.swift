@@ -53,7 +53,7 @@ class PriceComparisonViewCell: UITableViewCell {
         let view = UIStackView()
         view.axis = .vertical
 
-    
+
         view.backgroundColor = .clear
         
         view.clipsToBounds = true
