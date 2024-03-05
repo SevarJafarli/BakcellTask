@@ -9,7 +9,7 @@ import UIKit
 
 
 
-class PriceComparisonView: UIView {
+class OperatorServicePriceComparisonView: UIView {
     
     let operators: [OperatorServicePriceModel] = [
         .init(name: "TT Mobile", incomingCallFee: "0.39 ₼ / dəq", outgoingCallFee: "0.99 ₼ / dəq", incomingSMS: "Pulsuz", outgoingSMS: "0.19 ₼ / sms", internetUsage: "-", network: "2G, 3G, 4G"),

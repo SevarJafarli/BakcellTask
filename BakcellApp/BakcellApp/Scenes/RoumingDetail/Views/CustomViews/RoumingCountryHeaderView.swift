@@ -56,7 +56,7 @@ class RoumingCountryHeaderView: UIView {
         let collectionView = RoumingCountriesCollectionView()
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(RoumingCountryButton.self, forCellWithReuseIdentifier: RoumingCountryButton.reuseIdentifier)
+        collectionView.register(RoumingCountryViewCell.self, forCellWithReuseIdentifier: RoumingCountryViewCell.reuseIdentifier)
         
         return collectionView
     }()
@@ -124,7 +124,7 @@ extension RoumingCountryHeaderView: UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RoumingCountryButton.reuseIdentifier, for: indexPath) as? RoumingCountryButton else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RoumingCountryViewCell.reuseIdentifier, for: indexPath) as? RoumingCountryViewCell else {
             return UICollectionViewCell()
         }
         

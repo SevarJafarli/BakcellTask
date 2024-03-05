@@ -9,7 +9,6 @@ import UIKit
 import BakcellUIKit
 
 class PackageChipButton: UIView {
-//    var theme: ThemeProvider = App.theme
 
     private lazy var titleLabel: UILabel = {
         let lbl = UILabel()
@@ -25,9 +24,11 @@ class PackageChipButton: UIView {
         self.addSubviews()
 
     }
+    
     required init?(coder: NSCoder) {
         fatalError()
     }
+    
     private func setupUI() {
         self.backgroundColor = adaptiveColor(.greyBg)
         self.layer.cornerRadius = 8

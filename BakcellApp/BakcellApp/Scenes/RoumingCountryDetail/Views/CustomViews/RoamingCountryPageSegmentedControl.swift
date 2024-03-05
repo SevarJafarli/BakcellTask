@@ -10,7 +10,6 @@ import BakcellUIKit
 
 class RoamingCountryPageSegmentedControl: SegmentedControl {
     
-    
     //MARK: Init
     
     override init(frame: CGRect) {

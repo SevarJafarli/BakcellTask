@@ -35,7 +35,6 @@
 		C53A32392B8C9C9E00EBB596 /* OperatorServiceInfoStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53A32382B8C9C9E00EBB596 /* OperatorServiceInfoStackView.swift */; };
 		C53A323B2B8CA2D200EBB596 /* OperatorStatusVStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53A323A2B8CA2D200EBB596 /* OperatorStatusVStackView.swift */; };
 		C53A323D2B8CA31B00EBB596 /* OperatorStatusHStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53A323C2B8CA31B00EBB596 /* OperatorStatusHStackView.swift */; };
-		C54E84692B91C4D700B198DD /* PriceComparisonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54E84682B91C4D700B198DD /* PriceComparisonView.swift */; };
 		C54E846B2B91E98500B198DD /* PriceTableSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54E846A2B91E98500B198DD /* PriceTableSectionHeaderView.swift */; };
 		C550E09F2B7F8382009408D2 /* PackageFreeServicesStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C550E09E2B7F8382009408D2 /* PackageFreeServicesStackView.swift */; };
 		C550E0A12B7F87CA009408D2 /* PackageChipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C550E0A02B7F87CA009408D2 /* PackageChipButton.swift */; };
@@ -44,6 +43,11 @@
 		C567E22E2B95C739003C7943 /* OperatorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C567E22D2B95C739003C7943 /* OperatorsViewController.swift */; };
 		C567E2302B95CCF4003C7943 /* PriceComparisonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C567E22F2B95CCF4003C7943 /* PriceComparisonViewController.swift */; };
 		C567E2322B96E45D003C7943 /* RoamingCountryPageSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C567E2312B96E45D003C7943 /* RoamingCountryPageSegmentedControl.swift */; };
+		C567E2352B96F4D8003C7943 /* RoamingCountryPackagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C567E2342B96F4D8003C7943 /* RoamingCountryPackagesViewController.swift */; };
+		C567E2382B96F51B003C7943 /* OperatorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C567E2372B96F51B003C7943 /* OperatorsView.swift */; };
+		C567E23A2B96F5D2003C7943 /* PriceComparisonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C567E2392B96F5D2003C7943 /* PriceComparisonView.swift */; };
+		C567E23B2B96F720003C7943 /* OperatorServicePriceComparisonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54E84682B91C4D700B198DD /* OperatorServicePriceComparisonView.swift */; };
+		C567E23D2B96F77C003C7943 /* RoamingCountryPackagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C567E23C2B96F77C003C7943 /* RoamingCountryPackagesView.swift */; };
 		C5B01C0B2B8DB49E00C14F0C /* OperatorInfoTitleVStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B01C0A2B8DB49E00C14F0C /* OperatorInfoTitleVStackView.swift */; };
 		C5B01C0D2B8DBB6900C14F0C /* AppDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B01C0C2B8DBB6900C14F0C /* AppDivider.swift */; };
 		C5B01C0F2B8DCC5E00C14F0C /* OperatorServiceVStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B01C0E2B8DCC5E00C14F0C /* OperatorServiceVStackView.swift */; };
@@ -52,14 +56,6 @@
 		C5B01C172B8DF4A700C14F0C /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B01C162B8DF4A700C14F0C /* Protocols.swift */; };
 		C5B01C192B8DF4BD00C14F0C /* SCScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B01C182B8DF4BD00C14F0C /* SCScrollView.swift */; };
 		C5B01C1B2B8DF4DA00C14F0C /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B01C1A2B8DF4DA00C14F0C /* Style.swift */; };
-		C5B01C252B8E11B900C14F0C /* RoumingSearchCountryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B01C1D2B8E11B900C14F0C /* RoumingSearchCountryPresenter.swift */; };
-		C5B01C262B8E11B900C14F0C /* RoumingSearchCountryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B01C1E2B8E11B900C14F0C /* RoumingSearchCountryWorker.swift */; };
-		C5B01C272B8E11B900C14F0C /* RoumingSearchCountryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B01C1F2B8E11B900C14F0C /* RoumingSearchCountryRouter.swift */; };
-		C5B01C282B8E11B900C14F0C /* RoumingSearchCountryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B01C202B8E11B900C14F0C /* RoumingSearchCountryModels.swift */; };
-		C5B01C292B8E11B900C14F0C /* RoumingSearchCountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B01C212B8E11B900C14F0C /* RoumingSearchCountryViewController.swift */; };
-		C5B01C2A2B8E11B900C14F0C /* RoumingSearchCountryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B01C222B8E11B900C14F0C /* RoumingSearchCountryInteractor.swift */; };
-		C5B01C2B2B8E11B900C14F0C /* RoumingSearchCountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B01C232B8E11B900C14F0C /* RoumingSearchCountryView.swift */; };
-		C5B01C2C2B8E11B900C14F0C /* RoumingSearchCountryConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B01C242B8E11B900C14F0C /* RoumingSearchCountryConfigurator.swift */; };
 		C5B01C362B8E120B00C14F0C /* RoumingPackageDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B01C2E2B8E120B00C14F0C /* RoumingPackageDetailPresenter.swift */; };
 		C5B01C372B8E120B00C14F0C /* RoumingPackageDetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B01C2F2B8E120B00C14F0C /* RoumingPackageDetailWorker.swift */; };
 		C5B01C382B8E120B00C14F0C /* RoumingPackageDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B01C302B8E120B00C14F0C /* RoumingPackageDetailRouter.swift */; };
@@ -107,11 +103,10 @@
 		C5E658D52B8C71B400571CE8 /* RoumingCountryDetailConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E658CD2B8C71B400571CE8 /* RoumingCountryDetailConfigurator.swift */; };
 		C5E658D82B8C774600571CE8 /* CategoriesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E658D72B8C774600571CE8 /* CategoriesCollectionView.swift */; };
 		C5EF6E6B2B84876C00AA3494 /* AllIncludedPackageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EF6E6A2B84876C00AA3494 /* AllIncludedPackageViewCell.swift */; };
-		C5EF6E6D2B848A7900AA3494 /* PackageServiceFeeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EF6E6C2B848A7900AA3494 /* PackageServiceFeeLabel.swift */; };
 		C5EF6E6F2B84BD0F00AA3494 /* AllPackageInfoVStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EF6E6E2B84BD0F00AA3494 /* AllPackageInfoVStackView.swift */; };
 		C5EF6E732B85C0C400AA3494 /* AllIncludedPackageInfoHStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EF6E722B85C0C400AA3494 /* AllIncludedPackageInfoHStackView.swift */; };
 		C5EF6E752B85C61800AA3494 /* CountrySearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EF6E742B85C61800AA3494 /* CountrySearchView.swift */; };
-		C5EF6E772B85CD2900AA3494 /* RoumingCountryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EF6E762B85CD2900AA3494 /* RoumingCountryButton.swift */; };
+		C5EF6E772B85CD2900AA3494 /* RoumingCountryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EF6E762B85CD2900AA3494 /* RoumingCountryViewCell.swift */; };
 		C5EF6E792B85D1A800AA3494 /* RoumingCountriesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EF6E782B85D1A800AA3494 /* RoumingCountriesCollectionView.swift */; };
 		C5EF6E7B2B85EEFC00AA3494 /* UICollectionCenterFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EF6E7A2B85EEFC00AA3494 /* UICollectionCenterFlowLayout.swift */; };
 		C5EF6E9D2B87614F00AA3494 /* RoumingCountryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EF6E9C2B87614F00AA3494 /* RoumingCountryHeaderView.swift */; };
@@ -162,7 +157,7 @@
 		C53A32382B8C9C9E00EBB596 /* OperatorServiceInfoStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorServiceInfoStackView.swift; sourceTree = "<group>"; };
 		C53A323A2B8CA2D200EBB596 /* OperatorStatusVStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorStatusVStackView.swift; sourceTree = "<group>"; };
 		C53A323C2B8CA31B00EBB596 /* OperatorStatusHStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorStatusHStackView.swift; sourceTree = "<group>"; };
-		C54E84682B91C4D700B198DD /* PriceComparisonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceComparisonView.swift; sourceTree = "<group>"; };
+		C54E84682B91C4D700B198DD /* OperatorServicePriceComparisonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorServicePriceComparisonView.swift; sourceTree = "<group>"; };
 		C54E846A2B91E98500B198DD /* PriceTableSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTableSectionHeaderView.swift; sourceTree = "<group>"; };
 		C550E09E2B7F8382009408D2 /* PackageFreeServicesStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageFreeServicesStackView.swift; sourceTree = "<group>"; };
 		C550E0A02B7F87CA009408D2 /* PackageChipButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageChipButton.swift; sourceTree = "<group>"; };
@@ -171,6 +166,10 @@
 		C567E22D2B95C739003C7943 /* OperatorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorsViewController.swift; sourceTree = "<group>"; };
 		C567E22F2B95CCF4003C7943 /* PriceComparisonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceComparisonViewController.swift; sourceTree = "<group>"; };
 		C567E2312B96E45D003C7943 /* RoamingCountryPageSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoamingCountryPageSegmentedControl.swift; sourceTree = "<group>"; };
+		C567E2342B96F4D8003C7943 /* RoamingCountryPackagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RoamingCountryPackagesViewController.swift; path = BakcellApp/Scenes/RoumingCountryDetail/RoamingCountryPackagesViewController.swift; sourceTree = SOURCE_ROOT; };
+		C567E2372B96F51B003C7943 /* OperatorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorsView.swift; sourceTree = "<group>"; };
+		C567E2392B96F5D2003C7943 /* PriceComparisonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceComparisonView.swift; sourceTree = "<group>"; };
+		C567E23C2B96F77C003C7943 /* RoamingCountryPackagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoamingCountryPackagesView.swift; sourceTree = "<group>"; };
 		C5B01C0A2B8DB49E00C14F0C /* OperatorInfoTitleVStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorInfoTitleVStackView.swift; sourceTree = "<group>"; };
 		C5B01C0C2B8DBB6900C14F0C /* AppDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDivider.swift; sourceTree = "<group>"; };
 		C5B01C0E2B8DCC5E00C14F0C /* OperatorServiceVStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorServiceVStackView.swift; sourceTree = "<group>"; };
@@ -179,14 +178,6 @@
 		C5B01C162B8DF4A700C14F0C /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		C5B01C182B8DF4BD00C14F0C /* SCScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCScrollView.swift; sourceTree = "<group>"; };
 		C5B01C1A2B8DF4DA00C14F0C /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
-		C5B01C1D2B8E11B900C14F0C /* RoumingSearchCountryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingSearchCountryPresenter.swift; sourceTree = "<group>"; };
-		C5B01C1E2B8E11B900C14F0C /* RoumingSearchCountryWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingSearchCountryWorker.swift; sourceTree = "<group>"; };
-		C5B01C1F2B8E11B900C14F0C /* RoumingSearchCountryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingSearchCountryRouter.swift; sourceTree = "<group>"; };
-		C5B01C202B8E11B900C14F0C /* RoumingSearchCountryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingSearchCountryModels.swift; sourceTree = "<group>"; };
-		C5B01C212B8E11B900C14F0C /* RoumingSearchCountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingSearchCountryViewController.swift; sourceTree = "<group>"; };
-		C5B01C222B8E11B900C14F0C /* RoumingSearchCountryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingSearchCountryInteractor.swift; sourceTree = "<group>"; };
-		C5B01C232B8E11B900C14F0C /* RoumingSearchCountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingSearchCountryView.swift; sourceTree = "<group>"; };
-		C5B01C242B8E11B900C14F0C /* RoumingSearchCountryConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingSearchCountryConfigurator.swift; sourceTree = "<group>"; };
 		C5B01C2E2B8E120B00C14F0C /* RoumingPackageDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingPackageDetailPresenter.swift; sourceTree = "<group>"; };
 		C5B01C2F2B8E120B00C14F0C /* RoumingPackageDetailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingPackageDetailWorker.swift; sourceTree = "<group>"; };
 		C5B01C302B8E120B00C14F0C /* RoumingPackageDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingPackageDetailRouter.swift; sourceTree = "<group>"; };
@@ -233,11 +224,10 @@
 		C5E658CD2B8C71B400571CE8 /* RoumingCountryDetailConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingCountryDetailConfigurator.swift; sourceTree = "<group>"; };
 		C5E658D72B8C774600571CE8 /* CategoriesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionView.swift; sourceTree = "<group>"; };
 		C5EF6E6A2B84876C00AA3494 /* AllIncludedPackageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllIncludedPackageViewCell.swift; sourceTree = "<group>"; };
-		C5EF6E6C2B848A7900AA3494 /* PackageServiceFeeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageServiceFeeLabel.swift; sourceTree = "<group>"; };
 		C5EF6E6E2B84BD0F00AA3494 /* AllPackageInfoVStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPackageInfoVStackView.swift; sourceTree = "<group>"; };
 		C5EF6E722B85C0C400AA3494 /* AllIncludedPackageInfoHStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllIncludedPackageInfoHStackView.swift; sourceTree = "<group>"; };
 		C5EF6E742B85C61800AA3494 /* CountrySearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountrySearchView.swift; sourceTree = "<group>"; };
-		C5EF6E762B85CD2900AA3494 /* RoumingCountryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingCountryButton.swift; sourceTree = "<group>"; };
+		C5EF6E762B85CD2900AA3494 /* RoumingCountryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingCountryViewCell.swift; sourceTree = "<group>"; };
 		C5EF6E782B85D1A800AA3494 /* RoumingCountriesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingCountriesCollectionView.swift; sourceTree = "<group>"; };
 		C5EF6E7A2B85EEFC00AA3494 /* UICollectionCenterFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionCenterFlowLayout.swift; sourceTree = "<group>"; };
 		C5EF6E9C2B87614F00AA3494 /* RoumingCountryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingCountryHeaderView.swift; sourceTree = "<group>"; };
@@ -261,14 +251,8 @@
 		C50B032D2B8F0B06007A7EAD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C567E2332B96F155003C7943 /* CustomViews */,
 				C53745C52B906C5C001224A6 /* Buttons */,
-				C50B032E2B8F0B13007A7EAD /* RoumingPackageInfoCardView.swift */,
-				C50B03322B8F1098007A7EAD /* PackageDetailInfoStackView.swift */,
-				C50B03342B8F1157007A7EAD /* PackageDetailISingleInfoView.swift */,
-				C50B03362B8F1B9B007A7EAD /* PackageCardHeaderView.swift */,
-				C50B03382B8F23E9007A7EAD /* PackageIconView.swift */,
-				C50B033A2B8F5A00007A7EAD /* PackageMoreInfosStackView.swift */,
-				C53745BB2B9054EA001224A6 /* PackageSingleMoreInfoStackView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -325,6 +309,8 @@
 		C53A32312B8C938400EBB596 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				C54E846A2B91E98500B198DD /* PriceTableSectionHeaderView.swift */,
+				C54E84682B91C4D700B198DD /* OperatorServicePriceComparisonView.swift */,
 				C53A32322B8C93A600EBB596 /* RoamingSegmentedControl.swift */,
 				C53A32382B8C9C9E00EBB596 /* OperatorServiceInfoStackView.swift */,
 				C5B01C0A2B8DB49E00C14F0C /* OperatorInfoTitleVStackView.swift */,
@@ -347,15 +333,43 @@
 		C567E22C2B95C729003C7943 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C567E2362B96F50E003C7943 /* Views */,
 				C567E22D2B95C739003C7943 /* OperatorsViewController.swift */,
 				C567E22F2B95CCF4003C7943 /* PriceComparisonViewController.swift */,
+				C567E2342B96F4D8003C7943 /* RoamingCountryPackagesViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C567E2332B96F155003C7943 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				C50B032E2B8F0B13007A7EAD /* RoumingPackageInfoCardView.swift */,
+				C50B03362B8F1B9B007A7EAD /* PackageCardHeaderView.swift */,
+				C50B03342B8F1157007A7EAD /* PackageDetailISingleInfoView.swift */,
+				C50B033A2B8F5A00007A7EAD /* PackageMoreInfosStackView.swift */,
+				C53745BB2B9054EA001224A6 /* PackageSingleMoreInfoStackView.swift */,
+				C50B03382B8F23E9007A7EAD /* PackageIconView.swift */,
+				C50B03322B8F1098007A7EAD /* PackageDetailInfoStackView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		C567E2362B96F50E003C7943 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C567E2372B96F51B003C7943 /* OperatorsView.swift */,
+				C567E2392B96F5D2003C7943 /* PriceComparisonView.swift */,
+				C567E23C2B96F77C003C7943 /* RoamingCountryPackagesView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		C5B01C102B8DF46A00C14F0C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C5B01C0C2B8DBB6900C14F0C /* AppDivider.swift */,
+				C5EF6E7A2B85EEFC00AA3494 /* UICollectionCenterFlowLayout.swift */,
 				C53745BF2B906754001224A6 /* Buttons */,
 				C5B01C132B8DF48100C14F0C /* SegmentedControl */,
 			);
@@ -372,21 +386,6 @@
 				C5B01C1A2B8DF4DA00C14F0C /* Style.swift */,
 			);
 			path = SegmentedControl;
-			sourceTree = "<group>";
-		};
-		C5B01C1C2B8E11A300C14F0C /* RoumingSearchCountry */ = {
-			isa = PBXGroup;
-			children = (
-				C5B01C1D2B8E11B900C14F0C /* RoumingSearchCountryPresenter.swift */,
-				C5B01C1E2B8E11B900C14F0C /* RoumingSearchCountryWorker.swift */,
-				C5B01C1F2B8E11B900C14F0C /* RoumingSearchCountryRouter.swift */,
-				C5B01C202B8E11B900C14F0C /* RoumingSearchCountryModels.swift */,
-				C5B01C212B8E11B900C14F0C /* RoumingSearchCountryViewController.swift */,
-				C5B01C222B8E11B900C14F0C /* RoumingSearchCountryInteractor.swift */,
-				C5B01C232B8E11B900C14F0C /* RoumingSearchCountryView.swift */,
-				C5B01C242B8E11B900C14F0C /* RoumingSearchCountryConfigurator.swift */,
-			);
-			path = RoumingSearchCountry;
 			sourceTree = "<group>";
 		};
 		C5B01C2D2B8E11F400C14F0C /* RoumingPackageDetail */ = {
@@ -501,7 +500,6 @@
 			children = (
 				C53745C82B909510001224A6 /* RoumingCountrySearch */,
 				C5B01C2D2B8E11F400C14F0C /* RoumingPackageDetail */,
-				C5B01C1C2B8E11A300C14F0C /* RoumingSearchCountry */,
 				C5E658C52B8C719E00571CE8 /* RoumingCountryDetail */,
 				C5BB3C442B7E30F700819E25 /* RoumingDetail */,
 			);
@@ -557,9 +555,7 @@
 				C5EF6EA02B876D3500AA3494 /* StackViews */,
 				C550E0A22B7F8ADB009408D2 /* Buttons */,
 				C5BB3C482B7E312100819E25 /* CollectionViews */,
-				C5BB3C472B7E311B00819E25 /* TableViews */,
 				C5BB3C462B7E310A00819E25 /* Cells */,
-				C5EF6E7A2B85EEFC00AA3494 /* UICollectionCenterFlowLayout.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -571,13 +567,6 @@
 				C5C82A0F2B7F62CA0018BB61 /* CollectionViewCell */,
 			);
 			path = Cells;
-			sourceTree = "<group>";
-		};
-		C5BB3C472B7E311B00819E25 /* TableViews */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TableViews;
 			sourceTree = "<group>";
 		};
 		C5BB3C482B7E312100819E25 /* CollectionViews */ = {
@@ -593,7 +582,7 @@
 			isa = PBXGroup;
 			children = (
 				C5BB3C4B2B7E32A600819E25 /* RoumingPackageViewCell.swift */,
-				C5EF6E762B85CD2900AA3494 /* RoumingCountryButton.swift */,
+				C5EF6E762B85CD2900AA3494 /* RoumingCountryViewCell.swift */,
 			);
 			path = CollectionViewCell;
 			sourceTree = "<group>";
@@ -631,8 +620,6 @@
 				C53A32312B8C938400EBB596 /* CustomViews */,
 				C5E658DA2B8C781F00571CE8 /* CollectionViews */,
 				C5E658D92B8C781A00571CE8 /* Cells */,
-				C5B01C0C2B8DBB6900C14F0C /* AppDivider.swift */,
-				C54E846A2B91E98500B198DD /* PriceTableSectionHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -641,7 +628,6 @@
 			isa = PBXGroup;
 			children = (
 				C53A32342B8C97B700EBB596 /* OperatorViewCell.swift */,
-				C54E84682B91C4D700B198DD /* PriceComparisonView.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -670,7 +656,6 @@
 				C5EF6E9C2B87614F00AA3494 /* RoumingCountryHeaderView.swift */,
 				C550E0A02B7F87CA009408D2 /* PackageChipButton.swift */,
 				C5EF6E9E2B87650B00AA3494 /* SectionHeaderView.swift */,
-				C5EF6E6C2B848A7900AA3494 /* PackageServiceFeeLabel.swift */,
 				C5EF6E742B85C61800AA3494 /* CountrySearchView.swift */,
 			);
 			path = CustomViews;
@@ -753,7 +738,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5EF6E6D2B848A7900AA3494 /* PackageServiceFeeLabel.swift in Sources */,
+				C567E23B2B96F720003C7943 /* OperatorServicePriceComparisonView.swift in Sources */,
 				C5B01C1B2B8DF4DA00C14F0C /* Style.swift in Sources */,
 				C550E09F2B7F8382009408D2 /* PackageFreeServicesStackView.swift in Sources */,
 				C53A32332B8C93A600EBB596 /* RoamingSegmentedControl.swift in Sources */,
@@ -769,7 +754,7 @@
 				C5E658D32B8C71B400571CE8 /* RoumingCountryDetailInteractor.swift in Sources */,
 				C5B01C372B8E120B00C14F0C /* RoumingPackageDetailWorker.swift in Sources */,
 				C5B01C0D2B8DBB6900C14F0C /* AppDivider.swift in Sources */,
-				C5EF6E772B85CD2900AA3494 /* RoumingCountryButton.swift in Sources */,
+				C5EF6E772B85CD2900AA3494 /* RoumingCountryViewCell.swift in Sources */,
 				C5B01C122B8DF47800C14F0C /* SegmentedControl.swift in Sources */,
 				C5B01C192B8DF4BD00C14F0C /* SCScrollView.swift in Sources */,
 				C50B033B2B8F5A00007A7EAD /* PackageMoreInfosStackView.swift in Sources */,
@@ -780,7 +765,6 @@
 				C5E658CE2B8C71B400571CE8 /* RoumingCountryDetailPresenter.swift in Sources */,
 				C53745D52B909545001224A6 /* RoumingCountrySearchViewController.swift in Sources */,
 				C5B01C0F2B8DCC5E00C14F0C /* OperatorServiceVStackView.swift in Sources */,
-				C5B01C282B8E11B900C14F0C /* RoumingSearchCountryModels.swift in Sources */,
 				C5BB3BF92B7E1E1700819E25 /* AppContainer.swift in Sources */,
 				C5EF6E6F2B84BD0F00AA3494 /* AllPackageInfoVStackView.swift in Sources */,
 				C5BB3C052B7E1F1E00819E25 /* ViewController+Navigation.swift in Sources */,
@@ -798,10 +782,9 @@
 				C5EF6E9D2B87614F00AA3494 /* RoumingCountryHeaderView.swift in Sources */,
 				C53745C32B906882001224A6 /* LinearGradientView.swift in Sources */,
 				C5BB3BB12B7E1CF800819E25 /* AppDelegate.swift in Sources */,
-				C5B01C272B8E11B900C14F0C /* RoumingSearchCountryRouter.swift in Sources */,
 				C5BB3C3B2B7E29C200819E25 /* RoumingDetailViewController.swift in Sources */,
+				C567E2352B96F4D8003C7943 /* RoamingCountryPackagesViewController.swift in Sources */,
 				C5BB3C3C2B7E29C200819E25 /* RoumingDetailInteractor.swift in Sources */,
-				C5B01C2A2B8E11B900C14F0C /* RoumingSearchCountryInteractor.swift in Sources */,
 				C5B01C3B2B8E120B00C14F0C /* RoumingPackageDetailInteractor.swift in Sources */,
 				C53745D32B909545001224A6 /* RoumingCountrySearchRouter.swift in Sources */,
 				C5EF6E7B2B85EEFC00AA3494 /* UICollectionCenterFlowLayout.swift in Sources */,
@@ -809,21 +792,20 @@
 				C550E0A42B7F8AE7009408D2 /* MiniAddButton.swift in Sources */,
 				C53745DE2B909634001224A6 /* RoumingSearchCountryViewCell.swift in Sources */,
 				C50B03312B8F0D78007A7EAD /* AttributedStringHelper.swift in Sources */,
-				C5B01C2C2B8E11B900C14F0C /* RoumingSearchCountryConfigurator.swift in Sources */,
 				C5B01C392B8E120B00C14F0C /* RoumingPackageDetailModels.swift in Sources */,
 				C5EF6E732B85C0C400AA3494 /* AllIncludedPackageInfoHStackView.swift in Sources */,
+				C567E23D2B96F77C003C7943 /* RoamingCountryPackagesView.swift in Sources */,
 				C50B03332B8F1098007A7EAD /* PackageDetailInfoStackView.swift in Sources */,
 				C5BB3C3D2B7E29C200819E25 /* RoumingDetailView.swift in Sources */,
 				C53745D42B909545001224A6 /* RoumingCountrySearchModels.swift in Sources */,
 				C5E658D12B8C71B400571CE8 /* RoumingCountryDetailModels.swift in Sources */,
 				C53A323D2B8CA31B00EBB596 /* OperatorStatusHStackView.swift in Sources */,
 				C5E658CF2B8C71B400571CE8 /* RoumingCountryDetailWorker.swift in Sources */,
+				C567E23A2B96F5D2003C7943 /* PriceComparisonView.swift in Sources */,
 				C5B01C152B8DF49200C14F0C /* Constants.swift in Sources */,
 				C50B03392B8F23E9007A7EAD /* PackageIconView.swift in Sources */,
-				C5B01C292B8E11B900C14F0C /* RoumingSearchCountryViewController.swift in Sources */,
 				C5EF6E792B85D1A800AA3494 /* RoumingCountriesCollectionView.swift in Sources */,
 				C550E0A12B7F87CA009408D2 /* PackageChipButton.swift in Sources */,
-				C5B01C262B8E11B900C14F0C /* RoumingSearchCountryWorker.swift in Sources */,
 				C5B01C3D2B8E120B00C14F0C /* RoumingPackageDetailConfigurator.swift in Sources */,
 				C53745DB2B9095A6001224A6 /* RoamingCountriesTableView.swift in Sources */,
 				C5EF6E752B85C61800AA3494 /* CountrySearchView.swift in Sources */,
@@ -841,16 +823,14 @@
 				C5E658D22B8C71B400571CE8 /* RoumingCountryDetailViewController.swift in Sources */,
 				C5EF6E9F2B87650B00AA3494 /* SectionHeaderView.swift in Sources */,
 				C53745D72B909545001224A6 /* RoumingCountrySearchView.swift in Sources */,
-				C54E84692B91C4D700B198DD /* PriceComparisonView.swift in Sources */,
-				C5B01C2B2B8E11B900C14F0C /* RoumingSearchCountryView.swift in Sources */,
 				C5BB3BF62B7E1E0800819E25 /* AppRouter.swift in Sources */,
 				C5BB3C382B7E29C200819E25 /* RoumingDetailWorker.swift in Sources */,
+				C567E2382B96F51B003C7943 /* OperatorsView.swift in Sources */,
 				C54E846B2B91E98500B198DD /* PriceTableSectionHeaderView.swift in Sources */,
 				C5B01C3A2B8E120B00C14F0C /* RoumingPackageDetailViewController.swift in Sources */,
 				C567E2322B96E45D003C7943 /* RoamingCountryPageSegmentedControl.swift in Sources */,
 				C53745C12B90676A001224A6 /* AppButton.swift in Sources */,
 				C5C82A162B7F6BC40018BB61 /* RoundedView.swift in Sources */,
-				C5B01C252B8E11B900C14F0C /* RoumingSearchCountryPresenter.swift in Sources */,
 				C567E22B2B95AF25003C7943 /* Extension + PageViewController.swift in Sources */,
 				C5E658D82B8C774600571CE8 /* CategoriesCollectionView.swift in Sources */,
 				C5B01C362B8E120B00C14F0C /* RoumingPackageDetailPresenter.swift in Sources */,

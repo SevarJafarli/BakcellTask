@@ -26,8 +26,8 @@ class RoumingPackageViewCell: UICollectionViewCell {
         return lbl
     }()
     
-    private lazy var serviceFeeLabel: PackageServiceFeeLabel = {
-        let lbl = PackageServiceFeeLabel()
+    private lazy var serviceFeeLabel: UILabel = {
+        let lbl = UILabel()
         return lbl
     }()
     
@@ -121,7 +121,7 @@ class RoumingPackageViewCell: UICollectionViewCell {
             }
             self.setAmountLabel(amount: internetModel.package.packageAmount, amountType: internetModel.package.amountType)
             
-            self.serviceFeeLabel.configure(serviceFee: internetModel.packagePrice, serviceType: internetModel.packageTimeRange)
+            self.serviceFeeLabel.makePackageServiceFeeLabel(serviceFee: internetModel.packagePrice, serviceType: internetModel.packageTimeRange)
 
             self.chipButton.configure(with: model.packageModelType.title!)
             
@@ -135,7 +135,7 @@ class RoumingPackageViewCell: UICollectionViewCell {
             }
             self.setAmountLabel(amount: smsModel.package.packageAmount, amountType: smsModel.package.amountType)
             
-            self.serviceFeeLabel.configure(serviceFee: smsModel.packagePrice, serviceType: smsModel.packageTimeRange)
+            self.serviceFeeLabel.makePackageServiceFeeLabel(serviceFee: smsModel.packagePrice, serviceType: smsModel.packageTimeRange)
             
             self.chipButton.configure(with: model.packageModelType.title!)
             

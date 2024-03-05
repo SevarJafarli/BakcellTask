@@ -64,7 +64,6 @@ final class RoumingPackageDetailView: UIView {
     private lazy var backViewForButton: UIView = {
         let view = UIView()
         view.backgroundColor = adaptiveColor(.appWhite)
-        
         return view
     }()
     
@@ -110,7 +109,7 @@ final class RoumingPackageDetailView: UIView {
         self.activateButton.snp.updateConstraints { make in
             make.top.equalToSuperview().offset(24)
             make.horizontalEdges.equalToSuperview().inset(16)
-            make.bottom.equalToSuperview().offset(-safeAreaInsets.bottom).offset(-16)
+            make.bottom.equalToSuperview().offset(-16).offset(-self.safeAreaInsets.bottom)
             make.height.equalTo(56)
         }
     }

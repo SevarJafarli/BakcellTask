@@ -45,8 +45,8 @@ class AllIncludedPackageViewCell: UITableViewCell {
         return lbl
     }()
     
-    private lazy var packageServiceFeeLabel: PackageServiceFeeLabel = {
-        let lbl = PackageServiceFeeLabel()
+    private lazy var packageServiceFeeLabel: UILabel = {
+        let lbl = UILabel()
         return lbl
     }()
     
@@ -121,15 +121,13 @@ class AllIncludedPackageViewCell: UITableViewCell {
         }
     }
     
-   
-    
     func configure() {
         guard let data = self.data else {
             return
         }
         self.packageTitleLabel.text = "\(data.title)"
         
-        self.packageServiceFeeLabel.configure(serviceFee: data.packagePrice, serviceType: data.packageTimeRange)
+        self.packageServiceFeeLabel.makePackageServiceFeeLabel(serviceFee: data.packagePrice, serviceType: data.packageTimeRange)
         
         self.packageHStackView.data = [data.internetPackage, data.callPackage, data.smsPackage]
     }

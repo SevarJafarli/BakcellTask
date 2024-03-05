@@ -9,9 +9,7 @@ import UIKit
 import BakcellUIKit
 
 class SectionHeaderView: UIView {
-    
-//    var theme: ThemeProvider = App.theme
-    
+
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left

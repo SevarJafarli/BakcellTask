@@ -9,6 +9,7 @@ import UIKit
 import BakcellUIKit
 
 protocol RoumingCountryDetailViewDelegate: AnyObject {
+    func onPackageSelected()
 }
 
 final class RoumingCountryDetailView: UIView {
@@ -42,11 +43,16 @@ final class RoumingCountryDetailView: UIView {
         return segmentedControl
     }()
     
-    private lazy var firstViewController = UIViewController()
+    private lazy var packagesViewController: RoamingCountryPackagesViewController = {
+        let vc = RoamingCountryPackagesViewController()
+        vc.delegate = self
+        return vc
+    }()
+ 
     private lazy var operatorsViewController = OperatorsViewController()
     private lazy var priceComparisonViewController = PriceComparisonViewController()
 
-    private lazy var pageViewControllers: [UIViewController] = [firstViewController, operatorsViewController, priceComparisonViewController]
+    private lazy var pageViewControllers: [UIViewController] = [packagesViewController, operatorsViewController, priceComparisonViewController]
     
     //MARK: Init
     
@@ -55,6 +61,8 @@ final class RoumingCountryDetailView: UIView {
         self.addSubviews()
         self.setupUI()
         self.setSegmentedControl()
+        
+        self.showViewController()
     }
     
     required init?(coder: NSCoder) {
@@ -147,5 +155,13 @@ extension RoumingCountryDetailView: UIPageViewControllerDelegate, UIPageViewCont
             return nil
         }
         return pageViewControllers[currentIndex + 1]
+    }
+}
+
+
+
+extension RoumingCountryDetailView: RoamingCountryPackagesViewControllerDelegate {
+    func onPackageSelected() {
+        delegate?.onPackageSelected()
     }
 }

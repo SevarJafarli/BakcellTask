@@ -8,7 +8,7 @@
 import UIKit
 import BakcellUIKit
 
-class RoumingCountryButton: UICollectionViewCell {
+class RoumingCountryViewCell: UICollectionViewCell {
     static var reuseIdentifier = "RoumingCountryButton"
     
 

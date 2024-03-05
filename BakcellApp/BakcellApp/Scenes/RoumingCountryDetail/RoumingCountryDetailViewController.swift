@@ -73,4 +73,7 @@ extension RoumingCountryDetailViewController: RoumingCountryDetailDisplayLogic {
 // MARK: - View Delegate
 
 extension RoumingCountryDetailViewController: RoumingCountryDetailViewDelegate {
+    func onPackageSelected() {
+        router?.routeToPackageDetail()
+    }
 }
