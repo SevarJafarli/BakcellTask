@@ -9,12 +9,14 @@ import UIKit
 
 
 
-class PriceComparisonViewCell: UIView {
-//    static var reuseIdentifier = "PriceComparisonViewCell"
-//    
+class PriceComparisonView: UIView {
+    
+    let operators: [OperatorServicePriceModel] = [
+        .init(name: "TT Mobile", incomingCallFee: "0.39 ₼ / dəq", outgoingCallFee: "0.99 ₼ / dəq", incomingSMS: "Pulsuz", outgoingSMS: "0.19 ₼ / sms", internetUsage: "-", network: "2G, 3G, 4G"),
+        .init(name: "TT Mobile", incomingCallFee: "0.59 ₼ / dəq", outgoingCallFee: "0.79 ₼ / dəq", incomingSMS: "Pulsuz", outgoingSMS: "0.19 ₼ / sms", internetUsage: "-", network: "2G, 3G, 4G, 5G"),
+    ]
+    
     let titles = ["Operatorlar", "Daxil olan zənglər", "Çıxan zənglər", "Daxil olan SMS", "Çıxan SMS", "İnternet sərfiyyatı", "Şəbəkə"]
-    let operator1 = ["TT Mobile", "0.39 ₼ / dəq", "0.99 ₼ / dəq", "Pulsuz", "0.19 ₼ / sms", "-", "2G, 3G, 4G"]
-    let operator2 = ["Turkcell", "0.39 ₼ / dəq", "0.99 ₼ / dəq", "Pulsuz", "0.19 ₼ / sms", "-", "2G, 3G, 4G"]
     
     private lazy var contentHStackView: UIStackView = {
         let view = UIStackView()
@@ -49,25 +51,6 @@ class PriceComparisonViewCell: UIView {
         return view
     }()
     
-    private lazy var operatorPriceTableView: UIStackView = {
-        let view = UIStackView()
-        view.axis = .vertical
-
-
-        view.backgroundColor = .clear
-        
-        view.clipsToBounds = true
-        return view
-    }()
-    
-    private lazy var operatorPriceTableView2: UIStackView = {
-        let view = UIStackView()
-        view.axis = .vertical
-        view.backgroundColor = .clear
-        view.clipsToBounds = true
-        return view
-    }()
-    
     //MARK: Init
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -84,51 +67,33 @@ class PriceComparisonViewCell: UIView {
        
         self.addSubview(self.contentHStackView)
         
-        
         for (index, title) in self.titles.enumerated() {
             let view = PriceTableSectionHeaderView(title: title)
           
-            
-            if index % 2 == 0 {
-                view.backgroundColor = adaptiveColor(.tableGrey)
-            }
-            else {
-                view.backgroundColor = adaptiveColor(.appWhite)
-            }
+            view.setBackgroundColor(at: index)
             self.priceTableHeaders.addArrangedSubview(view)
         }
-        for (index, title) in self.operator1.enumerated() {
-            let view = PriceTableSectionHeaderView(title: title)
-            view.isOperationHeaderView = true
-            if index != 0 {
-                view.isChildView = true
-            }
-            if index % 2 != 0 {
-                view.backgroundColor = adaptiveColor(.tableGrey)
-            }
-            else {
-                view.backgroundColor = adaptiveColor(.appWhite)
-            }
-            self.operatorPriceTableView.addArrangedSubview(view)
-        }
         
-        for (index, title) in self.operator2.enumerated() {
-            let view = PriceTableSectionHeaderView(title: title)
-            view.isOperationHeaderView = true
-            if index != 0 {
-                view.isChildView = true
-            }
-            if index % 2 != 0 {
-                view.backgroundColor = adaptiveColor(.tableGrey)
-            }
-            else {
-                view.backgroundColor = adaptiveColor(.appWhite)
-            }
-            self.operatorPriceTableView2.addArrangedSubview(view)
-        }
         
-        self.operatorsPricesHStackView.addArrangedSubview(self.operatorPriceTableView)
-        self.operatorsPricesHStackView.addArrangedSubview(self.operatorPriceTableView2)
+        for (index, op) in self.operators.enumerated() {
+            let operatorPriceTableView: UIStackView = {
+                let view = UIStackView()
+                view.axis = .vertical
+                view.backgroundColor = .clear
+                view.clipsToBounds = true
+                return view
+            }()
+            
+            let mirror = Mirror(reflecting: op)
+            for (index, element) in mirror.children.enumerated() {
+               
+                let view = PriceTableSectionHeaderView(title: element.value as! String)
+                view.setBackgroundColor(at: index)
+                operatorPriceTableView.addArrangedSubview(view)
+            }
+            
+            self.operatorsPricesHStackView.addArrangedSubview(operatorPriceTableView)
+        }
         
         self.contentHStackView.addArrangedSubview(self.priceTableHeaders)
         
