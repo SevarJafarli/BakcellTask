@@ -25,6 +25,8 @@ class PriceTableSectionHeaderView: UIView {
         }
     }
     
+    
+    
     private lazy var titleLabel: UILabel = {
         let lbl = UILabel()
         lbl.font  = AppFonts.SFBoldCaption3.fontStyle
@@ -44,7 +46,7 @@ class PriceTableSectionHeaderView: UIView {
         self.layer.borderWidth = 1
         self.addSubviews()
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError()
     }
@@ -56,11 +58,11 @@ class PriceTableSectionHeaderView: UIView {
     
     override func updateConstraints() {
         super.updateConstraints()
-
+        
         self.snp.updateConstraints { make in
             make.height.equalTo(50)
             make.width.equalTo(120)
-           
+            
         }
         
         self.titleLabel.snp.updateConstraints { make in
@@ -77,5 +79,14 @@ class PriceTableSectionHeaderView: UIView {
     private func configureChildView() {
         self.titleLabel.font = AppFonts.SFRegularSubheadline.fontStyle
         
+    }
+    
+    public func setBackgroundColor(at index: Int) {
+        if index % 2 != 0 {
+            self.backgroundColor = adaptiveColor(.tableGrey)
+        }
+        else {
+            self.backgroundColor = adaptiveColor(.appWhite)
+        }
     }
 }

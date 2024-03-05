@@ -25,17 +25,15 @@ final class RoumingCountryDetailViewController: UIViewController, ThemeableViewC
     
     var selectedFilterIndex = 0
     
-
     
     // MARK: - Lifecycle Methods
 
     override func loadView() {
         super.loadView()
-       
         self.view = mainView
         mainView?.delegate = self
+        
         self.setupPageViewController()
-        self.setSegmentedControl()
        
     }
     
@@ -44,31 +42,6 @@ final class RoumingCountryDetailViewController: UIViewController, ThemeableViewC
         self.showBackButton = true
         self.title = router?.dataStore?.country
         self.load()
-    }
-    
-    func setSegmentedControl() {
-        let titleStrings = RoumingCountryDetail.categories
-        let titles: [NSAttributedString] = {
-            let attributes: [NSAttributedString.Key: Any] = [.font:  AppFonts.SFRegularSubheadline.fontStyle, .foregroundColor: adaptiveColor(.blackHigh)]
-            var titles = [NSAttributedString]()
-            for titleString in titleStrings {
-                let title = NSAttributedString(string: titleString, attributes: attributes)
-                titles.append(title)
-            }
-            return titles
-        }()
-        
-        let selectedTitles: [NSAttributedString] = {
-            let attributes: [NSAttributedString.Key: Any] =  [.font:  AppFonts.SFRegularSubheadline.fontStyle, .foregroundColor: adaptiveColor(.appWhite)]
-            var selectedTitles = [NSAttributedString]()
-            for titleString in titleStrings {
-                let selectedTitle = NSAttributedString(string: titleString, attributes: attributes)
-                selectedTitles.append(selectedTitle)
-            }
-            return selectedTitles
-        }()
-        
-        self.mainView?.filterSegmentedControl.setTitles(titles, selectedTitles: selectedTitles)
     }
     
     

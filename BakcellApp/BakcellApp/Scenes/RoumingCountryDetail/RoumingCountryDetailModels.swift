@@ -79,3 +79,16 @@ struct RoumingOperatorVolume {
     let volume: String
     let volumeType: String
 }
+
+
+
+struct OperatorServicePriceModel {
+    let name: String
+    let incomingCallFee: String
+    let outgoingCallFee: String
+    let incomingSMS: String
+    let outgoingSMS: String
+    let internetUsage: String
+    let network: String
+
+}

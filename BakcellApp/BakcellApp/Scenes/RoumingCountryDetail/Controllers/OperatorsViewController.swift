@@ -12,25 +12,14 @@ class OperatorsViewController: UIViewController, ThemeableViewController {
     
     var theme: ThemeProvider = App.theme
     
-    private lazy var roamingSegmentedControl: SegmentedControl = {
-        let segmentedControl = SegmentedControl()
-        segmentedControl.backgroundColor = adaptiveColor(.greyBg)
-        segmentedControl.selectionBoxStyle = .default
-        segmentedControl.selectionBoxColor = adaptiveColor(.appWhite)
-        segmentedControl.selectionBoxCornerRadius = 10
-        segmentedControl.layoutPolicy = .fixed
-        segmentedControl.segmentSpacing = 0
-        segmentedControl.selectionBoxHeight = 32
-        segmentedControl.selectionHorizontalPadding = 8
-        segmentedControl.contentInset = .zero
-        segmentedControl.clipsToBounds = true
+    private lazy var roamingSegmentedControl: RoamingCountryPageSegmentedControl = {
+        let segmentedControl = RoamingCountryPageSegmentedControl()
         segmentedControl.delegate = self
         return segmentedControl
     }()
     
     private lazy var backViewForRoamingSegmentedControl: UIView = {
         let view = UIView()
-
         return view
     }()
     
@@ -42,8 +31,6 @@ class OperatorsViewController: UIViewController, ThemeableViewController {
         tableView.backgroundColor = .clear
         tableView.contentInset = .zero
         tableView.register(OperatorViewCell.self, forCellReuseIdentifier: OperatorViewCell.reuseIdentifier)
-
-        
         return tableView
         
     }()
@@ -58,7 +45,7 @@ class OperatorsViewController: UIViewController, ThemeableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setSegmentedControl()
+//        self.setSegmentedControl()
         self.addSubviews()
     }
     
@@ -68,7 +55,6 @@ class OperatorsViewController: UIViewController, ThemeableViewController {
         self.view.addSubview(self.stackView)
         self.stackView.addArrangedSubview(self.backViewForRoamingSegmentedControl)
         self.stackView.addArrangedSubview(self.operatorsTableView)
-       
 
         self.updateViewConstraints()
     }
@@ -87,34 +73,7 @@ class OperatorsViewController: UIViewController, ThemeableViewController {
             make.edges.equalToSuperview().inset(16)
         }
     }
-    
-    func setSegmentedControl() {
-        let titleStrings = ["Öncədən ödənişli", "Fakturalı"]
-        let titles: [NSAttributedString] = {
-            let attributes: [NSAttributedString.Key: Any] = [.font:  AppFonts.SFRegularSubheadline.fontStyle, .foregroundColor: adaptiveColor(.blackHigh)]
-            var titles = [NSAttributedString]()
-            for titleString in titleStrings {
-                let title = NSAttributedString(string: titleString, attributes: attributes)
-                titles.append(title)
-            }
-            return titles
-        }()
-        
-        let selectedTitles: [NSAttributedString] = {
-            let attributes: [NSAttributedString.Key: Any] =  [.font:  AppFonts.SFRegularSubheadline.fontStyle, .foregroundColor: adaptiveColor(.blackHigh)]
-            var selectedTitles = [NSAttributedString]()
-            for titleString in titleStrings {
-                let selectedTitle = NSAttributedString(string: titleString, attributes: attributes)
-                selectedTitles.append(selectedTitle)
-            }
-            return selectedTitles
-        }()
-        
-        self.roamingSegmentedControl.setTitles(titles, selectedTitles: selectedTitles)
-        
-    }
 }
-
 
 
 //MARK: UITableView
@@ -131,6 +90,8 @@ extension OperatorsViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
 }
+
+//MARK: SegmentedControlDelegate
 
 extension OperatorsViewController: SegmentedControlDelegate {
     func segmentedControl(_ segmentedControl: SegmentedControl, didSelectIndex selectedIndex: Int) {
