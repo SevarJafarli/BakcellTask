@@ -25,11 +25,12 @@ enum  RoamingCountryPackages: CaseIterable {
 }
 
 class RoamingCountryPackagesViewController: UIViewController {
-    var internetPackages = Array(repeating: InternetPackageModel(packagePrice: 3.00, packageTimeRange: "Gun", packageModelType: .internet, isWhatsappFree: true, package: .init(packageAmount: 100, amountType: "MB")), count: 3)
-    
-    var smsPackages = Array(repeating: SMSPackageModel(packagePrice: 40.00, packageTimeRange: "Ay", packageModelType: .smsAndCall, package: .init(packageAmount: 100, amountType: "dəq")), count: 3)
-    
 
+    var internetPackages: [InternetPackageModel]?
+    var smsPackages: [SMSPackageModel]?
+    
+//    var smsPackages = Array(repeating: SMSPackageModel(packagePrice: 40.00, packageTimeRange: "Ay", packageModelType: .smsAndCall, package: .init(packageAmount: 100, amountType: "dəq")), count: 3)
+//    
     
     weak var delegate: RoamingCountryPackagesViewControllerDelegate?
     
@@ -45,9 +46,17 @@ class RoamingCountryPackagesViewController: UIViewController {
         mainView.mainTableView.delegate = self
         mainView.mainTableView.dataSource = self
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+    }
+    
+    func receiveInternetPackages(data: [InternetPackageModel]) {
+        self.internetPackages = data
+    }
+    func receiveSMSPackages(data: [SMSPackageModel]) {
+        self.smsPackages = data
     }
 }
 
@@ -69,7 +78,8 @@ extension RoamingCountryPackagesViewController: UITableViewDelegate, UITableView
                 return UITableViewCell()
             }
             
-            cell.configure(with: self.internetPackages)
+            guard let internetPackages = self.internetPackages else {  return UITableViewCell() }
+            cell.configure(with: internetPackages)
             cell.delegate = self
             return cell
             
@@ -78,8 +88,8 @@ extension RoamingCountryPackagesViewController: UITableViewDelegate, UITableView
             guard let cell = tableView.dequeueReusableCell(withIdentifier: SMSPackagesCollectionTableViewCell.reuseIdentifier, for: indexPath) as? SMSPackagesCollectionTableViewCell else {
                 return UITableViewCell()
             }
-
-            cell.configure(with: self.smsPackages)
+            guard let smsPackages = self.smsPackages else {  return UITableViewCell() }
+            cell.configure(with: smsPackages)
             return cell
         }
     }

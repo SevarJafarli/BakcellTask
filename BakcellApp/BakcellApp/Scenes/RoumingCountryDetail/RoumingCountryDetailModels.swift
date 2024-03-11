@@ -26,7 +26,49 @@ enum RoumingCountryDetail {
         struct ViewModel {
         }
     }
+    
+    enum FetchPackages {
+        struct Request {
+        }
+        
+        struct Response {
+            let internetPackages: [InternetPackageModel]
+            let smsPackages: [SMSPackageModel]
+        }
+        
+        struct ViewModel {
+            let internetPackages: [InternetPackageModel]
+            let smsPackages: [SMSPackageModel]
+        }
+    }
+    
+    enum FetchOperators {
+        struct Request {
+        }
+        
+        struct Response {
+            let operators: [OperatorModel]
+        }
+        
+        struct ViewModel {
+            let operators: [OperatorModel]
+        }
+    }
+    
+    enum FetchPriceComparison {
+        struct Request {
+        }
+        
+        struct Response {
+            let services: [OperatorServicePriceModel]
+        }
+        
+        struct ViewModel {
+            let services: [OperatorServicePriceModel]
+        }
+    }
 }
+
 
 
 enum PageCategoryModel: String, CaseIterable {
@@ -34,15 +76,6 @@ enum PageCategoryModel: String, CaseIterable {
     case operators = "Operatorlar"
     case priceComparison = "Qiymət müqayisəsi"
     
-}
-
-struct RoumingOperatorServices {
-    let services: [RoumingOperatorServiceType]
-}
-
-struct RoumingOperatorServiceType {
-    let packageType: PackageType
-    let volumes: [RoumingOperatorVolume]
 }
 
 enum PackageType {
@@ -74,13 +107,27 @@ enum PackageType {
 }
 
 
+//MARK: OperatorModel
+
+struct OperatorModel {
+    let operatorName: String
+    let services: RoumingOperatorServices
+}
+
+struct RoumingOperatorServices {
+    let services: [RoumingOperatorServiceType]
+}
+
+struct RoumingOperatorServiceType {
+    let packageType: PackageType
+    let volumes: [RoumingOperatorVolume]
+}
+
 struct RoumingOperatorVolume {
     let title: String
     let volume: String
     let volumeType: String
 }
-
-
 
 struct OperatorServicePriceModel {
     let name: String

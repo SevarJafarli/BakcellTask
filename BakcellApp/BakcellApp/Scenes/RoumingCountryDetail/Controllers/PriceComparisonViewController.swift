@@ -21,4 +21,8 @@ class PriceComparisonViewController: UIViewController, ThemeableViewController {
         self.view = mainView
         
     }
+    
+    func receivePriceComparison(data: [OperatorServicePriceModel]) {
+        self.mainView.priceComparisonView.operators = data
+    }
 }

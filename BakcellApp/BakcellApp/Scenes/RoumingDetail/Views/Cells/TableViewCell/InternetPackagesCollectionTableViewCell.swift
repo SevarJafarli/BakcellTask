@@ -33,6 +33,7 @@ class InternetPackagesCollectionTableViewCell: UITableViewCell {
         self.internetPackagesCollectionView.delegate = self
         self.internetPackagesCollectionView.dataSource = self
         self.addSubviews()
+
        
         
     }

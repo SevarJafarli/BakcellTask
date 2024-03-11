@@ -43,14 +43,14 @@ final class RoumingCountryDetailView: UIView {
         return segmentedControl
     }()
     
-    private lazy var packagesViewController: RoamingCountryPackagesViewController = {
+    lazy var packagesViewController: RoamingCountryPackagesViewController = {
         let vc = RoamingCountryPackagesViewController()
         vc.delegate = self
         return vc
     }()
  
-    private lazy var operatorsViewController = OperatorsViewController()
-    private lazy var priceComparisonViewController = PriceComparisonViewController()
+    lazy var operatorsViewController = OperatorsViewController()
+    lazy var priceComparisonViewController = PriceComparisonViewController()
 
     private lazy var pageViewControllers: [UIViewController] = [packagesViewController, operatorsViewController, priceComparisonViewController]
     
@@ -161,6 +161,7 @@ extension RoumingCountryDetailView: UIPageViewControllerDelegate, UIPageViewCont
 
 
 extension RoumingCountryDetailView: RoamingCountryPackagesViewControllerDelegate {
+    
     func onPackageSelected() {
         delegate?.onPackageSelected()
     }

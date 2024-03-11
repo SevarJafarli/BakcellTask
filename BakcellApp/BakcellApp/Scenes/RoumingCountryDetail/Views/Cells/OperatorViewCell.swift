@@ -13,11 +13,11 @@ class OperatorViewCell: UITableViewCell {
     static var reuseIdentifier = "OperatorViewCell"
     
     
-//    var data: OperatorModel? {
-//        didSet {
-//            configure()
-//        }
-//    }
+    var data: OperatorModel? {
+        didSet {
+            configure()
+        }
+    }
     
     private lazy var backView: UIView = {
         let view = UIView()
@@ -94,21 +94,9 @@ class OperatorViewCell: UITableViewCell {
     
     
     private func configure() {
-        self.operatorTitleLabel.text = "TT MobileB"
-        self.operatorServiceVStackView.data = .init(services: [
-            .init(packageType: .call, volumes: [
-                .init(title: "Daxil olan", volume: "0.39 ₼", volumeType: "deq"),
-                .init(title: "Çıxan", volume: "0.99 ₼", volumeType: "deq")
-            ]),
-            .init(packageType: .sms, volumes: [
-                .init(title: "Daxil olan", volume: "Pulsuz", volumeType: ""),
-                .init(title: "Çıxan", volume: "0.19 ₼", volumeType: "sms")
-            ]),
-            .init(packageType: .internet, volumes: [
-                .init(title: "Sərfiyyat", volume: "-", volumeType: ""),
-                .init(title: "Şəbəkə", volume: "2G, 3G, 4G", volumeType: "")
-            ]),
-        ])
+        guard let op = self.data else { return }
+        self.operatorTitleLabel.text = op.operatorName
+        self.operatorServiceVStackView.data = op.services
         
     }
 }

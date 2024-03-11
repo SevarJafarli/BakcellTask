@@ -12,10 +12,17 @@ import SnapKit
 protocol RoumingCountryDetailDisplayLogic: AnyObject {
     
     func displayLoad(viewModel: RoumingCountryDetail.Load.ViewModel)
+    func displayPackages(viewModel: RoumingCountryDetail.FetchPackages.ViewModel)
+    func displayOperators(viewModel: RoumingCountryDetail.FetchOperators.ViewModel)
+    func displayPriceComparison(viewModel: RoumingCountryDetail.FetchPriceComparison.ViewModel)
+    
+    func sendDataToInternetPackages(internetPackages: [InternetPackageModel])
+    func sendDataToSMSPackages(smsPackages: [SMSPackageModel])
+    func sendDataToOperators(operators: [OperatorModel])
+    func sendDataToPriceComparison(services: [OperatorServicePriceModel])
 }
 
 final class RoumingCountryDetailViewController: UIViewController, ThemeableViewController {
-
     
     var theme: ThemeProvider = App.theme
     
@@ -27,14 +34,14 @@ final class RoumingCountryDetailViewController: UIViewController, ThemeableViewC
     
     
     // MARK: - Lifecycle Methods
-
+    
     override func loadView() {
         super.loadView()
         self.view = mainView
         mainView?.delegate = self
         
         self.setupPageViewController()
-       
+        
     }
     
     override func viewDidLoad() {
@@ -52,7 +59,23 @@ final class RoumingCountryDetailViewController: UIViewController, ThemeableViewC
         interactor?.load(request: request)
     }
     
+    func loadPackages() {
+        let request = RoumingCountryDetail.FetchPackages.Request()
+        interactor?.loadPackages(request: request)
+        
+    }
     
+    func loadOperators() {
+        let request = RoumingCountryDetail.FetchOperators.Request()
+        interactor?.loadOperators(request: request)
+        
+    }
+    
+    func loadPriceComparison() {
+        let request = RoumingCountryDetail.FetchPriceComparison.Request()
+        interactor?.loadPriceComparison(request: request)
+        
+    }
     
     private func setupPageViewController() {
         self.addChild(self.mainView!.pageViewController)
@@ -66,13 +89,54 @@ final class RoumingCountryDetailViewController: UIViewController, ThemeableViewC
 
 extension RoumingCountryDetailViewController: RoumingCountryDetailDisplayLogic {
     
+    func sendDataToInternetPackages(internetPackages: [InternetPackageModel]) {
+        if let vc = self.mainView?.packagesViewController {
+            vc.receiveInternetPackages(data: internetPackages)
+        }
+    }
+    
+    func sendDataToSMSPackages(smsPackages: [SMSPackageModel]) {
+        if let vc = self.mainView?.packagesViewController {
+            vc.receiveSMSPackages(data: smsPackages)
+        }
+    }
+    func sendDataToOperators(operators: [OperatorModel]) {
+        if let vc = self.mainView?.operatorsViewController {
+            vc.receiveOperators(data: operators)
+        }
+    }
+    
+    func sendDataToPriceComparison(services: [OperatorServicePriceModel]) {
+        if let vc = self.mainView?.priceComparisonViewController {
+            vc.receivePriceComparison(data: services)
+        }
+    }
+    
+    func displayPackages(viewModel: RoumingCountryDetail.FetchPackages.ViewModel) {
+        self.sendDataToInternetPackages(internetPackages: viewModel.internetPackages)
+        self.sendDataToSMSPackages(smsPackages: viewModel.smsPackages)
+    }
+    
+    func displayOperators(viewModel: RoumingCountryDetail.FetchOperators.ViewModel) {
+        self.sendDataToOperators(operators: viewModel.operators)
+    }
+    
+    func displayPriceComparison(viewModel: RoumingCountryDetail.FetchPriceComparison.ViewModel) {
+        self.sendDataToPriceComparison(services: viewModel.services)
+    }
+    
+    
     func displayLoad(viewModel: RoumingCountryDetail.Load.ViewModel) {
+        self.loadPackages()
+        self.loadOperators()
+        self.loadPriceComparison()
     }
 }
 
 // MARK: - View Delegate
 
 extension RoumingCountryDetailViewController: RoumingCountryDetailViewDelegate {
+    
     func onPackageSelected() {
         router?.routeToPackageDetail()
     }

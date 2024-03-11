@@ -18,7 +18,7 @@ internal class PriceComparisonView: UIView {
         return view
     }()
     
-    private lazy var priceComparisonView: OperatorServicePriceComparisonView = {
+    lazy var priceComparisonView: OperatorServicePriceComparisonView = {
         let view = OperatorServicePriceComparisonView()
         return view
     }()
@@ -73,5 +73,5 @@ override func updateConstraints() {
 
 //MARK: SegmentedControlDelegate
 extension PriceComparisonView: SegmentedControlDelegate {
-func segmentedControl(_ segmentedControl: SegmentedControl, didSelectIndex selectedIndex: Int) { }
+    func segmentedControl(_ segmentedControl: SegmentedControl, didSelectIndex selectedIndex: Int) { }
 }

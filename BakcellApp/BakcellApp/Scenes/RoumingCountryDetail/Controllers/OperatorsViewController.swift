@@ -20,4 +20,8 @@ class OperatorsViewController: UIViewController, ThemeableViewController {
         super.viewDidLoad()
         self.view = mainView
     }
+    
+    func receiveOperators(data: [OperatorModel] ) {
+        self.mainView.operators = data
+    }
 }

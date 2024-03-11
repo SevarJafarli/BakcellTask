@@ -11,10 +11,11 @@ import UIKit
 
 class OperatorServicePriceComparisonView: UIView {
     
-    let operators: [OperatorServicePriceModel] = [
-        .init(name: "TT Mobile", incomingCallFee: "0.39 ₼ / dəq", outgoingCallFee: "0.99 ₼ / dəq", incomingSMS: "Pulsuz", outgoingSMS: "0.19 ₼ / sms", internetUsage: "-", network: "2G, 3G, 4G"),
-        .init(name: "TT Mobile", incomingCallFee: "0.59 ₼ / dəq", outgoingCallFee: "0.79 ₼ / dəq", incomingSMS: "Pulsuz", outgoingSMS: "0.19 ₼ / sms", internetUsage: "-", network: "2G, 3G, 4G, 5G"),
-    ]
+    var operators: [OperatorServicePriceModel]? {
+        didSet {
+            configure()
+        }
+    }
     
     let titles = ["Operatorlar", "Daxil olan zənglər", "Çıxan zənglər", "Daxil olan SMS", "Çıxan SMS", "İnternet sərfiyyatı", "Şəbəkə"]
     
@@ -63,19 +64,21 @@ class OperatorServicePriceComparisonView: UIView {
         fatalError()
     }
     
-    private func addSubviews() {
-       
+    fileprivate func addSubviews() {
         self.addSubview(self.contentHStackView)
         
         for (index, title) in self.titles.enumerated() {
             let view = PriceTableSectionHeaderView(title: title)
-          
+            
             view.setBackgroundColor(at: index)
             self.priceTableHeaders.addArrangedSubview(view)
         }
-        
-        
-        for (index, op) in self.operators.enumerated() {
+    }
+    
+    private func configure() {
+        guard let operators = operators else { return }
+     
+        for (_, op) in operators.enumerated() {
             let operatorPriceTableView: UIStackView = {
                 let view = UIStackView()
                 view.axis = .vertical
@@ -96,7 +99,6 @@ class OperatorServicePriceComparisonView: UIView {
         }
         
         self.contentHStackView.addArrangedSubview(self.priceTableHeaders)
-        
         self.contentHStackView.addArrangedSubview(self.operatorsPricesHStackView)
         self.updateConstraints()
     }

@@ -9,6 +9,8 @@ import UIKit
 
 internal class OperatorsView: UIView {
 
+    var operators: [OperatorModel]?
+    
     private lazy var roamingSegmentedControl: RoamingCountryPageSegmentedControl = {
         let segmentedControl = RoamingCountryPageSegmentedControl()
         segmentedControl.delegate = self
@@ -81,13 +83,16 @@ internal class OperatorsView: UIView {
 
 extension OperatorsView: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        self.operators?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: OperatorViewCell.reuseIdentifier, for: indexPath) as?  OperatorViewCell else {
             return UITableViewCell()
         }
+        guard let operators = operators else { return  UITableViewCell() }
+        let op = operators[indexPath.row]
+        cell.data = op
         return cell
     }
 }
