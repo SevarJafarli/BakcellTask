@@ -6,48 +6,28 @@
 //
 
 import UIKit
+import BakcellNetworkKit
 
 protocol RoumingDetailWorkingLogic {
-    func fetchAllIncludedPackages(_ completion: @escaping ([AllIncludedPackageModel]) -> Void)
     
-    func fetchInternetPackages(_ completion: @escaping ([InternetPackageModel]) -> Void)
-    
-    func fetchSMSPackages(_ completion: @escaping ([SMSPackageModel]) -> Void)
-    
-    func fetchRoumingCountries(_ completion: @escaping ([String]) -> Void)
-
+    func fetchRoumingPackages(_ completion: @escaping (RoumingPackagesResponse?) -> Void)
 }
 
 
 final class RoumingDetailWorker: RoumingDetailWorkingLogic {
-    func fetchRoumingCountries(_ completion: @escaping ([String]) -> Void) {
-        let countries = ["Türkiyə", "Rusiya", "Almaniya", "Italiya", "Ispaniya", "Qazaxistan"]
-        
-        completion(countries)
-    }
     
+    //MARK: Private
     
-    func fetchAllIncludedPackages(_ completion: @escaping ([AllIncludedPackageModel]) -> Void) {
-        let models = [
-            AllIncludedPackageModel(title: "Aylıq hamısı daxil", internetPackage: .init(packageAmount: 1000, amountType: "MB", packageType: "Internet"), callPackage: .init(packageAmount: 100, amountType: "dəq.",  packageType: "Zeng"), smsPackage: .init(packageAmount: 100, amountType: "",  packageType: "SMS"), packagePrice: 30.00, packageTimeRange: "Ay", packageModelType: .allIncluded),
-            
-            AllIncludedPackageModel(title: "Həftəlik hamısı daxil", internetPackage: .init(packageAmount: 500, amountType: "MB",  packageType: "Internet"), callPackage: .init(packageAmount: 50, amountType: "dəq.",  packageType: "Zeng"), smsPackage: .init(packageAmount: 50, amountType: "",  packageType: "SMS"), packagePrice: 20, packageTimeRange: "Hefte", packageModelType: .allIncluded),
-            
-            AllIncludedPackageModel(title: "Gündəlik hamısı daxil", internetPackage: .init(packageAmount: 100, amountType: "MB",  packageType: "Internet"), callPackage: .init(packageAmount: 10, amountType: "dəq.",  packageType: "Zeng"), smsPackage: .init(packageAmount: 10, amountType: "",  packageType: "SMS"), packagePrice: 5.00, packageTimeRange: "Gun", packageModelType: .allIncluded)
-        ]
-        
-        completion(models)
-    }
+    private let service = App.service
     
-    func fetchInternetPackages(_ completion: @escaping ([InternetPackageModel]) -> Void) {
-        let models = Array(repeating: InternetPackageModel(packagePrice: 3.00, packageTimeRange: "Gun", packageModelType: .internet, isWhatsappFree: true, package: .init(packageAmount: 100, amountType: "MB")), count: 3)
-        
-        completion(models)
-    }
-    
-    func fetchSMSPackages(_ completion: @escaping ([SMSPackageModel]) -> Void) {
-        let models = Array(repeating: SMSPackageModel(packagePrice: 40.00, packageTimeRange: "Ay", packageModelType: .smsAndCall, package: .init(packageAmount: 100, amountType: "dəq")), count: 3)
-        
-        completion(models)
+    func fetchRoumingPackages(_ completion: @escaping (RoumingPackagesResponse?) -> Void) {
+        service.roumingPackages.getRoumingPackages { result in
+            switch result {
+            case .success(let data):
+                completion(data)
+            default:
+                completion(nil)
+            }
+        }
     }
 }

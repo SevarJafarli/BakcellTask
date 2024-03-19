@@ -11,7 +11,7 @@ class SMSPackagesCollectionTableViewCell: UITableViewCell {
     
     static var reuseIdentifier = "SMSPackagesCollectionTableViewCell"
     
-    var smsPackageModels = [SMSPackageModel]()
+    var smsPackageModels = [SMSCallPackagesItemModel]()
     
     lazy var smsPackagesCollectionView: PackagesCollectionView = {
         let collectionView = PackagesCollectionView()
@@ -53,9 +53,9 @@ class SMSPackagesCollectionTableViewCell: UITableViewCell {
     
     //MARK: Public
     
-    public func configure(with models: [SMSPackageModel]) {
+    public func configure(with models: [SMSCallPackagesItemModel]) {
         self.smsPackageModels = models
-//        self.smsPackagesCollectionView.reloadData()
+        self.smsPackagesCollectionView.reloadData()
     }
 }
 
@@ -74,7 +74,7 @@ extension SMSPackagesCollectionTableViewCell: UICollectionViewDelegate, UICollec
       
         let model = self.smsPackageModels[indexPath.row]
         
-        cell.configure(model: model as PackageModel)
+        cell.configure(model: model)
         return cell
     }
     

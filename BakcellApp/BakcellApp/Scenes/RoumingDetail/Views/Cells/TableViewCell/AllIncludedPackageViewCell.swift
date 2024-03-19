@@ -13,7 +13,7 @@ class AllIncludedPackageViewCell: UITableViewCell {
    
     static var reuseIdentifier = "AllIncludedPackageViewCell"
 
-    var data: AllIncludedPackageModel? {
+    var data: AllPackagesItemModel? {
         didSet {
             configure()
         }
@@ -127,9 +127,9 @@ class AllIncludedPackageViewCell: UITableViewCell {
         }
         self.packageTitleLabel.text = "\(data.title)"
         
-        self.packageServiceFeeLabel.makePackageServiceFeeLabel(serviceFee: data.packagePrice, serviceType: data.packageTimeRange)
+        self.packageServiceFeeLabel.text = data.period
         
-        self.packageHStackView.data = [data.internetPackage, data.callPackage, data.smsPackage]
+        self.packageHStackView.data = data.types
     }
     
     override func prepareForReuse() {

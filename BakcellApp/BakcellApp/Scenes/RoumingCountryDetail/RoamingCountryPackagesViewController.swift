@@ -26,8 +26,8 @@ enum  RoamingCountryPackages: CaseIterable {
 
 class RoamingCountryPackagesViewController: UIViewController {
 
-    var internetPackages: [InternetPackageModel]?
-    var smsPackages: [SMSPackageModel]?
+    var internetPackages: [InternetPackagesItemModel]?
+    var smsPackages: [SMSCallPackagesItemModel]?
     
 //    var smsPackages = Array(repeating: SMSPackageModel(packagePrice: 40.00, packageTimeRange: "Ay", packageModelType: .smsAndCall, package: .init(packageAmount: 100, amountType: "dəq")), count: 3)
 //    
@@ -52,10 +52,10 @@ class RoamingCountryPackagesViewController: UIViewController {
 
     }
     
-    func receiveInternetPackages(data: [InternetPackageModel]) {
+    func receiveInternetPackages(data: [InternetPackagesItemModel]) {
         self.internetPackages = data
     }
-    func receiveSMSPackages(data: [SMSPackageModel]) {
+    func receiveSMSPackages(data: [SMSCallPackagesItemModel]) {
         self.smsPackages = data
     }
 }

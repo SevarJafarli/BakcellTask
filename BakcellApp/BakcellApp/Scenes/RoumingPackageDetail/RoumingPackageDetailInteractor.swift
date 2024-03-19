@@ -10,6 +10,7 @@ import UIKit
 protocol RoumingPackageDetailBusinessLogic {
     
     func load(request: RoumingPackageDetail.Load.Request)
+    func loadPackageInfo(request: RoumingPackageDetail.FetchPackageInfo.Request)
 }
 
 protocol RoumingPackageDetailDataStore {
@@ -29,5 +30,12 @@ final class RoumingPackageDetailInteractor: RoumingPackageDetailBusinessLogic, R
     func load(request: RoumingPackageDetail.Load.Request) {
         let response = RoumingPackageDetail.Load.Response()
         presenter?.presentLoad(response: response)
+    }
+    
+    func loadPackageInfo(request: RoumingPackageDetail.FetchPackageInfo.Request) {
+        worker.fetchPackageInfo { package in
+            let response = RoumingPackageDetail.FetchPackageInfo.Response(package: package)
+            presenter?.presentPackageInfo(response: response)
+        }
     }
 }

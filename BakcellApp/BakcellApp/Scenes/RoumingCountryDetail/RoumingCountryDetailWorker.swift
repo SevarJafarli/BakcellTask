@@ -8,7 +8,7 @@
 import UIKit
 
 protocol RoumingCountryDetailWorkingLogic {
-    func fetchPackages(_ completion: ((internetPackages: [InternetPackageModel], smsPackages: [SMSPackageModel])) -> Void)
+    func fetchPackages(_ completion: ((internetPackages: [InternetPackagesItemModel], smsPackages: [SMSCallPackagesItemModel])) -> Void)
     
     func fetchOperators(_ completion: ([OperatorModel]) -> Void)
     
@@ -23,12 +23,9 @@ final class RoumingCountryDetailWorker: RoumingCountryDetailWorkingLogic {
     
     // MARK: - Working Logic
     
-    func fetchPackages(_ completion: ((internetPackages: [InternetPackageModel], smsPackages: [SMSPackageModel])) -> Void) {
-        let internetPackages = Array(repeating: InternetPackageModel(packagePrice: 3.00, packageTimeRange: "Gun", packageModelType: .internet, isWhatsappFree: true, package: .init(packageAmount: 100, amountType: "MB")), count: 3)
-        
-        let smsPackages = Array(repeating: SMSPackageModel(packagePrice: 40.00, packageTimeRange: "Ay", packageModelType: .smsAndCall, package: .init(packageAmount: 100, amountType: "dəq")), count: 3)
-        
-        completion((internetPackages, smsPackages))
+    func fetchPackages(_ completion: ((internetPackages: [InternetPackagesItemModel], smsPackages: [SMSCallPackagesItemModel])) -> Void) {
+       
+//        completion((internetPackages, smsPackages))
     }
     
     func fetchOperators(_ completion: ([OperatorModel]) -> Void) {

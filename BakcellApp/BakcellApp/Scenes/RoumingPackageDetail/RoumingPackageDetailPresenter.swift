@@ -10,6 +10,7 @@ import UIKit
 protocol RoumingPackageDetailPresentationLogic {
     
     func presentLoad(response: RoumingPackageDetail.Load.Response)
+    func presentPackageInfo(response: RoumingPackageDetail.FetchPackageInfo.Response)
 }
 
 final class RoumingPackageDetailPresenter: RoumingPackageDetailPresentationLogic {
@@ -22,5 +23,10 @@ final class RoumingPackageDetailPresenter: RoumingPackageDetailPresentationLogic
     func presentLoad(response: RoumingPackageDetail.Load.Response) {
         let viewModel = RoumingPackageDetail.Load.ViewModel()
         viewController?.displayLoad(viewModel: viewModel)
+    }
+    
+    func presentPackageInfo(response: RoumingPackageDetail.FetchPackageInfo.Response) {
+        let viewModel = RoumingPackageDetail.FetchPackageInfo.ViewModel(package: response.package)
+        viewController?.displayPackageInfo(viewModel: viewModel)
     }
 }

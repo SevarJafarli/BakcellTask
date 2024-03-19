@@ -9,7 +9,7 @@ import UIKit
 
 class AllIncludedPackageInfoHStackView: UIStackView {
     
-    var data: [Package]? = [] {
+    var data: [TypeElementModel] = [] {
         didSet {
             configure()
         }
@@ -18,32 +18,31 @@ class AllIncludedPackageInfoHStackView: UIStackView {
     fileprivate func setupStackView() {
         self.axis = .horizontal
         self.spacing = 24
-//        self.distribution = .fillEqually
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.setupStackView()
-
+        
     }
     
     required init(coder: NSCoder) {
         fatalError()
     }
     
-   
+    
     func configure() {
-        guard let data = data else { return }
+        
         
         for model in data {
-            if let title = model.packageType {
-                let packageView = AllPackageInfoVStackView(title: title, subtitle: "\(model.packageAmount) \(model.amountType)")
-        
+            let packageView = AllPackageInfoVStackView(title: model.name, subtitle: model.units)
+            
             self.addArrangedSubview(packageView)
-            }
         }
         self.updateConstraints()
     }
+
+    
     
     override func updateConstraints() {
         super.updateConstraints()

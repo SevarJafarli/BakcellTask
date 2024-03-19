@@ -23,6 +23,8 @@ class RoumingPackageViewCell: UICollectionViewCell {
     
     private lazy var amountLabel: UILabel = {
         let lbl = UILabel()
+        lbl.font = AppFonts.SFBoldLargeTitle.fontStyle
+        lbl.textColor = adaptiveColor(.blackHigh)
         return lbl
     }()
     
@@ -110,57 +112,36 @@ class RoumingPackageViewCell: UICollectionViewCell {
     }
     
     //MARK: Public
-    public func configure(model: PackageModel) {
-        
-        let packageModelType = model.packageModelType
+    public func configure(model: BasePackagesItemModel) {
+        let packageModelType = model.type
         
         switch packageModelType {
-        case .internet:
-            guard let internetModel = model as? InternetPackageModel else {
+        case "İnternet":
+            guard let internetModel = model as? InternetPackagesItemModel else {
                 return
             }
-            self.setAmountLabel(amount: internetModel.package.packageAmount, amountType: internetModel.package.amountType)
+            self.amountLabel.text = internetModel.title
             
-            self.serviceFeeLabel.makePackageServiceFeeLabel(serviceFee: internetModel.packagePrice, serviceType: internetModel.packageTimeRange)
+            
+            self.serviceFeeLabel.text = internetModel.period
 
-            self.chipButton.configure(with: model.packageModelType.title!)
+            self.chipButton.configure(with: internetModel.type)
             
             self.freeServiceView.configure(image: UIImage(named: AppAssets.whatsapp.rawValue)!)
             
             
-        case .smsAndCall:
+        case "SMS", "CALL":
+    
+            self.amountLabel.text = model.title
             
-            guard let smsModel = model as? SMSPackageModel else {
-                return
-            }
-            self.setAmountLabel(amount: smsModel.package.packageAmount, amountType: smsModel.package.amountType)
+            self.serviceFeeLabel.text = model.period
             
-            self.serviceFeeLabel.makePackageServiceFeeLabel(serviceFee: smsModel.packagePrice, serviceType: smsModel.packageTimeRange)
-            
-            self.chipButton.configure(with: model.packageModelType.title!)
+            self.chipButton.configure(with: model.type)
             
             self.freeServiceView.removeFromSuperview()
         default:
             break
         }
     }
-    
-    //TODO: refactor
-    
-    private func setAmountLabel(amount: Int, amountType: String) {
-        let attributedString = NSMutableAttributedString(string: "\(amount) \(amountType)")
-        
-        let boldRange = NSRange(location: 0, length: String(amount).count)
-        attributedString.addAttribute(.font, value: AppFonts.SFBoldLargeTitle.fontStyle, range: boldRange)
-        attributedString.addAttribute(.foregroundColor, value: adaptiveColor(.blackHigh), range: boldRange)
-        
-        
-        let regularRange = NSRange(location: String(amount).count + 1, length: String(amountType).count)
-        
-        attributedString.addAttribute(.font, value: AppFonts.SFBoldTitle2.fontStyle, range: regularRange)
-        attributedString.addAttribute(.foregroundColor,  value: adaptiveColor(.blackHigh), range: regularRange)
-        
-        self.amountLabel.attributedText = attributedString
-        
-    }
+
 }

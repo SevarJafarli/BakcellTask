@@ -16,8 +16,8 @@ protocol RoumingCountryDetailDisplayLogic: AnyObject {
     func displayOperators(viewModel: RoumingCountryDetail.FetchOperators.ViewModel)
     func displayPriceComparison(viewModel: RoumingCountryDetail.FetchPriceComparison.ViewModel)
     
-    func sendDataToInternetPackages(internetPackages: [InternetPackageModel])
-    func sendDataToSMSPackages(smsPackages: [SMSPackageModel])
+    func sendDataToInternetPackages(internetPackages: [InternetPackagesItemModel])
+    func sendDataToSMSPackages(smsPackages: [SMSCallPackagesItemModel])
     func sendDataToOperators(operators: [OperatorModel])
     func sendDataToPriceComparison(services: [OperatorServicePriceModel])
 }
@@ -89,13 +89,13 @@ final class RoumingCountryDetailViewController: UIViewController, ThemeableViewC
 
 extension RoumingCountryDetailViewController: RoumingCountryDetailDisplayLogic {
     
-    func sendDataToInternetPackages(internetPackages: [InternetPackageModel]) {
+    func sendDataToInternetPackages(internetPackages: [InternetPackagesItemModel]) {
         if let vc = self.mainView?.packagesViewController {
             vc.receiveInternetPackages(data: internetPackages)
         }
     }
     
-    func sendDataToSMSPackages(smsPackages: [SMSPackageModel]) {
+    func sendDataToSMSPackages(smsPackages: [SMSCallPackagesItemModel]) {
         if let vc = self.mainView?.packagesViewController {
             vc.receiveSMSPackages(data: smsPackages)
         }

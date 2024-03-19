@@ -32,13 +32,13 @@ enum RoumingCountryDetail {
         }
         
         struct Response {
-            let internetPackages: [InternetPackageModel]
-            let smsPackages: [SMSPackageModel]
+            let internetPackages: [InternetPackagesItemModel]
+            let smsPackages: [SMSCallPackagesItemModel]
         }
         
         struct ViewModel {
-            let internetPackages: [InternetPackageModel]
-            let smsPackages: [SMSPackageModel]
+            let internetPackages: [InternetPackagesItemModel]
+            let smsPackages: [SMSCallPackagesItemModel]
         }
     }
     

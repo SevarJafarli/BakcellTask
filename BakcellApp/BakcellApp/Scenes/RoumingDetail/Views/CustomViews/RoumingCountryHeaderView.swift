@@ -14,7 +14,7 @@ protocol RoumingCountryHeaderViewDelegate: AnyObject {
 
 class RoumingCountryHeaderView: UIView {
     
-    var items: [String] = [] {
+    var items: [String: String] = [:] {
         didSet {
             self.roumingCountriesCollectionView.reloadData()
             self.roumingCountriesCollectionView.invalidateIntrinsicContentSize()
@@ -127,14 +127,17 @@ extension RoumingCountryHeaderView: UICollectionViewDelegate, UICollectionViewDa
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RoumingCountryViewCell.reuseIdentifier, for: indexPath) as? RoumingCountryViewCell else {
             return UICollectionViewCell()
         }
-        
-        cell.data = items[indexPath.row]
+        let countries = items.values.map { $0 }
+       
+        cell.data = countries[indexPath.row]
         return cell
         
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let country = items[indexPath.row]
+        let countries = items.values.map { $0 }
+       
+        let country = countries[indexPath.row]
         delegate?.didSelectCountry(country: country)
     }
 }

@@ -15,5 +15,4 @@ final class AppContainer {
     let router = AppRouter()
     let theme = AppTheme()
     let service = Service()
-
 }

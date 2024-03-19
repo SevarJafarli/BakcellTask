@@ -32,6 +32,10 @@ final class RoumingDetailView: UIView {
         return tableView
     }()
 
+    private lazy var loadingIndicator: LoadingActivityIndicator = {
+        let indicator = LoadingActivityIndicator()
+        return indicator
+    }()
     
     //MARK: Init
     override init(frame: CGRect) {
@@ -49,13 +53,28 @@ final class RoumingDetailView: UIView {
         self.mainTableView.snp.updateConstraints { make in
             make.edges.equalToSuperview()
         }
+        
+        self.loadingIndicator.snp.updateConstraints { make in
+            make.center.equalToSuperview()
+        }
     }
     
     // MARK: - Private
     
     private func addSubviews() {
         self.addSubview(self.mainTableView)
-        
+        self.addSubview(self.loadingIndicator)
         self.updateConstraints()
+    }
+    
+    public func startLoading() {
+        self.loadingIndicator.startLoading()
+    }
+    public func stopLoading() {
+        self.loadingIndicator.stopLoading {
+            self.mainTableView.isHidden = false
+            self.loadingIndicator.removeFromSuperview()
+        }
+      
     }
 }

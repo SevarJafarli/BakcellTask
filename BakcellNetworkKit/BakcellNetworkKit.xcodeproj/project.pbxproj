@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C560D34D2BA04229003D01DD /* RoumingPackagesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C560D34C2BA04229003D01DD /* RoumingPackagesAPI.swift */; };
+		C560D34F2BA04233003D01DD /* RoumingPackages.swift in Sources */ = {isa = PBXBuildFile; fileRef = C560D34E2BA04233003D01DD /* RoumingPackages.swift */; };
+		C560D3512BA0423D003D01DD /* RoumingPackagesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C560D3502BA0423D003D01DD /* RoumingPackagesService.swift */; };
+		C560D3532BA042D8003D01DD /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = C560D3522BA042D8003D01DD /* Moya */; };
 		C5BB3BD22B7E1D1000819E25 /* BakcellNetworkKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C5BB3BD12B7E1D1000819E25 /* BakcellNetworkKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C5BB3C192B7E259200819E25 /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BB3C182B7E259200819E25 /* Connectivity.swift */; };
 		C5BB3C1C2B7E25D200819E25 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = C5BB3C1B2B7E25D200819E25 /* Moya */; };
@@ -19,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C560D34C2BA04229003D01DD /* RoumingPackagesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingPackagesAPI.swift; sourceTree = "<group>"; };
+		C560D34E2BA04233003D01DD /* RoumingPackages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingPackages.swift; sourceTree = "<group>"; };
+		C560D3502BA0423D003D01DD /* RoumingPackagesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingPackagesService.swift; sourceTree = "<group>"; };
 		C5BB3BCE2B7E1D1000819E25 /* BakcellNetworkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BakcellNetworkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5BB3BD12B7E1D1000819E25 /* BakcellNetworkKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BakcellNetworkKit.h; sourceTree = "<group>"; };
 		C5BB3C182B7E259200819E25 /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
@@ -35,6 +42,7 @@
 			files = (
 				C5BB3C202B7E25D200819E25 /* RxMoya in Frameworks */,
 				C5BB3C1C2B7E25D200819E25 /* Moya in Frameworks */,
+				C560D3532BA042D8003D01DD /* Moya in Frameworks */,
 				C5BB3C1E2B7E25D200819E25 /* ReactiveMoya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -42,6 +50,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C560D3492BA041FE003D01DD /* RoumingPackages */ = {
+			isa = PBXGroup;
+			children = (
+				C560D34C2BA04229003D01DD /* RoumingPackagesAPI.swift */,
+				C560D34E2BA04233003D01DD /* RoumingPackages.swift */,
+				C560D3502BA0423D003D01DD /* RoumingPackagesService.swift */,
+			);
+			path = RoumingPackages;
+			sourceTree = "<group>";
+		};
+		C560D34A2BA0420D003D01DD /* Rouming */ = {
+			isa = PBXGroup;
+			children = (
+				C560D34B2BA04213003D01DD /* RoumingCountries */,
+				C560D3492BA041FE003D01DD /* RoumingPackages */,
+			);
+			path = Rouming;
+			sourceTree = "<group>";
+		};
+		C560D34B2BA04213003D01DD /* RoumingCountries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RoumingCountries;
+			sourceTree = "<group>";
+		};
 		C5BB3BC42B7E1D1000819E25 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +113,7 @@
 		C5BB3C172B7E258500819E25 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				C560D34A2BA0420D003D01DD /* Rouming */,
 				C5BB3C222B7E25EF00819E25 /* Service */,
 				C5BB3C212B7E25EB00819E25 /* Base */,
 			);
@@ -151,6 +186,7 @@
 				C5BB3C1B2B7E25D200819E25 /* Moya */,
 				C5BB3C1D2B7E25D200819E25 /* ReactiveMoya */,
 				C5BB3C1F2B7E25D200819E25 /* RxMoya */,
+				C560D3522BA042D8003D01DD /* Moya */,
 			);
 			productName = BakcellNetworkKit;
 			productReference = C5BB3BCE2B7E1D1000819E25 /* BakcellNetworkKit.framework */;
@@ -207,9 +243,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C560D3512BA0423D003D01DD /* RoumingPackagesService.swift in Sources */,
 				C5BB3C242B7E25F900819E25 /* BaseService.swift in Sources */,
+				C560D34D2BA04229003D01DD /* RoumingPackagesAPI.swift in Sources */,
 				C5BB3C192B7E259200819E25 /* Connectivity.swift in Sources */,
 				C5BB3C2A2B7E264E00819E25 /* Result.swift in Sources */,
+				C560D34F2BA04233003D01DD /* RoumingPackages.swift in Sources */,
 				C5BB3C262B7E261800819E25 /* Service.swift in Sources */,
 				C5BB3C2C2B7E265F00819E25 /* Response.swift in Sources */,
 			);
@@ -441,6 +480,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C560D3522BA042D8003D01DD /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C5BB3C1A2B7E25D200819E25 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
 		C5BB3C1B2B7E25D200819E25 /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C5BB3C1A2B7E25D200819E25 /* XCRemoteSwiftPackageReference "Moya" */;

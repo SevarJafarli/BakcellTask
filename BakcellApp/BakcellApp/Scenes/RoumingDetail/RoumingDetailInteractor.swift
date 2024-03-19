@@ -11,15 +11,9 @@ protocol RoumingDetailBusinessLogic {
     
     func load(request: RoumingDetail.Load.Request)
     
-    func loadAllIncludedPackages(request: RoumingDetail.FetchAllIncluded.Request)
-    
-    func loadSMSPackages(request: RoumingDetail.FetchSMSPackages.Request)
-    
-    func loadInternetPackages(request: RoumingDetail.FetchInternetPackages.Request)
-    
-    func loadRoumingCountries(request: RoumingDetail.FetchRoumingCountries.Request)
-    
     func getSelectedCountry(country: String)
+    
+    func loadRoumingPackages(request: RoumingDetail.FetchRoumingPackages.Request)
 }
 
 protocol RoumingDetailDataStore {
@@ -46,46 +40,19 @@ final class RoumingDetailInteractor: RoumingDetailBusinessLogic, RoumingDetailDa
     }
     
     
-    func loadAllIncludedPackages(request: RoumingDetail.FetchAllIncluded.Request) {
-        worker.fetchAllIncludedPackages { [weak self] data in
+    func loadRoumingPackages(request: RoumingDetail.FetchRoumingPackages.Request) {
+        worker.fetchRoumingPackages { [weak self] data in
             guard let self = self else { return }
             
-            let response = RoumingDetail.FetchAllIncluded.Response(allIncludedPackageModels: data)
-            self.presenter?.presentAllIncludedPackages(response: response)
+            worker.fetchRoumingPackages { data in
+                let response = RoumingDetail.FetchRoumingPackages.Response(roumingPackagesResponse: data)
+                self.presenter?.presentRoumingPackages(response: response)
+            }
+          
         }
         
     }
-    
-    func loadInternetPackages(request: RoumingDetail.FetchInternetPackages.Request) {
-        worker.fetchInternetPackages { [weak self] data in
-            guard let self = self else { return }
-            
-            let response = RoumingDetail.FetchInternetPackages.Response(internetPackageModels: data)
-            self.presenter?.presentInternetPackages(response: response)
-        }
-        
-    }
-    
-    func loadSMSPackages(request: RoumingDetail.FetchSMSPackages.Request) {
-        worker.fetchSMSPackages { [weak self] data in
-            guard let self = self else { return }
-            
-            let response = RoumingDetail.FetchSMSPackages.Response(smsPackageModels: data)
-            self.presenter?.presentSMSPackages(response: response)
-        }
-        
-    }
-    
-    func loadRoumingCountries(request: RoumingDetail.FetchRoumingCountries.Request) {
-        worker.fetchRoumingCountries { [weak self] data in
-            guard let self = self else { return }
-            
-            let response = RoumingDetail.FetchRoumingCountries.Response(countries: data)
-            self.presenter?.presentRoumingCountries(response: response)
-        }
-        
-    }
-    
+
     
     func getSelectedCountry(country: String) {
         self.country = country

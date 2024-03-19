@@ -22,6 +22,20 @@ enum RoumingPackageDetail {
         struct ViewModel {
         }
     }
+    
+    
+    enum FetchPackageInfo {
+        struct Request {
+        }
+        
+        struct Response {
+            let package: RoumingPackageDetailCardModel
+        }
+        
+        struct ViewModel {
+            let package: RoumingPackageDetailCardModel
+        }
+    }
 }
 
 struct RoumingPackageDetailCardModel {

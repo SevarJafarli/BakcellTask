@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C503984F2BA80B8800E4CD90 /* RoumingPackagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C503984E2BA80B8800E4CD90 /* RoumingPackagesModel.swift */; };
+		C50398512BA80BAF00E4CD90 /* PackagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50398502BA80BAF00E4CD90 /* PackagesModel.swift */; };
+		C50398532BA9559500E4CD90 /* LoadingActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50398522BA9559500E4CD90 /* LoadingActivityIndicator.swift */; };
 		C50B032F2B8F0B13007A7EAD /* RoumingPackageInfoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50B032E2B8F0B13007A7EAD /* RoumingPackageInfoCardView.swift */; };
 		C50B03312B8F0D78007A7EAD /* AttributedStringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50B03302B8F0D78007A7EAD /* AttributedStringHelper.swift */; };
 		C50B03332B8F1098007A7EAD /* PackageDetailInfoStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50B03322B8F1098007A7EAD /* PackageDetailInfoStackView.swift */; };
@@ -129,6 +132,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C503984E2BA80B8800E4CD90 /* RoumingPackagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingPackagesModel.swift; sourceTree = "<group>"; };
+		C50398502BA80BAF00E4CD90 /* PackagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagesModel.swift; sourceTree = "<group>"; };
+		C50398522BA9559500E4CD90 /* LoadingActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingActivityIndicator.swift; sourceTree = "<group>"; };
 		C50B032E2B8F0B13007A7EAD /* RoumingPackageInfoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoumingPackageInfoCardView.swift; sourceTree = "<group>"; };
 		C50B03302B8F0D78007A7EAD /* AttributedStringHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedStringHelper.swift; sourceTree = "<group>"; };
 		C50B03322B8F1098007A7EAD /* PackageDetailInfoStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailInfoStackView.swift; sourceTree = "<group>"; };
@@ -248,6 +254,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C503984D2BA80A0000E4CD90 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C503984E2BA80B8800E4CD90 /* RoumingPackagesModel.swift */,
+				C50398502BA80BAF00E4CD90 /* PackagesModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		C50B032D2B8F0B06007A7EAD /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -372,6 +387,7 @@
 				C5EF6E7A2B85EEFC00AA3494 /* UICollectionCenterFlowLayout.swift */,
 				C53745BF2B906754001224A6 /* Buttons */,
 				C5B01C132B8DF48100C14F0C /* SegmentedControl */,
+				C50398522BA9559500E4CD90 /* LoadingActivityIndicator.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -535,6 +551,7 @@
 		C5BB3C442B7E30F700819E25 /* RoumingDetail */ = {
 			isa = PBXGroup;
 			children = (
+				C503984D2BA80A0000E4CD90 /* Models */,
 				C5BB3C452B7E310400819E25 /* Views */,
 				C5BB3C2F2B7E29C200819E25 /* RoumingDetailPresenter.swift */,
 				C5BB3C302B7E29C200819E25 /* RoumingDetailWorker.swift */,
@@ -758,6 +775,7 @@
 				C5B01C122B8DF47800C14F0C /* SegmentedControl.swift in Sources */,
 				C5B01C192B8DF4BD00C14F0C /* SCScrollView.swift in Sources */,
 				C50B033B2B8F5A00007A7EAD /* PackageMoreInfosStackView.swift in Sources */,
+				C50398512BA80BAF00E4CD90 /* PackagesModel.swift in Sources */,
 				C5BB3C3E2B7E29C200819E25 /* RoumingDetailConfigurator.swift in Sources */,
 				C5BB3C032B7E1EF100819E25 /* MainNavigation.swift in Sources */,
 				C5C82A122B7F62E30018BB61 /* InternetPackagesCollectionTableViewCell.swift in Sources */,
@@ -768,6 +786,7 @@
 				C5BB3BF92B7E1E1700819E25 /* AppContainer.swift in Sources */,
 				C5EF6E6F2B84BD0F00AA3494 /* AllPackageInfoVStackView.swift in Sources */,
 				C5BB3C052B7E1F1E00819E25 /* ViewController+Navigation.swift in Sources */,
+				C503984F2BA80B8800E4CD90 /* RoumingPackagesModel.swift in Sources */,
 				C5BB3C3A2B7E29C200819E25 /* RoumingDetailModels.swift in Sources */,
 				C567E22E2B95C739003C7943 /* OperatorsViewController.swift in Sources */,
 				C5B01C0B2B8DB49E00C14F0C /* OperatorInfoTitleVStackView.swift in Sources */,
@@ -833,6 +852,7 @@
 				C5C82A162B7F6BC40018BB61 /* RoundedView.swift in Sources */,
 				C567E22B2B95AF25003C7943 /* Extension + PageViewController.swift in Sources */,
 				C5E658D82B8C774600571CE8 /* CategoriesCollectionView.swift in Sources */,
+				C50398532BA9559500E4CD90 /* LoadingActivityIndicator.swift in Sources */,
 				C5B01C362B8E120B00C14F0C /* RoumingPackageDetailPresenter.swift in Sources */,
 				C5BB3C372B7E29C200819E25 /* RoumingDetailPresenter.swift in Sources */,
 			);

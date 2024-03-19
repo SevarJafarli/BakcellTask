@@ -15,7 +15,7 @@ class InternetPackagesCollectionTableViewCell: UITableViewCell {
     
     static var reuseIdentifier = "InternetPackagesCollectionTableViewCell"
     
-    var internetPackageModels = [InternetPackageModel]()
+    var internetPackageModels = [InternetPackagesItemModel]()
     
     weak var delegate: InternetPackagesCollectionTableViewCellDelegate?
     
@@ -25,6 +25,7 @@ class InternetPackagesCollectionTableViewCell: UITableViewCell {
         return collectionView
     }()
     
+    //MARK: Init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.selectionStyle = .none
@@ -33,10 +34,8 @@ class InternetPackagesCollectionTableViewCell: UITableViewCell {
         self.internetPackagesCollectionView.delegate = self
         self.internetPackagesCollectionView.dataSource = self
         self.addSubviews()
-
-       
-        
     }
+    
     required init?(coder: NSCoder) {
         fatalError()
     }
@@ -59,7 +58,7 @@ class InternetPackagesCollectionTableViewCell: UITableViewCell {
     
     //MARK: Public
     
-    public func configure(with models: [InternetPackageModel]) {
+    public func configure(with models: [InternetPackagesItemModel]) {
         self.internetPackageModels = models
         self.internetPackagesCollectionView.reloadData()
     }
@@ -80,7 +79,7 @@ extension InternetPackagesCollectionTableViewCell: UICollectionViewDelegate, UIC
         //TODO: add model from viewmodel
         let model = self.internetPackageModels[indexPath.row]
          
-        cell.configure(model: model as PackageModel)
+        cell.configure(model: model)
         return cell
     }
     

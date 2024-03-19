@@ -11,10 +11,7 @@ import BakcellUIKit
 protocol RoumingDetailDisplayLogic: AnyObject {
     
     func displayLoad(viewModel: RoumingDetail.Load.ViewModel)
-    func displayAllIncludedPackages(viewModel: RoumingDetail.FetchAllIncluded.ViewModel)
-    func displayInternetPackages(viewModel: RoumingDetail.FetchInternetPackages.ViewModel)
-    func displaySMSPackages(viewModel: RoumingDetail.FetchSMSPackages.ViewModel)
-    func displayRoumingCountries(viewModel: RoumingDetail.FetchRoumingCountries.ViewModel)
+    func displayRoumingPackages(viewModel: RoumingDetail.FetchRoumingPackages.ViewModel)
     
 }
 
@@ -26,10 +23,10 @@ final class RoumingDetailViewController: UIViewController, ThemeableViewControll
     var router: (RoumingDetailRoutingLogic & RoumingDetailDataPassing)?
     
     
-    var allIncludedPackages = [AllIncludedPackageModel]()
-    var internetPackages = [InternetPackageModel]()
-    var smsPackages = [SMSPackageModel]()
-    var countries = [String]()
+    var allIncludedPackages: AllPackagesModel? = nil
+    var internetPackages: InternetPackagesModel? = nil
+    var smsPackages: SMSCallPackagesModel? = nil
+    var countries = [String: String]()
     
     private lazy var roumingHeaderView: RoumingCountryHeaderView = {
         let view = RoumingCountryHeaderView()
@@ -62,53 +59,34 @@ final class RoumingDetailViewController: UIViewController, ThemeableViewControll
         let request = RoumingDetail.Load.Request()
         interactor?.load(request: request)
     }
-    func loadAllIncludedPackages() {
-        let request = RoumingDetail.FetchAllIncluded.Request()
-        interactor?.loadAllIncludedPackages(request: request)
-    }
-    func loadInternetPackages() {
-        let request = RoumingDetail.FetchInternetPackages.Request()
-        interactor?.loadInternetPackages(request: request)
-    }
-    func loadSMSPackages() {
-        let request = RoumingDetail.FetchSMSPackages.Request()
-        interactor?.loadSMSPackages(request: request)
-    }
-    
-    func loadRoumingCountries() {
-        let request = RoumingDetail.FetchRoumingCountries.Request()
-        interactor?.loadRoumingCountries(request: request)
+    func loadRoumingPackages() {
+        self.mainView?.startLoading()
+        let request = RoumingDetail.FetchRoumingPackages.Request()
+        interactor?.loadRoumingPackages(request: request)
     }
 }
 
 // MARK: - Display Logic
 
 extension RoumingDetailViewController: RoumingDetailDisplayLogic {
-    func displayInternetPackages(viewModel: RoumingDetail.FetchInternetPackages.ViewModel) {
-        self.internetPackages = viewModel.internetPackageModels
-    }
-    
-    func displaySMSPackages(viewModel: RoumingDetail.FetchSMSPackages.ViewModel) {
-        self.smsPackages = viewModel.smsPackageModels
+    func displayRoumingPackages(viewModel: RoumingDetail.FetchRoumingPackages.ViewModel) {
+        self.countries = viewModel.model.countries
+        self.roumingHeaderView.items = self.countries
         
-    }
-    
-    func displayAllIncludedPackages(viewModel: RoumingDetail.FetchAllIncluded.ViewModel) {
-        self.allIncludedPackages = viewModel.allIncludedPackageModels
+        self.allIncludedPackages = viewModel.model.allPackages
         
+        self.internetPackages = viewModel.model.internetPackages
+        self.smsPackages = viewModel.model.smsCallPackages
+        
+        self.mainView?.mainTableView.reloadData()
+        
+        self.mainView?.stopLoading()
     }
-    func displayRoumingCountries(viewModel: RoumingDetail.FetchRoumingCountries.ViewModel) {
-        self.roumingHeaderView.items = viewModel.countries
-    }
+
     
     func displayLoad(viewModel: RoumingDetail.Load.ViewModel) {
-        self.loadRoumingCountries()
-        self.loadInternetPackages()
-        self.loadAllIncludedPackages()
-        self.loadSMSPackages()
+        self.loadRoumingPackages()
     }
-    
-    
 }
 
 // MARK: - View Delegate
@@ -134,7 +112,7 @@ extension RoumingDetailViewController: UITableViewDelegate, UITableViewDataSourc
         case .internetPackages, .smsPackages:
             return 1
         case .allIncludedPackages:
-            return self.allIncludedPackages.count
+            return self.allIncludedPackages?.items.count ?? 0
             
         }
     }
@@ -151,8 +129,11 @@ extension RoumingDetailViewController: UITableViewDelegate, UITableViewDataSourc
                 return UITableViewCell()
             }
            
-            cell.configure(with: self.internetPackages)
-            cell.delegate = self
+            if let items = self.internetPackages?.items {
+                cell.configure(with: items)
+                cell.delegate = self
+            }
+       
             return cell
             
         case .allIncludedPackages:
@@ -160,17 +141,19 @@ extension RoumingDetailViewController: UITableViewDelegate, UITableViewDataSourc
                 return UITableViewCell()
             }
             
-            let model = self.allIncludedPackages[ indexPath.row]
+            let model = self.allIncludedPackages?.items[indexPath.row]
             cell.data = model
-            
+        
             return cell
             
         case .smsPackages:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: SMSPackagesCollectionTableViewCell.reuseIdentifier, for: indexPath) as? SMSPackagesCollectionTableViewCell else {
                 return UITableViewCell()
             }
+            if let items = self.smsPackages?.items {
+                cell.configure(with: items)
+            }
             
-            cell.configure(with: self.smsPackages)
             return cell
         }
     }
